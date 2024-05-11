@@ -4,7 +4,6 @@ from ..models.enums import Stats, Parts
 
 METADATA_CH_TYPE = Dict[str, Union[Dict[Parts, List[Stats]], Dict[Stats, float]]]
 METADATA_TYPE = Dict[int, METADATA_CH_TYPE]
-
 METADATA = {
     1001: {  # March 7th
         "stats": {

@@ -1,0 +1,40 @@
+name: Fetch Res
+
+on:
+  workflow_dispatch: ~
+
+jobs:
+  Fetch-Wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@master
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install httpx black
+
+      - name: Fetch Remote Files
+        run: |
+          cd compiler
+          python main.py
+          cd ..
+          black .
+
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -S -m ":bento: Update res"
+          git push
