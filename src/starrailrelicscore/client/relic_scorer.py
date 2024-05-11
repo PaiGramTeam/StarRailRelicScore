@@ -86,7 +86,7 @@ class RelicScorer:
         return pairs
 
     @staticmethod
-    def score(relic, character_id: int) -> Score:
+    def score(relic: Dict, character_id: int) -> Score:
         if (not relic) or (not character_id):
             return Score(score="0", rating="N/A", main_stat_score=0)
         scaling = RelicScorer.get_scaling(character_id)
@@ -113,7 +113,7 @@ class RelicScorer:
             score=round(sum_value, 1),
             rating=rating,
             main_stat_score=main_stat_score,
-            part=relic["part"],
+            tid=relic["tid"],
             meta=scoring_metadata,
         )
 

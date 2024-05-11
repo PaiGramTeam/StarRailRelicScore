@@ -14,7 +14,7 @@ class Score(BaseModel):
     score: float
     rating: str
     main_stat_score: float
-    part: Optional[Parts] = None
+    tid: int
     meta: Optional[dict] = None
 
 

@@ -39,6 +39,7 @@ class RelicClient:
             raise StarRailRelicScoreNoRelicConfig()
         main_affix = config.main_affix.get(str(relic.mainAffixId))
         return {
+            "tid": relic.tid,
             "part": fix_relic_position(config.type),
             "grade": config.rarity,
             "set": str(config.set_id),
