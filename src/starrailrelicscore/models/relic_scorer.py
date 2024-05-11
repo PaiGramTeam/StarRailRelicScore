@@ -11,10 +11,11 @@ class Rating(BaseModel):
 
 
 class Score(BaseModel):
+    tid: int
     score: float
     rating: str
     main_stat_score: float
-    tid: int
+    sub_stat_score: List[float]
     meta: Optional[dict] = None
 
 

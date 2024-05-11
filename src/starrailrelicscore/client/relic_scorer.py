@@ -88,18 +88,23 @@ class RelicScorer:
     @staticmethod
     def score(relic: Dict, character_id: int) -> Score:
         if (not relic) or (not character_id):
-            return Score(score="0", rating="N/A", main_stat_score=0)
+            return Score(
+                tid=0, score="0", rating="N/A", main_stat_score=0, sub_stat_score=[]
+            )
         scaling = RelicScorer.get_scaling(character_id)
         scoring_metadata: "METADATA_CH_TYPE" = get_scoring_metadata(character_id)
         multipliers = scoring_metadata["stats"]
 
         sum_value = 0
+        sub_stat_score = []
         for sub_stat in relic["substats"]:
-            sum_value += (
+            score = (
                 sub_stat["value"]
                 * (multipliers.get(sub_stat["stat"], 0))
                 * scaling[sub_stat["stat"]]
             )
+            sum_value += score
+            sub_stat_score.append(round(score, 1))
 
         sum_value += RelicScorer.main_stat_free_roll(
             relic["part"], relic["main"]["stat"], scoring_metadata
@@ -110,10 +115,11 @@ class RelicScorer:
         )
 
         return Score(
+            tid=relic["tid"],
             score=round(sum_value, 1),
             rating=rating,
             main_stat_score=main_stat_score,
-            tid=relic["tid"],
+            sub_stat_score=sub_stat_score,
             meta=scoring_metadata,
         )
 

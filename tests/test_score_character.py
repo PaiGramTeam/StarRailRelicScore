@@ -23,6 +23,8 @@ class TestScoreCharacter:
             avatars.append(Avatar(**b))
         for avatar in avatars:
             score = Character.score_character(avatar)
+            for relic in score.relics:
+                print(relic.sub_stat_score)
             print(score.total_score)
             print(score.total_rating)
             assert score is not None
