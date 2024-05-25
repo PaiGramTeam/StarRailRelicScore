@@ -6,7 +6,7 @@ from typing import Dict, Union, List
 from ..models.enums import Stats, Parts
 
 METADATA_CH_TYPE = Dict[str, Union[Dict[Parts, List[Stats]], Dict[Stats, float]]]
-METADATA_TYPE = Dict[int, METADATA_CH_TYPE]
+METADATA_TYPE = Dict[str, METADATA_CH_TYPE]
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 
