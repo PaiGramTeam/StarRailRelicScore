@@ -1,6 +1,6 @@
 [project]
 name = "StarRailRelicScore"
-version = "0.1.0"
+version = "0.1.1"
 description = "StarRail Relic Score Cal"
 authors = [
     {name = "xtaodada", email = "xtao@xtaolink.cn"},
