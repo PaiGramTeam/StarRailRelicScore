@@ -15,6 +15,10 @@ jobs:
         with:
           python-version: 3.9
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18.19.0'
+
       - name: Install Dependencies
         run: |
           python -m pip install httpx black
@@ -23,7 +27,11 @@ jobs:
         run: |
           cd compiler
           python main.py
-          cd ..
+          cd hsr-optimizer-api
+          npm install -g pnpm
+          pnpm install
+          npm run build
+          cd ../..
           black .
 
       - name: Import GPG key
