@@ -8,13 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@hono/node-server':
-        specifier: ^1.11.1
-        version: 1.11.1
-      hono:
-        specifier: ^4.3.11
-        version: 4.3.11
-    devDependencies:
       '@types/node':
         specifier: ^20.11.17
         version: 20.12.12
@@ -162,10 +155,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@hono/node-server@1.11.1':
-    resolution: {integrity: sha512-GW1Iomhmm1o4Z+X57xGby8A35Cu9UZLL7pSMdqDBkD99U5cywff8F+8hLk5aBTzNubnsFAvWQ/fZjNwPsEn9lA==, tarball: https://registry.npmmirror.com/@hono/node-server/-/node-server-1.11.1.tgz}
-    engines: {node: '>=18.14.1'}
-
   '@types/node@20.12.12':
     resolution: {integrity: sha512-eWLDGF/FOSPtAvEqeRAQ4C8LSA7M1I7i0ky1I8U7kD1J5ITyW3AsRhQrKVoWf5pFKZ2kILsEGJhsI9r93PYnOw==, tarball: https://registry.npmmirror.com/@types/node/-/node-20.12.12.tgz}
 
@@ -181,10 +170,6 @@ packages:
 
   get-tsconfig@4.7.5:
     resolution: {integrity: sha512-ZCuZCnlqNzjb4QprAzXKdpp/gh6KTxSJuw3IBsPnV/7fV4NxC9ckB+vPTt8w7fJA0TaSD7c55BR47JD6MEDyDw==, tarball: https://registry.npmmirror.com/get-tsconfig/-/get-tsconfig-4.7.5.tgz}
-
-  hono@4.3.11:
-    resolution: {integrity: sha512-Hle1uNqJJKkebFkFEEWr3UAElJP922Xy0STfl8c+1PH1q+l6WrmhwAJFS6YH8ZWJY4z46qJtssbyVwwPm3dP5w==, tarball: https://registry.npmmirror.com/hono/-/hono-4.3.11.tgz}
-    engines: {node: '>=16.0.0'}
 
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==, tarball: https://registry.npmmirror.com/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz}
@@ -268,8 +253,6 @@ snapshots:
   '@esbuild/win32-x64@0.20.2':
     optional: true
 
-  '@hono/node-server@1.11.1': {}
-
   '@types/node@20.12.12':
     dependencies:
       undici-types: 5.26.5
@@ -306,8 +289,6 @@ snapshots:
   get-tsconfig@4.7.5:
     dependencies:
       resolve-pkg-maps: 1.0.0
-
-  hono@4.3.11: {}
 
   resolve-pkg-maps@1.0.0: {}
 
