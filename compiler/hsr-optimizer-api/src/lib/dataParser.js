@@ -3573,8 +3573,8 @@ export function getScoringMetadata() {
       simulation: {
         parts: {
           [Parts.Body]: [
-            Stats.ATK_P,
             Stats.EHR,
+            Stats.ATK_P,
           ],
           [Parts.Feet]: [
             Stats.ATK_P,
@@ -3868,6 +3868,7 @@ export function getScoringMetadata() {
           BREAK: 1,
         },
         relicSets: [
+          [Sets.ThiefOfShootingMeteor, Sets.WatchmakerMasterOfDreamMachinations],
           RELICS_2P_BREAK_EFFECT_SPEED,
           [Sets.IronCavalryAgainstScourge, Sets.IronCavalryAgainstScourge],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
@@ -4173,7 +4174,6 @@ export function getScoringMetadata() {
             Stats.Physical_DMG,
           ],
           [Parts.LinkRope]: [
-            Stats.ATK_P,
             Stats.BE,
           ],
         },
@@ -4194,6 +4194,7 @@ export function getScoringMetadata() {
           BREAK: 1,
         },
         relicSets: [
+          [Sets.ThiefOfShootingMeteor, Sets.WatchmakerMasterOfDreamMachinations],
           RELICS_2P_BREAK_EFFECT_SPEED,
           [Sets.IronCavalryAgainstScourge, Sets.IronCavalryAgainstScourge],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
