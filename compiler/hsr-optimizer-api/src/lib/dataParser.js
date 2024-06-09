@@ -495,7 +495,7 @@ export function getScoringMetadata() {
           SKILL: 2,
           ULT: 1,
           FUA: 2,
-          DOT: 6,
+          DOT: 8,
           BREAK: 0,
         },
         relicSets: [
@@ -1421,7 +1421,7 @@ export function getScoringMetadata() {
           SKILL: 3,
           ULT: 1,
           FUA: 0,
-          DOT: 30,
+          DOT: 60,
           BREAK: 0,
         },
         relicSets: [
@@ -1681,7 +1681,7 @@ export function getScoringMetadata() {
           SKILL: 1,
           ULT: 1,
           FUA: 0,
-          DOT: 2,
+          DOT: 5,
           BREAK: 1,
         },
         relicSets: [
@@ -2321,7 +2321,7 @@ export function getScoringMetadata() {
         },
         relicSets: [
           [Sets.ChampionOfStreetwiseBoxing, Sets.ChampionOfStreetwiseBoxing],
-          [Sets.IronCavalryAgainstScourge, Sets.IronCavalryAgainstScourge],
+          [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
@@ -3229,8 +3229,11 @@ export function getScoringMetadata() {
       },
       parts: {
         [Parts.Body]: [
-          Stats.DEF_P,
           Stats.HP_P,
+          Stats.DEF_P,
+          Stats.ATK_P,
+          Stats.CR,
+          Stats.CD,
         ],
         [Parts.Feet]: [
           Stats.SPD,
@@ -3238,6 +3241,14 @@ export function getScoringMetadata() {
         [Parts.PlanarSphere]: [
           Stats.HP_P,
           Stats.DEF_P,
+          Stats.ATK_P,
+          Stats.Wind_DMG,
+          Stats.Physical_DMG,
+          Stats.Fire_DMG,
+          Stats.Ice_DMG,
+          Stats.Lightning_DMG,
+          Stats.Quantum_DMG,
+          Stats.Imaginary_DMG,
         ],
         [Parts.LinkRope]: [
           Stats.ERR,
@@ -3866,7 +3877,7 @@ export function getScoringMetadata() {
         relicSets: [
           [Sets.ThiefOfShootingMeteor, Sets.WatchmakerMasterOfDreamMachinations],
           RELICS_2P_BREAK_EFFECT_SPEED,
-          [Sets.IronCavalryAgainstScourge, Sets.IronCavalryAgainstScourge],
+          [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
@@ -4202,7 +4213,7 @@ export function getScoringMetadata() {
         relicSets: [
           [Sets.ThiefOfShootingMeteor, Sets.WatchmakerMasterOfDreamMachinations],
           RELICS_2P_BREAK_EFFECT_SPEED,
-          [Sets.IronCavalryAgainstScourge, Sets.IronCavalryAgainstScourge],
+          [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
