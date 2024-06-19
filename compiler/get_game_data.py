@@ -1,6 +1,6 @@
 from httpx import get
 
-url = "https://raw.githubusercontent.com/fribbels/hsr-optimizer/main/src/data/character_promotions.json"
+url = "https://raw.githubusercontent.com/PaiGramTeam/hsr-optimizer/main/src/data/game_data.json"
 
 
 def get_content() -> str:
@@ -10,7 +10,7 @@ def get_content() -> str:
 
 def save_content(content: str) -> None:
     with open(
-        "../src/starrailrelicscore/data/character_promotions.json",
+        "../src/starrailrelicscore/data/game_data.json",
         "w",
         encoding="utf-8",
     ) as file:

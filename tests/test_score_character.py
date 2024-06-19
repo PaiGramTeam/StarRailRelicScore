@@ -22,6 +22,7 @@ class TestScoreCharacter:
         for b in data_json.get("detailInfo", {}).get("assistAvatarList", []):
             avatars.append(Avatar(**b))
         for avatar in avatars:
+            print(avatar.avatarId)
             score = Character.score_character(avatar)
             for relic in score.relics:
                 print(relic.sub_stat_score)

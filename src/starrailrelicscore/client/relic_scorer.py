@@ -17,16 +17,14 @@ if TYPE_CHECKING:
 class RelicScorer:
     @staticmethod
     def get_scaling(character_id: int) -> Dict[Stats, float]:
-        level80_stats = character_data.get_character_data(character_id)["promotions"][
-            80
-        ]
+        base_stats = character_data.get_character_data(character_id)["stats"]
         return {
             Stats.HP_P: 64.8 / 43.2,
             Stats.ATK_P: 64.8 / 43.2,
             Stats.DEF_P: 64.8 / 54,
-            Stats.HP: 1 / (level80_stats[Stats.HP] * 2 * 0.01) * (64.8 / 43.2),
-            Stats.ATK: 1 / (level80_stats[Stats.ATK] * 2 * 0.01) * (64.8 / 43.2),
-            Stats.DEF: 1 / (level80_stats[Stats.DEF] * 2 * 0.01) * (64.8 / 54),
+            Stats.HP: 1 / (base_stats[Stats.HP] * 2 * 0.01) * (64.8 / 43.2),
+            Stats.ATK: 1 / (base_stats[Stats.ATK] * 2 * 0.01) * (64.8 / 43.2),
+            Stats.DEF: 1 / (base_stats[Stats.DEF] * 2 * 0.01) * (64.8 / 54),
             Stats.CR: 64.8 / 32.4,
             Stats.CD: 64.8 / 64.8,
             Stats.OHB: 64.8 / 34.5,
