@@ -708,18 +708,11 @@ export function getScoringMetadata() {
       },
       parts: {
         [Parts.Body]: [
-          Stats.HP_P,
-          Stats.DEF_P,
-          Stats.ATK_P,
         ],
         [Parts.Feet]: [
           Stats.SPD,
         ],
         [Parts.PlanarSphere]: [
-          Stats.HP_P,
-          Stats.DEF_P,
-          Stats.ATK_P,
-          Stats.Fire_DMG,
         ],
         [Parts.LinkRope]: [
           Stats.ATK_P,
@@ -871,16 +864,6 @@ export function getScoringMetadata() {
           Stats.SPD,
         ],
         [Parts.PlanarSphere]: [
-          Stats.HP_P,
-          Stats.DEF_P,
-          Stats.ATK_P,
-          Stats.Wind_DMG,
-          Stats.Physical_DMG,
-          Stats.Fire_DMG,
-          Stats.Ice_DMG,
-          Stats.Lightning_DMG,
-          Stats.Quantum_DMG,
-          Stats.Imaginary_DMG,
         ],
         [Parts.LinkRope]: [
           Stats.ERR,
@@ -2992,15 +2975,11 @@ export function getScoringMetadata() {
       },
       parts: {
         [Parts.Body]: [
-          Stats.DEF_P,
-          Stats.HP_P,
         ],
         [Parts.Feet]: [
           Stats.SPD,
         ],
         [Parts.PlanarSphere]: [
-          Stats.DEF_P,
-          Stats.HP_P,
         ],
         [Parts.LinkRope]: [
           Stats.ERR,
@@ -3053,6 +3032,261 @@ export function getScoringMetadata() {
       presets: [],
       sortOption: SortOption.EHP,
     },
+    1218: { // Jiaoqiu
+      stats: {
+        [Constants.Stats.ATK]: 0.5,
+        [Constants.Stats.ATK_P]: 0.5,
+        [Constants.Stats.DEF]: 0.5,
+        [Constants.Stats.DEF_P]: 0.5,
+        [Constants.Stats.HP]: 0.5,
+        [Constants.Stats.HP_P]: 0.5,
+        [Constants.Stats.SPD]: 1,
+        [Constants.Stats.CR]: 0,
+        [Constants.Stats.CD]: 0,
+        [Constants.Stats.EHR]: 1,
+        [Constants.Stats.RES]: 0,
+        [Constants.Stats.BE]: 0,
+        [Constants.Stats.ERR]: 0,
+        [Constants.Stats.OHB]: 0,
+        [Constants.Stats.Physical_DMG]: 0,
+        [Constants.Stats.Fire_DMG]: 1,
+        [Constants.Stats.Ice_DMG]: 0,
+        [Constants.Stats.Lightning_DMG]: 0,
+        [Constants.Stats.Wind_DMG]: 0,
+        [Constants.Stats.Quantum_DMG]: 0,
+        [Constants.Stats.Imaginary_DMG]: 0,
+      },
+      parts: {
+        [Constants.Parts.Body]: [
+          Constants.Stats.EHR,
+        ],
+        [Constants.Parts.Feet]: [
+          Constants.Stats.SPD,
+        ],
+        [Constants.Parts.PlanarSphere]: [
+        ],
+        [Constants.Parts.LinkRope]: [
+        ],
+      },
+      presets: [],
+      sortOption: SortOption.EHR,
+    },
+    1221: { // Yunli
+      stats: {
+        [Constants.Stats.ATK]: 0.75,
+        [Constants.Stats.ATK_P]: 0.75,
+        [Constants.Stats.DEF]: 0,
+        [Constants.Stats.DEF_P]: 0,
+        [Constants.Stats.HP]: 0,
+        [Constants.Stats.HP_P]: 0,
+        [Constants.Stats.SPD]: 1,
+        [Constants.Stats.CR]: 1,
+        [Constants.Stats.CD]: 1,
+        [Constants.Stats.EHR]: 0,
+        [Constants.Stats.RES]: 0,
+        [Constants.Stats.BE]: 0,
+        [Constants.Stats.ERR]: 0,
+        [Constants.Stats.OHB]: 0,
+        [Constants.Stats.Physical_DMG]: 1,
+        [Constants.Stats.Fire_DMG]: 0,
+        [Constants.Stats.Ice_DMG]: 0,
+        [Constants.Stats.Lightning_DMG]: 0,
+        [Constants.Stats.Wind_DMG]: 0,
+        [Constants.Stats.Quantum_DMG]: 0,
+        [Constants.Stats.Imaginary_DMG]: 0,
+      },
+      parts: {
+        [Constants.Parts.Body]: [
+          Constants.Stats.CR,
+          Constants.Stats.CD,
+        ],
+        [Constants.Parts.Feet]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.SPD,
+        ],
+        [Constants.Parts.PlanarSphere]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.Physical_DMG,
+        ],
+        [Constants.Parts.LinkRope]: [
+          Constants.Stats.ATK_P,
+        ],
+      },
+      presets: [],
+      sortOption: SortOption.FUA,
+      simulation: {
+        parts: {
+          [Parts.Body]: [
+            Stats.CR,
+            Stats.CD,
+          ],
+          [Parts.Feet]: [
+            Stats.ATK_P,
+            Stats.SPD,
+          ],
+          [Parts.PlanarSphere]: [
+            Stats.ATK_P,
+            Stats.Physical_DMG,
+          ],
+          [Parts.LinkRope]: [
+            Stats.ATK_P,
+          ],
+        },
+        substats: [
+          Stats.CD,
+          Stats.CR,
+          Stats.ATK_P,
+          Stats.ATK,
+        ],
+        breakpoints: {},
+        formula: {
+          BASIC: 0,
+          SKILL: 1,
+          ULT: 0,
+          FUA: 1,
+          DOT: 0,
+          BREAK: 0,
+        },
+        relicSets: [
+          [Sets.TheWindSoaringValorous, Sets.TheWindSoaringValorous],
+          [Sets.ChampionOfStreetwiseBoxing, Sets.ChampionOfStreetwiseBoxing],
+          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+        ],
+        ornamentSets: [
+          Sets.InertSalsotto,
+          ...SPREAD_ORNAMENTS_2P_FUA,
+          ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
+        ],
+        teammates: [
+          {
+            characterId: '1112', // Topaz
+            lightCone: '23016', // Worrisome
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1303', // Ruan Mei
+            lightCone: '23019', // Past self
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1304', // Aventurine
+            lightCone: '21016', // Trend
+            characterEidolon: 0,
+            lightConeSuperimposition: 5,
+          },
+        ],
+      },
+    },
+    1224: { // March 8th
+      stats: {
+        [Constants.Stats.ATK]: 0.75,
+        [Constants.Stats.ATK_P]: 0.75,
+        [Constants.Stats.DEF]: 0,
+        [Constants.Stats.DEF_P]: 0,
+        [Constants.Stats.HP]: 0,
+        [Constants.Stats.HP_P]: 0,
+        [Constants.Stats.SPD]: 1,
+        [Constants.Stats.CR]: 1,
+        [Constants.Stats.CD]: 1,
+        [Constants.Stats.EHR]: 0,
+        [Constants.Stats.RES]: 0,
+        [Constants.Stats.BE]: 0,
+        [Constants.Stats.ERR]: 0,
+        [Constants.Stats.OHB]: 0,
+        [Constants.Stats.Physical_DMG]: 0,
+        [Constants.Stats.Fire_DMG]: 0,
+        [Constants.Stats.Ice_DMG]: 0,
+        [Constants.Stats.Lightning_DMG]: 0,
+        [Constants.Stats.Wind_DMG]: 0,
+        [Constants.Stats.Quantum_DMG]: 0,
+        [Constants.Stats.Imaginary_DMG]: 1,
+      },
+      parts: {
+        [Constants.Parts.Body]: [
+          Constants.Stats.CR,
+          Constants.Stats.CD,
+        ],
+        [Constants.Parts.Feet]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.SPD,
+        ],
+        [Constants.Parts.PlanarSphere]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.Imaginary_DMG,
+        ],
+        [Constants.Parts.LinkRope]: [
+          Constants.Stats.ATK_P,
+        ],
+      },
+      presets: [],
+      sortOption: SortOption.BASIC,
+      simulation: {
+        parts: {
+          [Parts.Body]: [
+            Stats.CR,
+            Stats.CD,
+          ],
+          [Parts.Feet]: [
+            Stats.ATK_P,
+            Stats.SPD,
+          ],
+          [Parts.PlanarSphere]: [
+            Stats.ATK_P,
+            Stats.Imaginary_DMG,
+          ],
+          [Parts.LinkRope]: [
+            Stats.ATK_P,
+          ],
+        },
+        substats: [
+          Stats.ATK_P,
+          Stats.CR,
+          Stats.CD,
+          Stats.ATK,
+        ],
+        breakpoints: {},
+        maxBonusRolls: {},
+        formula: {
+          BASIC: 1,
+          SKILL: 0,
+          ULT: 1,
+          FUA: 1,
+          DOT: 0,
+          BREAK: 0,
+        },
+        relicSets: [
+          [Sets.MusketeerOfWildWheat, Sets.MusketeerOfWildWheat],
+          [Sets.WastelanderOfBanditryDesert, Sets.WastelanderOfBanditryDesert],
+          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+        ],
+        ornamentSets: [
+          Sets.RutilantArena,
+          ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
+        ],
+        teammates: [
+          {
+            characterId: '1112', // Topaz
+            lightCone: '23016', // Worrisome
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1304', // Aventurine
+            lightCone: '23023', // Unjust destiny
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+        ],
+      },
+    },
     1301: { // Gallagher
       stats: {
         [Stats.ATK]: 0,
@@ -3085,8 +3319,6 @@ export function getScoringMetadata() {
           Stats.SPD,
         ],
         [Parts.PlanarSphere]: [
-          Stats.HP_P,
-          Stats.DEF_P,
         ],
         [Parts.LinkRope]: [
           Stats.ERR,
@@ -3229,26 +3461,11 @@ export function getScoringMetadata() {
       },
       parts: {
         [Parts.Body]: [
-          Stats.HP_P,
-          Stats.DEF_P,
-          Stats.ATK_P,
-          Stats.CR,
-          Stats.CD,
         ],
         [Parts.Feet]: [
           Stats.SPD,
         ],
         [Parts.PlanarSphere]: [
-          Stats.HP_P,
-          Stats.DEF_P,
-          Stats.ATK_P,
-          Stats.Wind_DMG,
-          Stats.Physical_DMG,
-          Stats.Fire_DMG,
-          Stats.Ice_DMG,
-          Stats.Lightning_DMG,
-          Stats.Quantum_DMG,
-          Stats.Imaginary_DMG,
         ],
         [Parts.LinkRope]: [
           Stats.ERR,
@@ -3330,7 +3547,9 @@ export function getScoringMetadata() {
           Stats.DEF_P,
           Stats.DEF,
         ],
-        breakpoints: {},
+        breakpoints: {
+          [Stats.DEF]: 4000,
+        },
         formula: {
           BASIC: 2,
           SKILL: 0,
@@ -3518,16 +3737,6 @@ export function getScoringMetadata() {
           Stats.SPD,
         ],
         [Parts.PlanarSphere]: [
-          Stats.HP_P,
-          Stats.DEF_P,
-          Stats.ATK_P,
-          Stats.Wind_DMG,
-          Stats.Physical_DMG,
-          Stats.Fire_DMG,
-          Stats.Ice_DMG,
-          Stats.Lightning_DMG,
-          Stats.Quantum_DMG,
-          Stats.Imaginary_DMG,
         ],
         [Parts.LinkRope]: [
           Stats.ERR,
@@ -3814,7 +4023,7 @@ export function getScoringMetadata() {
         [Constants.Stats.ERR]: 0,
         [Constants.Stats.OHB]: 0,
         [Constants.Stats.Physical_DMG]: 0,
-        [Constants.Stats.Fire_DMG]: 1,
+        [Constants.Stats.Fire_DMG]: 0,
         [Constants.Stats.Ice_DMG]: 0,
         [Constants.Stats.Lightning_DMG]: 0,
         [Constants.Stats.Wind_DMG]: 0,
@@ -3831,7 +4040,6 @@ export function getScoringMetadata() {
         ],
         [Constants.Parts.PlanarSphere]: [
           Constants.Stats.ATK_P,
-          Constants.Stats.Fire_DMG,
         ],
         [Constants.Parts.LinkRope]: [
           Constants.Stats.BE,
@@ -3850,10 +4058,8 @@ export function getScoringMetadata() {
           ],
           [Parts.PlanarSphere]: [
             Stats.ATK_P,
-            Stats.Fire_DMG,
           ],
           [Parts.LinkRope]: [
-            Stats.ATK_P,
             Stats.BE,
           ],
         },
@@ -3875,13 +4081,9 @@ export function getScoringMetadata() {
           BREAK: 1,
         },
         relicSets: [
-          [Sets.ThiefOfShootingMeteor, Sets.WatchmakerMasterOfDreamMachinations],
-          RELICS_2P_BREAK_EFFECT_SPEED,
           [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
-          Sets.TaliaKingdomOfBanditry,
           Sets.ForgeOfTheKalpagniLantern,
         ],
         teammates: [
@@ -4148,28 +4350,11 @@ export function getScoringMetadata() {
       },
       parts: {
         [Parts.Body]: [
-          Stats.CR,
-          Stats.CD,
-          Stats.ATK_P,
-          Stats.HP_P,
-          Stats.DEF_P,
-          Stats.EHR,
-          Stats.OHB,
         ],
         [Parts.Feet]: [
           Stats.SPD,
         ],
         [Parts.PlanarSphere]: [
-          Stats.HP_P,
-          Stats.DEF_P,
-          Stats.ATK_P,
-          Stats.Wind_DMG,
-          Stats.Physical_DMG,
-          Stats.Fire_DMG,
-          Stats.Ice_DMG,
-          Stats.Lightning_DMG,
-          Stats.Quantum_DMG,
-          Stats.Imaginary_DMG,
         ],
         [Parts.LinkRope]: [
           Stats.BE,
@@ -4569,26 +4754,11 @@ export function getScoringMetadata() {
       },
       parts: {
         [Parts.Body]: [
-          Stats.HP_P,
-          Stats.DEF_P,
-          Stats.ATK_P,
-          Stats.CR,
-          Stats.CD,
         ],
         [Parts.Feet]: [
           Stats.SPD,
         ],
         [Parts.PlanarSphere]: [
-          Stats.HP_P,
-          Stats.DEF_P,
-          Stats.ATK_P,
-          Stats.Wind_DMG,
-          Stats.Physical_DMG,
-          Stats.Fire_DMG,
-          Stats.Ice_DMG,
-          Stats.Lightning_DMG,
-          Stats.Quantum_DMG,
-          Stats.Imaginary_DMG,
         ],
         [Parts.LinkRope]: [
           Stats.BE,
@@ -4624,26 +4794,11 @@ export function getScoringMetadata() {
       },
       parts: {
         [Parts.Body]: [
-          Stats.HP_P,
-          Stats.DEF_P,
-          Stats.ATK_P,
-          Stats.CR,
-          Stats.CD,
         ],
         [Parts.Feet]: [
           Stats.SPD,
         ],
         [Parts.PlanarSphere]: [
-          Stats.HP_P,
-          Stats.DEF_P,
-          Stats.ATK_P,
-          Stats.Wind_DMG,
-          Stats.Physical_DMG,
-          Stats.Fire_DMG,
-          Stats.Ice_DMG,
-          Stats.Lightning_DMG,
-          Stats.Quantum_DMG,
-          Stats.Imaginary_DMG,
         ],
         [Parts.LinkRope]: [
           Stats.BE,
