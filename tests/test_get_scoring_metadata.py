@@ -3,7 +3,6 @@ import pytest
 from src.starrailrelicscore.client.db import get_scoring_metadata
 
 
-@pytest.mark.asyncio
 class TestScoringMetadata:
     @staticmethod
     def test_get_scoring_metadata_success():

@@ -21,10 +21,15 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          python -m pip install httpx black
+          python -m pip install virtualenv pdm
+          python -m virtualenv venv
+          pdm use venv
+          source venv/bin/activate
+          pdm install -G :all
 
       - name: Fetch Remote Files
         run: |
+          source venv/bin/activate
           cd compiler
           python main.py
           cd hsr-optimizer-api
@@ -33,6 +38,11 @@ jobs:
           npm run build
           cd ../..
           black .
+
+      - name: Test New files
+        run: |
+          source venv/bin/activate
+          pytest
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6

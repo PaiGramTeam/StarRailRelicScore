@@ -15,9 +15,7 @@ class CharacterData:
         self.load_game_data()
 
     def load_game_data(self):
-        with open(
-            os.path.join(PATH, "game_data.json"), "r", encoding="utf-8"
-        ) as f:
+        with open(os.path.join(PATH, "game_data.json"), "r", encoding="utf-8") as f:
             data = json.load(f)
             for character_id, _character_data in data["characters"].items():
                 cid = int(character_id)

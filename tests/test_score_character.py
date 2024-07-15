@@ -1,11 +1,8 @@
-import pytest
-
 from httpx import get
 from src.starrailrelicscore.client.character import Character
 from starrailrelicscore.models.mihomo import Avatar
 
 
-@pytest.mark.asyncio
 class TestScoreCharacter:
     @staticmethod
     def test_get_mihomo_data():

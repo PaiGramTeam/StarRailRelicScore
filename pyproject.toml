@@ -1,6 +1,6 @@
 [project]
 name = "StarRailRelicScore"
-version = "0.1.1"
+version = "0.1.2"
 description = "StarRail Relic Score Cal"
 authors = [
     {name = "xtaodada", email = "xtao@xtaolink.cn"},
@@ -24,4 +24,5 @@ distribution = true
 test = [
     "pytest>=8.2.0",
     "httpx>=0.27.0",
+    "black>=24.4.2",
 ]

@@ -1,6 +1,6 @@
 from httpx import get
 
-url = "https://raw.githubusercontent.com/fribbels/hsr-optimizer/main/src/lib/"
+url = "https://raw.githubusercontent.com/PaiGramTeam/hsr-optimizer/main/src/lib/"
 HEAD_DATA = """import { Parts, Sets, SetsRelics, Stats, Constants } from 'lib/constants.ts'
 import { SortOption } from 'lib/optimizer/sortOptions'
 
