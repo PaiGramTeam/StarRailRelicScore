@@ -1741,6 +1741,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.fnAshblazingSet(0),
+        PresetEffects.BANANA_SET,
       ],
       sortOption: SortOption.FUA,
       simulation: {
@@ -2050,6 +2051,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.fnAshblazingSet(8),
+        PresetEffects.BANANA_SET,
       ],
       sortOption: SortOption.FUA,
       simulation: {
@@ -3071,6 +3073,114 @@ export function getScoringMetadata() {
       presets: [],
       sortOption: SortOption.EHR,
     },
+    1220: { // Feixiao
+      stats: {
+        [Constants.Stats.ATK]: 0.75,
+        [Constants.Stats.ATK_P]: 0.75,
+        [Constants.Stats.DEF]: 0,
+        [Constants.Stats.DEF_P]: 0,
+        [Constants.Stats.HP]: 0,
+        [Constants.Stats.HP_P]: 0,
+        [Constants.Stats.SPD]: 1,
+        [Constants.Stats.CR]: 1,
+        [Constants.Stats.CD]: 1,
+        [Constants.Stats.EHR]: 0,
+        [Constants.Stats.RES]: 0,
+        [Constants.Stats.BE]: 0,
+        [Constants.Stats.ERR]: 0,
+        [Constants.Stats.OHB]: 0,
+        [Constants.Stats.Physical_DMG]: 0,
+        [Constants.Stats.Fire_DMG]: 0,
+        [Constants.Stats.Ice_DMG]: 0,
+        [Constants.Stats.Lightning_DMG]: 0,
+        [Constants.Stats.Wind_DMG]: 1,
+        [Constants.Stats.Quantum_DMG]: 0,
+        [Constants.Stats.Imaginary_DMG]: 0,
+      },
+      parts: {
+        [Constants.Parts.Body]: [
+          Constants.Stats.CR,
+          Constants.Stats.CD,
+        ],
+        [Constants.Parts.Feet]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.SPD,
+        ],
+        [Constants.Parts.PlanarSphere]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.Wind_DMG,
+        ],
+        [Constants.Parts.LinkRope]: [
+          Constants.Stats.ATK_P,
+        ],
+      },
+      presets: [],
+      sortOption: SortOption.ULT,
+      simulation: {
+        parts: {
+          [Parts.Body]: [
+            Stats.CR,
+            Stats.CD,
+          ],
+          [Parts.Feet]: [
+            Stats.ATK_P,
+            Stats.SPD,
+          ],
+          [Parts.PlanarSphere]: [
+            Stats.ATK_P,
+            Stats.Wind_DMG,
+          ],
+          [Parts.LinkRope]: [
+            Stats.ATK_P,
+          ],
+        },
+        substats: [
+          Stats.ATK_P,
+          Stats.CR,
+          Stats.CD,
+          Stats.ATK,
+        ],
+        breakpoints: {},
+        maxBonusRolls: {},
+        formula: {
+          BASIC: 0,
+          SKILL: 2,
+          ULT: 1,
+          FUA: 2,
+          DOT: 0,
+          BREAK: 1,
+        },
+        relicSets: [
+          [Sets.TheWindSoaringValorous, Sets.TheWindSoaringValorous],
+          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+        ],
+        ornamentSets: [
+          Sets.DuranDynastyOfRunningWolves,
+          ...SPREAD_ORNAMENTS_2P_FUA,
+          ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
+        ],
+        teammates: [
+          {
+            characterId: '1112', // Topaz
+            lightCone: '23016', // Worrisome
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1304', // Aventurine
+            lightCone: '23023', // Unjust destiny
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+        ],
+      },
+    },
     1221: { // Yunli
       stats: {
         [Constants.Stats.ATK]: 0.75,
@@ -3173,6 +3283,163 @@ export function getScoringMetadata() {
           {
             characterId: '1217', // Huohuo
             lightCone: '23017', // Night of Fright
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+        ],
+      },
+    },
+    1222: { // Lingsha
+      stats: {
+        [Constants.Stats.ATK]: 0.75,
+        [Constants.Stats.ATK_P]: 0.75,
+        [Constants.Stats.DEF]: 0.5,
+        [Constants.Stats.DEF_P]: 0.5,
+        [Constants.Stats.HP]: 0.5,
+        [Constants.Stats.HP_P]: 0.5,
+        [Constants.Stats.SPD]: 1,
+        [Constants.Stats.CR]: 0,
+        [Constants.Stats.CD]: 0,
+        [Constants.Stats.EHR]: 0,
+        [Constants.Stats.RES]: 0.75,
+        [Constants.Stats.BE]: 1,
+        [Constants.Stats.ERR]: 1,
+        [Constants.Stats.OHB]: 0,
+        [Constants.Stats.Physical_DMG]: 0,
+        [Constants.Stats.Fire_DMG]: 1,
+        [Constants.Stats.Ice_DMG]: 0,
+        [Constants.Stats.Lightning_DMG]: 0,
+        [Constants.Stats.Wind_DMG]: 0,
+        [Constants.Stats.Quantum_DMG]: 0,
+        [Constants.Stats.Imaginary_DMG]: 0,
+      },
+      parts: {
+        [Constants.Parts.Body]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.OHB,
+          Constants.Stats.DEF_P,
+          Constants.Stats.HP_P,
+        ],
+        [Constants.Parts.Feet]: [
+          Constants.Stats.SPD,
+        ],
+        [Constants.Parts.PlanarSphere]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.DEF_P,
+          Constants.Stats.HP_P,
+        ],
+        [Constants.Parts.LinkRope]: [
+          Constants.Stats.BE,
+          Constants.Stats.ERR,
+        ],
+      },
+      presets: [
+        PresetEffects.BANANA_SET,
+      ],
+      sortOption: SortOption.BE,
+    },
+    1223: { // Moze
+      stats: {
+        [Constants.Stats.ATK]: 0.75,
+        [Constants.Stats.ATK_P]: 0.75,
+        [Constants.Stats.DEF]: 0,
+        [Constants.Stats.DEF_P]: 0,
+        [Constants.Stats.HP]: 0,
+        [Constants.Stats.HP_P]: 0,
+        [Constants.Stats.SPD]: 1,
+        [Constants.Stats.CR]: 1,
+        [Constants.Stats.CD]: 1,
+        [Constants.Stats.EHR]: 0,
+        [Constants.Stats.RES]: 0,
+        [Constants.Stats.BE]: 0,
+        [Constants.Stats.ERR]: 0,
+        [Constants.Stats.OHB]: 0,
+        [Constants.Stats.Physical_DMG]: 0,
+        [Constants.Stats.Fire_DMG]: 0,
+        [Constants.Stats.Ice_DMG]: 0,
+        [Constants.Stats.Lightning_DMG]: 1,
+        [Constants.Stats.Wind_DMG]: 0,
+        [Constants.Stats.Quantum_DMG]: 0,
+        [Constants.Stats.Imaginary_DMG]: 0,
+      },
+      parts: {
+        [Constants.Parts.Body]: [
+          Constants.Stats.CR,
+          Constants.Stats.CD,
+        ],
+        [Constants.Parts.Feet]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.SPD,
+        ],
+        [Constants.Parts.PlanarSphere]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.Lightning_DMG,
+        ],
+        [Constants.Parts.LinkRope]: [
+          Constants.Stats.ATK_P,
+        ],
+      },
+      presets: [],
+      sortOption: SortOption.FUA,
+      simulation: {
+        parts: {
+          [Parts.Body]: [
+            Stats.CR,
+            Stats.CD,
+          ],
+          [Parts.Feet]: [
+            Stats.ATK_P,
+            Stats.SPD,
+          ],
+          [Parts.PlanarSphere]: [
+            Stats.ATK_P,
+            Stats.Lightning_DMG,
+          ],
+          [Parts.LinkRope]: [
+            Stats.ATK_P,
+          ],
+        },
+        substats: [
+          Stats.ATK_P,
+          Stats.CR,
+          Stats.CD,
+          Stats.ATK,
+        ],
+        breakpoints: {},
+        maxBonusRolls: {},
+        formula: {
+          BASIC: 1,
+          SKILL: 1,
+          ULT: 1,
+          FUA: 2,
+          DOT: 0,
+          BREAK: 0,
+        },
+        relicSets: [
+          [Sets.TheWindSoaringValorous, Sets.TheWindSoaringValorous],
+          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+        ],
+        ornamentSets: [
+          Sets.DuranDynastyOfRunningWolves,
+          ...SPREAD_ORNAMENTS_2P_FUA,
+          ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
+        ],
+        teammates: [
+          {
+            characterId: '1112', // Topaz
+            lightCone: '23016', // Worrisome
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1304', // Aventurine
+            lightCone: '23023', // Unjust destiny
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
