@@ -280,8 +280,7 @@ export function getScoringMetadata() {
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
-          Sets.InertSalsotto,
-          Sets.RutilantArena,
+          Sets.DuranDynastyOfRunningWolves,
           ...SPREAD_ORNAMENTS_2P_FUA,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
         ],
@@ -3148,7 +3147,7 @@ export function getScoringMetadata() {
           ULT: 1,
           FUA: 2,
           DOT: 0,
-          BREAK: 1,
+          BREAK: 0,
         },
         relicSets: [
           [Sets.TheWindSoaringValorous, Sets.TheWindSoaringValorous],
@@ -3408,7 +3407,7 @@ export function getScoringMetadata() {
         breakpoints: {},
         maxBonusRolls: {},
         formula: {
-          BASIC: 1,
+          BASIC: 0,
           SKILL: 1,
           ULT: 1,
           FUA: 2,
@@ -3946,7 +3945,7 @@ export function getScoringMetadata() {
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
-          Sets.InertSalsotto,
+          Sets.DuranDynastyOfRunningWolves,
           ...SPREAD_ORNAMENTS_2P_FUA,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
         ],
