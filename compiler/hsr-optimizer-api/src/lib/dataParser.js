@@ -494,7 +494,7 @@ export function getScoringMetadata() {
           SKILL: 2,
           ULT: 1,
           FUA: 2,
-          DOT: 8,
+          DOT: 16,
           BREAK: 0,
         },
         relicSets: [
@@ -706,13 +706,11 @@ export function getScoringMetadata() {
         [Stats.Imaginary_DMG]: 0,
       },
       parts: {
-        [Parts.Body]: [
-        ],
+        [Parts.Body]: [],
         [Parts.Feet]: [
           Stats.SPD,
         ],
-        [Parts.PlanarSphere]: [
-        ],
+        [Parts.PlanarSphere]: [],
         [Parts.LinkRope]: [
           Stats.ATK_P,
           Stats.ERR,
@@ -862,8 +860,7 @@ export function getScoringMetadata() {
         [Parts.Feet]: [
           Stats.SPD,
         ],
-        [Parts.PlanarSphere]: [
-        ],
+        [Parts.PlanarSphere]: [],
         [Parts.LinkRope]: [
           Stats.ERR,
         ],
@@ -2975,13 +2972,11 @@ export function getScoringMetadata() {
         [Stats.Imaginary_DMG]: 0,
       },
       parts: {
-        [Parts.Body]: [
-        ],
+        [Parts.Body]: [],
         [Parts.Feet]: [
           Stats.SPD,
         ],
-        [Parts.PlanarSphere]: [
-        ],
+        [Parts.PlanarSphere]: [],
         [Parts.LinkRope]: [
           Stats.ERR,
         ],
@@ -3064,10 +3059,8 @@ export function getScoringMetadata() {
         [Constants.Parts.Feet]: [
           Constants.Stats.SPD,
         ],
-        [Constants.Parts.PlanarSphere]: [
-        ],
-        [Constants.Parts.LinkRope]: [
-        ],
+        [Constants.Parts.PlanarSphere]: [],
+        [Constants.Parts.LinkRope]: [],
       },
       presets: [],
       sortOption: SortOption.EHR,
@@ -3113,7 +3106,9 @@ export function getScoringMetadata() {
           Constants.Stats.ATK_P,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.fnAshblazingSet(1),
+      ],
       sortOption: SortOption.ULT,
       simulation: {
         parts: {
@@ -3144,8 +3139,8 @@ export function getScoringMetadata() {
         formula: {
           BASIC: 0,
           SKILL: 2,
-          ULT: 1,
-          FUA: 2,
+          ULT: 2,
+          FUA: 4,
           DOT: 0,
           BREAK: 0,
         },
@@ -3334,6 +3329,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.BANANA_SET,
+        PresetEffects.fnAshblazingSet(3),
       ],
       sortOption: SortOption.BE,
     },
@@ -3378,7 +3374,9 @@ export function getScoringMetadata() {
           Constants.Stats.ATK_P,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.fnAshblazingSet(6),
+      ],
       sortOption: SortOption.FUA,
       simulation: {
         parts: {
@@ -3415,11 +3413,13 @@ export function getScoringMetadata() {
           BREAK: 0,
         },
         relicSets: [
-          [Sets.TheWindSoaringValorous, Sets.TheWindSoaringValorous],
+          [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
+          [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.DuranDynastyOfRunningWolves,
+          Sets.IzumoGenseiAndTakamaDivineRealm,
           ...SPREAD_ORNAMENTS_2P_FUA,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
         ],
@@ -3584,8 +3584,7 @@ export function getScoringMetadata() {
         [Parts.Feet]: [
           Stats.SPD,
         ],
-        [Parts.PlanarSphere]: [
-        ],
+        [Parts.PlanarSphere]: [],
         [Parts.LinkRope]: [
           Stats.ERR,
           Stats.BE,
@@ -3726,13 +3725,11 @@ export function getScoringMetadata() {
         [Stats.Imaginary_DMG]: 0,
       },
       parts: {
-        [Parts.Body]: [
-        ],
+        [Parts.Body]: [],
         [Parts.Feet]: [
           Stats.SPD,
         ],
-        [Parts.PlanarSphere]: [
-        ],
+        [Parts.PlanarSphere]: [],
         [Parts.LinkRope]: [
           Stats.ERR,
           Stats.BE,
@@ -4002,8 +3999,7 @@ export function getScoringMetadata() {
         [Parts.Feet]: [
           Stats.SPD,
         ],
-        [Parts.PlanarSphere]: [
-        ],
+        [Parts.PlanarSphere]: [],
         [Parts.LinkRope]: [
           Stats.ERR,
         ],
@@ -4089,7 +4085,7 @@ export function getScoringMetadata() {
           SKILL: 1,
           ULT: 1,
           FUA: 0,
-          DOT: 8,
+          DOT: 16,
           BREAK: 0,
         },
         relicSets: [
@@ -4615,13 +4611,11 @@ export function getScoringMetadata() {
         [Stats.Imaginary_DMG]: 0,
       },
       parts: {
-        [Parts.Body]: [
-        ],
+        [Parts.Body]: [],
         [Parts.Feet]: [
           Stats.SPD,
         ],
-        [Parts.PlanarSphere]: [
-        ],
+        [Parts.PlanarSphere]: [],
         [Parts.LinkRope]: [
           Stats.BE,
         ],
@@ -5019,13 +5013,11 @@ export function getScoringMetadata() {
         [Stats.Imaginary_DMG]: 0,
       },
       parts: {
-        [Parts.Body]: [
-        ],
+        [Parts.Body]: [],
         [Parts.Feet]: [
           Stats.SPD,
         ],
-        [Parts.PlanarSphere]: [
-        ],
+        [Parts.PlanarSphere]: [],
         [Parts.LinkRope]: [
           Stats.BE,
           Stats.ERR,
@@ -5059,13 +5051,11 @@ export function getScoringMetadata() {
         [Stats.Imaginary_DMG]: 0,
       },
       parts: {
-        [Parts.Body]: [
-        ],
+        [Parts.Body]: [],
         [Parts.Feet]: [
           Stats.SPD,
         ],
-        [Parts.PlanarSphere]: [
-        ],
+        [Parts.PlanarSphere]: [],
         [Parts.LinkRope]: [
           Stats.BE,
           Stats.ERR,
