@@ -86,7 +86,9 @@ export function getScoringMetadata() {
           Stats.ERR,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.VALOROUS_SET,
+      ],
       sortOption: SortOption.DEF,
     },
     1002: { // Dan Heng
@@ -239,7 +241,8 @@ export function getScoringMetadata() {
         ],
       },
       presets: [
-        PresetEffects.fnAshblazingSet(4),
+        PresetEffects.fnAshblazingSet(8),
+        PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.FUA,
       simulation: {
@@ -426,11 +429,11 @@ export function getScoringMetadata() {
         [Stats.HP]: 0,
         [Stats.HP_P]: 0,
         [Stats.SPD]: 1,
-        [Stats.CR]: 0.5,
-        [Stats.CD]: 0.5,
+        [Stats.CR]: 0,
+        [Stats.CD]: 0,
         [Stats.EHR]: 0.5,
         [Stats.RES]: 0,
-        [Stats.BE]: 0.75,
+        [Stats.BE]: 0,
         [Stats.ERR]: 0,
         [Stats.OHB]: 0,
         [Stats.Physical_DMG]: 0,
@@ -460,6 +463,7 @@ export function getScoringMetadata() {
       presets: [
         PresetEffects.PRISONER_SET,
         PresetEffects.fnAshblazingSet(6),
+        PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.DOT,
       simulation: {
@@ -527,18 +531,18 @@ export function getScoringMetadata() {
     },
     1006: { // Silver Wolf
       stats: {
-        [Stats.ATK]: 0.5,
-        [Stats.ATK_P]: 0.5,
-        [Stats.DEF]: 0.25,
-        [Stats.DEF_P]: 0.25,
-        [Stats.HP]: 0.25,
-        [Stats.HP_P]: 0.25,
+        [Stats.ATK]: 0,
+        [Stats.ATK_P]: 0,
+        [Stats.DEF]: 0.5,
+        [Stats.DEF_P]: 0.5,
+        [Stats.HP]: 0.5,
+        [Stats.HP_P]: 0.5,
         [Stats.SPD]: 1,
-        [Stats.CR]: 0.75,
-        [Stats.CD]: 0.75,
+        [Stats.CR]: 0,
+        [Stats.CD]: 0,
         [Stats.EHR]: 1,
-        [Stats.RES]: 0,
-        [Stats.BE]: 0.75,
+        [Stats.RES]: 0.5,
+        [Stats.BE]: 0,
         [Stats.ERR]: 1,
         [Stats.OHB]: 0,
         [Stats.Physical_DMG]: 0,
@@ -683,17 +687,17 @@ export function getScoringMetadata() {
     },
     1009: { // Asta
       stats: {
-        [Stats.ATK]: 0.75,
-        [Stats.ATK_P]: 0.75,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.ATK]: 0.5,
+        [Stats.ATK_P]: 0.5,
+        [Stats.DEF]: 0.5,
+        [Stats.DEF_P]: 0.5,
+        [Stats.HP]: 1,
+        [Stats.HP_P]: 1,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.5,
         [Stats.BE]: 0.5,
         [Stats.ERR]: 1,
         [Stats.OHB]: 0,
@@ -761,7 +765,8 @@ export function getScoringMetadata() {
         ],
       },
       presets: [
-        PresetEffects.fnAshblazingSet(4),
+        PresetEffects.fnAshblazingSet(8),
+        PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.FUA,
       simulation: {
@@ -833,10 +838,10 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.DEF]: 0.5,
+        [Stats.DEF_P]: 0.5,
+        [Stats.HP]: 0.5,
+        [Stats.HP_P]: 0.5,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 1,
@@ -1181,7 +1186,7 @@ export function getScoringMetadata() {
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 1,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.5,
         [Stats.BE]: 0,
         [Stats.ERR]: 1,
         [Stats.OHB]: 0,
@@ -1845,7 +1850,9 @@ export function getScoringMetadata() {
           Stats.ATK_P,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.VALOROUS_SET,
+      ],
       sortOption: SortOption.BASIC,
       simulation: {
         parts: {
@@ -1923,7 +1930,7 @@ export function getScoringMetadata() {
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.5,
         [Stats.BE]: 0,
         [Stats.ERR]: 1,
         [Stats.OHB]: 0,
@@ -2047,6 +2054,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.fnAshblazingSet(8),
+        PresetEffects.VALOROUS_SET,
         PresetEffects.BANANA_SET,
       ],
       sortOption: SortOption.FUA,
@@ -2156,7 +2164,9 @@ export function getScoringMetadata() {
           Stats.HP_P,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.VALOROUS_SET,
+      ],
       sortOption: SortOption.BASIC,
       simulation: {
         parts: {
@@ -2382,15 +2392,15 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
+        [Stats.DEF]: 1,
+        [Stats.DEF_P]: 1,
         [Stats.HP]: 1,
         [Stats.HP_P]: 1,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.5,
         [Stats.BE]: 0,
         [Stats.ERR]: 1,
         [Stats.OHB]: 0,
@@ -2466,7 +2476,10 @@ export function getScoringMetadata() {
           Stats.ATK_P,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.VALOROUS_SET,
+        PresetEffects.fnAshblazingSet(2),
+      ],
       sortOption: SortOption.ULT,
       simulation: {
         parts: {
@@ -2535,16 +2548,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 1,
         [Stats.ATK_P]: 1,
-        [Stats.DEF]: 0,
-        [Stats.DEF_P]: 0,
-        [Stats.HP]: 0,
-        [Stats.HP_P]: 0,
+        [Stats.DEF]: 0.5,
+        [Stats.DEF_P]: 0.5,
+        [Stats.HP]: 0.5,
+        [Stats.HP_P]: 0.5,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 1,
-        [Stats.RES]: 0,
-        [Stats.BE]: 0.75,
+        [Stats.RES]: 0.5,
+        [Stats.BE]: 0,
         [Stats.ERR]: 1,
         [Stats.OHB]: 0,
         [Stats.Physical_DMG]: 0,
@@ -2878,6 +2891,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.fnAshblazingSet(3),
+        PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.SKILL,
       simulation: {
@@ -2959,7 +2973,7 @@ export function getScoringMetadata() {
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.5,
         [Stats.BE]: 0,
         [Stats.ERR]: 1,
         [Stats.OHB]: 0,
@@ -3040,7 +3054,7 @@ export function getScoringMetadata() {
         [Constants.Stats.CR]: 0,
         [Constants.Stats.CD]: 0,
         [Constants.Stats.EHR]: 1,
-        [Constants.Stats.RES]: 0,
+        [Constants.Stats.RES]: 0.5,
         [Constants.Stats.BE]: 0,
         [Constants.Stats.ERR]: 0,
         [Constants.Stats.OHB]: 0,
@@ -3062,7 +3076,9 @@ export function getScoringMetadata() {
         [Constants.Parts.PlanarSphere]: [],
         [Constants.Parts.LinkRope]: [],
       },
-      presets: [],
+      presets: [
+        PresetEffects.PRISONER_SET,
+      ],
       sortOption: SortOption.EHR,
     },
     1220: { // Feixiao
@@ -3108,6 +3124,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.fnAshblazingSet(1),
+        PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.ULT,
       simulation: {
@@ -3216,7 +3233,10 @@ export function getScoringMetadata() {
           Constants.Stats.ATK_P,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.VALOROUS_SET,
+        PresetEffects.fnAshblazingSet(8),
+      ],
       sortOption: SortOption.FUA,
       simulation: {
         parts: {
@@ -3325,11 +3345,13 @@ export function getScoringMetadata() {
         [Constants.Parts.LinkRope]: [
           Constants.Stats.BE,
           Constants.Stats.ERR,
+          Constants.Stats.ATK_P,
         ],
       },
       presets: [
         PresetEffects.BANANA_SET,
-        PresetEffects.fnAshblazingSet(3),
+        PresetEffects.fnAshblazingSet(6),
+        PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.BE,
     },
@@ -3375,7 +3397,9 @@ export function getScoringMetadata() {
         ],
       },
       presets: [
+        PresetEffects.fnPioneerSet(4),
         PresetEffects.fnAshblazingSet(6),
+        PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.FUA,
       simulation: {
@@ -3486,7 +3510,10 @@ export function getScoringMetadata() {
           Constants.Stats.ATK_P,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.fnAshblazingSet(2),
+        PresetEffects.VALOROUS_SET,
+      ],
       sortOption: SortOption.BASIC,
       simulation: {
         parts: {
@@ -3704,15 +3731,15 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.DEF]: 0.5,
+        [Stats.DEF_P]: 0.5,
+        [Stats.HP]: 0.5,
+        [Stats.HP_P]: 0.5,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.5,
         [Stats.BE]: 1,
         [Stats.ERR]: 1,
         [Stats.OHB]: 0,
@@ -3744,8 +3771,8 @@ export function getScoringMetadata() {
         [Stats.ATK_P]: 0,
         [Stats.DEF]: 1,
         [Stats.DEF_P]: 1,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.HP]: 0,
+        [Stats.HP_P]: 0,
         [Stats.SPD]: 1,
         [Stats.CR]: 1,
         [Stats.CD]: 1,
@@ -3782,7 +3809,7 @@ export function getScoringMetadata() {
         ],
       },
       presets: [
-        PresetEffects.fnAshblazingSet(7),
+        PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.FUA,
       simulation: {
@@ -3901,6 +3928,7 @@ export function getScoringMetadata() {
       presets: [
         PresetEffects.fnAshblazingSet(1),
         PresetEffects.fnPioneerSet(4),
+        PresetEffects.VALOROUS_SET,
         PresetEffects.WASTELANDER_SET,
       ],
       sortOption: SortOption.FUA,
@@ -3972,15 +4000,15 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.DEF]: 0.5,
+        [Stats.DEF_P]: 0.5,
+        [Stats.HP]: 0.5,
+        [Stats.HP_P]: 0.5,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 1,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.5,
         [Stats.BE]: 0,
         [Stats.ERR]: 1,
         [Stats.OHB]: 0,
@@ -4020,7 +4048,7 @@ export function getScoringMetadata() {
         [Stats.CD]: 0,
         [Stats.EHR]: 1,
         [Stats.RES]: 0,
-        [Stats.BE]: 0.5,
+        [Stats.BE]: 0,
         [Stats.ERR]: 0,
         [Stats.OHB]: 0,
         [Stats.Physical_DMG]: 0,
@@ -4229,15 +4257,15 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 1,
         [Stats.ATK_P]: 1,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.DEF]: 0.5,
+        [Stats.DEF_P]: 0.5,
+        [Stats.HP]: 0.5,
+        [Stats.HP_P]: 0.5,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.5,
         [Stats.BE]: 0,
         [Stats.ERR]: 1,
         [Stats.OHB]: 0,
@@ -4270,8 +4298,8 @@ export function getScoringMetadata() {
     },
     1310: { // Firefly
       stats: {
-        [Constants.Stats.ATK]: 1,
-        [Constants.Stats.ATK_P]: 1,
+        [Constants.Stats.ATK]: 0.5,
+        [Constants.Stats.ATK_P]: 0.5,
         [Constants.Stats.DEF]: 0,
         [Constants.Stats.DEF_P]: 0,
         [Constants.Stats.HP]: 0,
@@ -4328,9 +4356,9 @@ export function getScoringMetadata() {
         substats: [
           Stats.BE,
           Stats.ATK_P,
+          Stats.ATK,
           Stats.CR,
           Stats.CD,
-          Stats.ATK,
         ],
         breakpoints: {},
         maxBonusRolls: {},
@@ -4519,7 +4547,10 @@ export function getScoringMetadata() {
           Constants.Stats.ATK_P,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.VALOROUS_SET,
+        PresetEffects.fnAshblazingSet(8),
+      ],
       sortOption: SortOption.FUA,
       simulation: {
         parts: {
@@ -4588,15 +4619,15 @@ export function getScoringMetadata() {
     },
     1315: { // Boothill
       stats: {
-        [Stats.ATK]: 0.5,
-        [Stats.ATK_P]: 0.5,
+        [Stats.ATK]: 0.25,
+        [Stats.ATK_P]: 0.25,
         [Stats.DEF]: 0,
         [Stats.DEF_P]: 0,
         [Stats.HP]: 0,
         [Stats.HP_P]: 0,
         [Stats.SPD]: 1,
-        [Stats.CR]: 0.75,
-        [Stats.CD]: 0.75,
+        [Stats.CR]: 0.25,
+        [Stats.CD]: 0.25,
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 1,
@@ -4682,6 +4713,106 @@ export function getScoringMetadata() {
             lightCone: '20015', // Multi
             characterEidolon: 6,
             lightConeSuperimposition: 5,
+          },
+        ],
+      },
+    },
+    1317: { // Rappa // TODO
+      stats: {
+        [Stats.ATK]: 1,
+        [Stats.ATK_P]: 1,
+        [Stats.DEF]: 0,
+        [Stats.DEF_P]: 0,
+        [Stats.HP]: 0,
+        [Stats.HP_P]: 0,
+        [Stats.SPD]: 1,
+        [Stats.CR]: 0,
+        [Stats.CD]: 0,
+        [Stats.EHR]: 0,
+        [Stats.RES]: 0,
+        [Stats.BE]: 1,
+        [Stats.ERR]: 0,
+        [Stats.OHB]: 0,
+        [Stats.Physical_DMG]: 0,
+        [Stats.Fire_DMG]: 0,
+        [Stats.Ice_DMG]: 0,
+        [Stats.Lightning_DMG]: 0,
+        [Stats.Wind_DMG]: 0,
+        [Stats.Quantum_DMG]: 0,
+        [Stats.Imaginary_DMG]: 1,
+      },
+      parts: {
+        [Parts.Body]: [],
+        [Parts.Feet]: [
+          Stats.SPD,
+        ],
+        [Parts.PlanarSphere]: [],
+        [Parts.LinkRope]: [
+          Stats.BE,
+        ],
+      },
+      presets: [
+        PresetEffects.WASTELANDER_SET,
+      ],
+      sortOption: SortOption.BASIC,
+      simulation: {
+        parts: {
+          [Parts.Body]: [
+            Stats.ATK_P,
+          ],
+          [Parts.Feet]: [
+            Stats.SPD,
+          ],
+          [Parts.PlanarSphere]: [
+            Stats.Imaginary_DMG,
+            Stats.ATK_P,
+          ],
+          [Parts.LinkRope]: [
+            Stats.BE,
+          ],
+        },
+        substats: [
+          Stats.BE,
+          Stats.ATK_P,
+          Stats.ATK,
+          Stats.CD,
+          Stats.CR,
+        ],
+        breakpoints: {
+          [Stats.ATK]: 3200,
+        },
+        formula: {
+          BASIC: 3,
+          SKILL: 1,
+          ULT: 0,
+          FUA: 0,
+          DOT: 0,
+          BREAK: 1,
+        },
+        relicSets: [
+          [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
+        ],
+        ornamentSets: [
+          Sets.TaliaKingdomOfBanditry,
+        ],
+        teammates: [
+          {
+            characterId: '8006', // Stelle
+            lightCone: '21004', // Memories
+            characterEidolon: 6,
+            lightConeSuperimposition: 5,
+          },
+          {
+            characterId: '1303', // Ruan Mei
+            lightCone: '23019', // Past self
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1003', // Himeko
+            lightCone: '23000', // Milky way
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
         ],
       },
@@ -4992,15 +5123,15 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.DEF]: 0.5,
+        [Stats.DEF_P]: 0.5,
+        [Stats.HP]: 0.5,
+        [Stats.HP_P]: 0.5,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.5,
         [Stats.BE]: 1,
         [Stats.ERR]: 1,
         [Stats.OHB]: 0,
@@ -5030,15 +5161,15 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.DEF]: 0.5,
+        [Stats.DEF_P]: 0.5,
+        [Stats.HP]: 0.5,
+        [Stats.HP_P]: 0.5,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.5,
         [Stats.BE]: 1,
         [Stats.ERR]: 1,
         [Stats.OHB]: 0,
