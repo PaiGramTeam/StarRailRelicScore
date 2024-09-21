@@ -18052,6 +18052,760 @@
         }
     },
     {
+        "id": 33175,
+        "set_id": 317,
+        "type": "NECK",
+        "rarity": 2,
+        "main_affix_group": 25,
+        "sub_affix_group": 2,
+        "max_level": 6,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPAddedRatio",
+                "base_value": 0.027648,
+                "level_value": 0.009677,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackAddedRatio",
+                "base_value": 0.027648,
+                "level_value": 0.009677,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": 0.012096001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "PhysicalAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "FireAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "6": {
+                "id": 6,
+                "property": "IceAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "7": {
+                "id": 7,
+                "property": "ThunderAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "8": {
+                "id": 8,
+                "property": "WindAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "9": {
+                "id": 9,
+                "property": "QuantumAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "10": {
+                "id": 10,
+                "property": "ImaginaryAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 13.548016,
+                "level_value": null,
+                "step_value": 1.693502,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 6.774008,
+                "level_value": null,
+                "step_value": 0.846751,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 6.774008,
+                "level_value": null,
+                "step_value": 0.846751,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.017280001,
+                "level_value": null,
+                "step_value": 0.0021600004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 1.0,
+                "level_value": null,
+                "step_value": 0.1,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.010368001,
+                "level_value": null,
+                "step_value": 0.0012960008,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 33176,
+        "set_id": 317,
+        "type": "OBJECT",
+        "rarity": 2,
+        "main_affix_group": 26,
+        "sub_affix_group": 2,
+        "max_level": 6,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.041472,
+                "level_value": 0.014515,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "SPRatioBase",
+                "base_value": 0.012442,
+                "level_value": 0.0043550003,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "HPAddedRatio",
+                "base_value": 0.027648,
+                "level_value": 0.009677,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "AttackAddedRatio",
+                "base_value": 0.027648,
+                "level_value": 0.009677,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": 0.012096001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 13.548016,
+                "level_value": null,
+                "step_value": 1.693502,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 6.774008,
+                "level_value": null,
+                "step_value": 0.846751,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 6.774008,
+                "level_value": null,
+                "step_value": 0.846751,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.017280001,
+                "level_value": null,
+                "step_value": 0.0021600004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 1.0,
+                "level_value": null,
+                "step_value": 0.1,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.010368001,
+                "level_value": null,
+                "step_value": 0.0012960008,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 33185,
+        "set_id": 318,
+        "type": "NECK",
+        "rarity": 2,
+        "main_affix_group": 25,
+        "sub_affix_group": 2,
+        "max_level": 6,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPAddedRatio",
+                "base_value": 0.027648,
+                "level_value": 0.009677,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackAddedRatio",
+                "base_value": 0.027648,
+                "level_value": 0.009677,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": 0.012096001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "PhysicalAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "FireAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "6": {
+                "id": 6,
+                "property": "IceAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "7": {
+                "id": 7,
+                "property": "ThunderAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "8": {
+                "id": 8,
+                "property": "WindAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "9": {
+                "id": 9,
+                "property": "QuantumAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "10": {
+                "id": 10,
+                "property": "ImaginaryAddedRatio",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 13.548016,
+                "level_value": null,
+                "step_value": 1.693502,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 6.774008,
+                "level_value": null,
+                "step_value": 0.846751,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 6.774008,
+                "level_value": null,
+                "step_value": 0.846751,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.017280001,
+                "level_value": null,
+                "step_value": 0.0021600004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 1.0,
+                "level_value": null,
+                "step_value": 0.1,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.010368001,
+                "level_value": null,
+                "step_value": 0.0012960008,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 33186,
+        "set_id": 318,
+        "type": "OBJECT",
+        "rarity": 2,
+        "main_affix_group": 26,
+        "sub_affix_group": 2,
+        "max_level": 6,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.041472,
+                "level_value": 0.014515,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "SPRatioBase",
+                "base_value": 0.012442,
+                "level_value": 0.0043550003,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "HPAddedRatio",
+                "base_value": 0.027648,
+                "level_value": 0.009677,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "AttackAddedRatio",
+                "base_value": 0.027648,
+                "level_value": 0.009677,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": 0.012096001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 13.548016,
+                "level_value": null,
+                "step_value": 1.693502,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 6.774008,
+                "level_value": null,
+                "step_value": 0.846751,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 6.774008,
+                "level_value": null,
+                "step_value": 0.846751,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.017280001,
+                "level_value": null,
+                "step_value": 0.0021600004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 1.0,
+                "level_value": null,
+                "step_value": 0.1,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.010368001,
+                "level_value": null,
+                "step_value": 0.0012960008,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.013824001,
+                "level_value": null,
+                "step_value": 0.0017280006,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
         "id": 41011,
         "set_id": 101,
         "type": "HEAD",
@@ -36104,6 +36858,760 @@
         }
     },
     {
+        "id": 43175,
+        "set_id": 317,
+        "type": "NECK",
+        "rarity": 3,
+        "main_affix_group": 35,
+        "sub_affix_group": 3,
+        "max_level": 9,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPAddedRatio",
+                "base_value": 0.041472,
+                "level_value": 0.014515,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackAddedRatio",
+                "base_value": 0.041472,
+                "level_value": 0.014515,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.05184,
+                "level_value": 0.018144,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "PhysicalAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "FireAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "6": {
+                "id": 6,
+                "property": "IceAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "7": {
+                "id": 7,
+                "property": "ThunderAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "8": {
+                "id": 8,
+                "property": "WindAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "9": {
+                "id": 9,
+                "property": "QuantumAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "10": {
+                "id": 10,
+                "property": "ImaginaryAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 20.322023,
+                "level_value": null,
+                "step_value": 2.540253,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 10.161012,
+                "level_value": null,
+                "step_value": 1.270126,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 10.161012,
+                "level_value": null,
+                "step_value": 1.270126,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.02592,
+                "level_value": null,
+                "step_value": 0.0032400002,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 1.2,
+                "level_value": null,
+                "step_value": 0.1,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.015552,
+                "level_value": null,
+                "step_value": 0.0019440008,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.031104,
+                "level_value": null,
+                "step_value": 0.003888001,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.031104,
+                "level_value": null,
+                "step_value": 0.003888001,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 43176,
+        "set_id": 317,
+        "type": "OBJECT",
+        "rarity": 3,
+        "main_affix_group": 36,
+        "sub_affix_group": 3,
+        "max_level": 9,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "SPRatioBase",
+                "base_value": 0.018662,
+                "level_value": 0.0065320004,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "HPAddedRatio",
+                "base_value": 0.041472,
+                "level_value": 0.014515,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "AttackAddedRatio",
+                "base_value": 0.041472,
+                "level_value": 0.014515,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.05184,
+                "level_value": 0.018144,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 20.322023,
+                "level_value": null,
+                "step_value": 2.540253,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 10.161012,
+                "level_value": null,
+                "step_value": 1.270126,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 10.161012,
+                "level_value": null,
+                "step_value": 1.270126,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.02592,
+                "level_value": null,
+                "step_value": 0.0032400002,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 1.2,
+                "level_value": null,
+                "step_value": 0.1,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.015552,
+                "level_value": null,
+                "step_value": 0.0019440008,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.031104,
+                "level_value": null,
+                "step_value": 0.003888001,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.031104,
+                "level_value": null,
+                "step_value": 0.003888001,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 43185,
+        "set_id": 318,
+        "type": "NECK",
+        "rarity": 3,
+        "main_affix_group": 35,
+        "sub_affix_group": 3,
+        "max_level": 9,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPAddedRatio",
+                "base_value": 0.041472,
+                "level_value": 0.014515,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackAddedRatio",
+                "base_value": 0.041472,
+                "level_value": 0.014515,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.05184,
+                "level_value": 0.018144,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "PhysicalAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "FireAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "6": {
+                "id": 6,
+                "property": "IceAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "7": {
+                "id": 7,
+                "property": "ThunderAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "8": {
+                "id": 8,
+                "property": "WindAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "9": {
+                "id": 9,
+                "property": "QuantumAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "10": {
+                "id": 10,
+                "property": "ImaginaryAddedRatio",
+                "base_value": 0.037325,
+                "level_value": 0.013064001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 20.322023,
+                "level_value": null,
+                "step_value": 2.540253,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 10.161012,
+                "level_value": null,
+                "step_value": 1.270126,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 10.161012,
+                "level_value": null,
+                "step_value": 1.270126,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.02592,
+                "level_value": null,
+                "step_value": 0.0032400002,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 1.2,
+                "level_value": null,
+                "step_value": 0.1,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.015552,
+                "level_value": null,
+                "step_value": 0.0019440008,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.031104,
+                "level_value": null,
+                "step_value": 0.003888001,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.031104,
+                "level_value": null,
+                "step_value": 0.003888001,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 43186,
+        "set_id": 318,
+        "type": "OBJECT",
+        "rarity": 3,
+        "main_affix_group": 36,
+        "sub_affix_group": 3,
+        "max_level": 9,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "SPRatioBase",
+                "base_value": 0.018662,
+                "level_value": 0.0065320004,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "HPAddedRatio",
+                "base_value": 0.041472,
+                "level_value": 0.014515,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "AttackAddedRatio",
+                "base_value": 0.041472,
+                "level_value": 0.014515,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.05184,
+                "level_value": 0.018144,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 20.322023,
+                "level_value": null,
+                "step_value": 2.540253,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 10.161012,
+                "level_value": null,
+                "step_value": 1.270126,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 10.161012,
+                "level_value": null,
+                "step_value": 1.270126,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.02592,
+                "level_value": null,
+                "step_value": 0.0032400002,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 1.2,
+                "level_value": null,
+                "step_value": 0.1,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.015552,
+                "level_value": null,
+                "step_value": 0.0019440008,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.031104,
+                "level_value": null,
+                "step_value": 0.003888001,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.031104,
+                "level_value": null,
+                "step_value": 0.003888001,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
         "id": 51011,
         "set_id": 101,
         "type": "HEAD",
@@ -53992,6 +55500,760 @@
     {
         "id": 53166,
         "set_id": 316,
+        "type": "OBJECT",
+        "rarity": 4,
+        "main_affix_group": 46,
+        "sub_affix_group": 4,
+        "max_level": 12,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.082944,
+                "level_value": 0.029029999,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "SPRatioBase",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "HPAddedRatio",
+                "base_value": 0.055296,
+                "level_value": 0.019354,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "AttackAddedRatio",
+                "base_value": 0.055296,
+                "level_value": 0.019354,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.06912,
+                "level_value": 0.024192,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 27.096031,
+                "level_value": null,
+                "step_value": 3.387004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 13.548016,
+                "level_value": null,
+                "step_value": 1.693502,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 13.548016,
+                "level_value": null,
+                "step_value": 1.693502,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 1.6,
+                "level_value": null,
+                "step_value": 0.2,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.041472,
+                "level_value": null,
+                "step_value": 0.0051840004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.041472,
+                "level_value": null,
+                "step_value": 0.0051840004,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 53175,
+        "set_id": 317,
+        "type": "NECK",
+        "rarity": 4,
+        "main_affix_group": 45,
+        "sub_affix_group": 4,
+        "max_level": 12,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPAddedRatio",
+                "base_value": 0.055296,
+                "level_value": 0.019354,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackAddedRatio",
+                "base_value": 0.055296,
+                "level_value": 0.019354,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.06912,
+                "level_value": 0.024192,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "PhysicalAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "FireAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "6": {
+                "id": 6,
+                "property": "IceAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "7": {
+                "id": 7,
+                "property": "ThunderAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "8": {
+                "id": 8,
+                "property": "WindAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "9": {
+                "id": 9,
+                "property": "QuantumAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "10": {
+                "id": 10,
+                "property": "ImaginaryAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 27.096031,
+                "level_value": null,
+                "step_value": 3.387004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 13.548016,
+                "level_value": null,
+                "step_value": 1.693502,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 13.548016,
+                "level_value": null,
+                "step_value": 1.693502,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 1.6,
+                "level_value": null,
+                "step_value": 0.2,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.041472,
+                "level_value": null,
+                "step_value": 0.0051840004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.041472,
+                "level_value": null,
+                "step_value": 0.0051840004,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 53176,
+        "set_id": 317,
+        "type": "OBJECT",
+        "rarity": 4,
+        "main_affix_group": 46,
+        "sub_affix_group": 4,
+        "max_level": 12,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.082944,
+                "level_value": 0.029029999,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "SPRatioBase",
+                "base_value": 0.024883,
+                "level_value": 0.008709,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "HPAddedRatio",
+                "base_value": 0.055296,
+                "level_value": 0.019354,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "AttackAddedRatio",
+                "base_value": 0.055296,
+                "level_value": 0.019354,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.06912,
+                "level_value": 0.024192,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 27.096031,
+                "level_value": null,
+                "step_value": 3.387004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 13.548016,
+                "level_value": null,
+                "step_value": 1.693502,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 13.548016,
+                "level_value": null,
+                "step_value": 1.693502,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 1.6,
+                "level_value": null,
+                "step_value": 0.2,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.041472,
+                "level_value": null,
+                "step_value": 0.0051840004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.041472,
+                "level_value": null,
+                "step_value": 0.0051840004,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 53185,
+        "set_id": 318,
+        "type": "NECK",
+        "rarity": 4,
+        "main_affix_group": 45,
+        "sub_affix_group": 4,
+        "max_level": 12,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPAddedRatio",
+                "base_value": 0.055296,
+                "level_value": 0.019354,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackAddedRatio",
+                "base_value": 0.055296,
+                "level_value": 0.019354,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.06912,
+                "level_value": 0.024192,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "PhysicalAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "FireAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "6": {
+                "id": 6,
+                "property": "IceAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "7": {
+                "id": 7,
+                "property": "ThunderAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "8": {
+                "id": 8,
+                "property": "WindAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "9": {
+                "id": 9,
+                "property": "QuantumAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "10": {
+                "id": 10,
+                "property": "ImaginaryAddedRatio",
+                "base_value": 0.049766,
+                "level_value": 0.017418,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 27.096031,
+                "level_value": null,
+                "step_value": 3.387004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 13.548016,
+                "level_value": null,
+                "step_value": 1.693502,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 13.548016,
+                "level_value": null,
+                "step_value": 1.693502,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 1.6,
+                "level_value": null,
+                "step_value": 0.2,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.020736001,
+                "level_value": null,
+                "step_value": 0.0025920009,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.041472,
+                "level_value": null,
+                "step_value": 0.0051840004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.027648,
+                "level_value": null,
+                "step_value": 0.0034560005,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.041472,
+                "level_value": null,
+                "step_value": 0.0051840004,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 53186,
+        "set_id": 318,
         "type": "OBJECT",
         "rarity": 4,
         "main_affix_group": 46,
@@ -72824,6 +75086,760 @@
     {
         "id": 63166,
         "set_id": 316,
+        "type": "OBJECT",
+        "rarity": 5,
+        "main_affix_group": 56,
+        "sub_affix_group": 5,
+        "max_level": 15,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.10368,
+                "level_value": 0.036288,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "SPRatioBase",
+                "base_value": 0.031104,
+                "level_value": 0.010886001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "HPAddedRatio",
+                "base_value": 0.06912,
+                "level_value": 0.024192,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "AttackAddedRatio",
+                "base_value": 0.06912,
+                "level_value": 0.024192,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.0864,
+                "level_value": 0.030240001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 33.87004,
+                "level_value": null,
+                "step_value": 4.233755,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 16.935019,
+                "level_value": null,
+                "step_value": 2.116877,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 16.935019,
+                "level_value": null,
+                "step_value": 2.116877,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.0432,
+                "level_value": null,
+                "step_value": 0.0054,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 2.0,
+                "level_value": null,
+                "step_value": 0.3,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.02592,
+                "level_value": null,
+                "step_value": 0.0032400002,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.05184,
+                "level_value": null,
+                "step_value": 0.0064800004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.05184,
+                "level_value": null,
+                "step_value": 0.0064800004,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 63175,
+        "set_id": 317,
+        "type": "NECK",
+        "rarity": 5,
+        "main_affix_group": 55,
+        "sub_affix_group": 5,
+        "max_level": 15,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPAddedRatio",
+                "base_value": 0.06912,
+                "level_value": 0.024192,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackAddedRatio",
+                "base_value": 0.06912,
+                "level_value": 0.024192,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.0864,
+                "level_value": 0.030240001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "PhysicalAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "FireAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "6": {
+                "id": 6,
+                "property": "IceAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "7": {
+                "id": 7,
+                "property": "ThunderAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "8": {
+                "id": 8,
+                "property": "WindAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "9": {
+                "id": 9,
+                "property": "QuantumAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "10": {
+                "id": 10,
+                "property": "ImaginaryAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 33.87004,
+                "level_value": null,
+                "step_value": 4.233755,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 16.935019,
+                "level_value": null,
+                "step_value": 2.116877,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 16.935019,
+                "level_value": null,
+                "step_value": 2.116877,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.0432,
+                "level_value": null,
+                "step_value": 0.0054,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 2.0,
+                "level_value": null,
+                "step_value": 0.3,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.02592,
+                "level_value": null,
+                "step_value": 0.0032400002,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.05184,
+                "level_value": null,
+                "step_value": 0.0064800004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.05184,
+                "level_value": null,
+                "step_value": 0.0064800004,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 63176,
+        "set_id": 317,
+        "type": "OBJECT",
+        "rarity": 5,
+        "main_affix_group": 56,
+        "sub_affix_group": 5,
+        "max_level": 15,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.10368,
+                "level_value": 0.036288,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "SPRatioBase",
+                "base_value": 0.031104,
+                "level_value": 0.010886001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "HPAddedRatio",
+                "base_value": 0.06912,
+                "level_value": 0.024192,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "AttackAddedRatio",
+                "base_value": 0.06912,
+                "level_value": 0.024192,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.0864,
+                "level_value": 0.030240001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 33.87004,
+                "level_value": null,
+                "step_value": 4.233755,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 16.935019,
+                "level_value": null,
+                "step_value": 2.116877,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 16.935019,
+                "level_value": null,
+                "step_value": 2.116877,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.0432,
+                "level_value": null,
+                "step_value": 0.0054,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 2.0,
+                "level_value": null,
+                "step_value": 0.3,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.02592,
+                "level_value": null,
+                "step_value": 0.0032400002,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.05184,
+                "level_value": null,
+                "step_value": 0.0064800004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.05184,
+                "level_value": null,
+                "step_value": 0.0064800004,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 63185,
+        "set_id": 318,
+        "type": "NECK",
+        "rarity": 5,
+        "main_affix_group": 55,
+        "sub_affix_group": 5,
+        "max_level": 15,
+        "main_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPAddedRatio",
+                "base_value": 0.06912,
+                "level_value": 0.024192,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackAddedRatio",
+                "base_value": 0.06912,
+                "level_value": 0.024192,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.0864,
+                "level_value": 0.030240001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "4": {
+                "id": 4,
+                "property": "PhysicalAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "5": {
+                "id": 5,
+                "property": "FireAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "6": {
+                "id": 6,
+                "property": "IceAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "7": {
+                "id": 7,
+                "property": "ThunderAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "8": {
+                "id": 8,
+                "property": "WindAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "9": {
+                "id": 9,
+                "property": "QuantumAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            },
+            "10": {
+                "id": 10,
+                "property": "ImaginaryAddedRatio",
+                "base_value": 0.062208,
+                "level_value": 0.021773001,
+                "step_value": null,
+                "is_main": true,
+                "max_step": null
+            }
+        },
+        "sub_affix": {
+            "1": {
+                "id": 1,
+                "property": "HPDelta",
+                "base_value": 33.87004,
+                "level_value": null,
+                "step_value": 4.233755,
+                "is_main": false,
+                "max_step": 2
+            },
+            "2": {
+                "id": 2,
+                "property": "AttackDelta",
+                "base_value": 16.935019,
+                "level_value": null,
+                "step_value": 2.116877,
+                "is_main": false,
+                "max_step": 2
+            },
+            "3": {
+                "id": 3,
+                "property": "DefenceDelta",
+                "base_value": 16.935019,
+                "level_value": null,
+                "step_value": 2.116877,
+                "is_main": false,
+                "max_step": 2
+            },
+            "4": {
+                "id": 4,
+                "property": "HPAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "5": {
+                "id": 5,
+                "property": "AttackAddedRatio",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "6": {
+                "id": 6,
+                "property": "DefenceAddedRatio",
+                "base_value": 0.0432,
+                "level_value": null,
+                "step_value": 0.0054,
+                "is_main": false,
+                "max_step": 2
+            },
+            "7": {
+                "id": 7,
+                "property": "SpeedDelta",
+                "base_value": 2.0,
+                "level_value": null,
+                "step_value": 0.3,
+                "is_main": false,
+                "max_step": 2
+            },
+            "8": {
+                "id": 8,
+                "property": "CriticalChanceBase",
+                "base_value": 0.02592,
+                "level_value": null,
+                "step_value": 0.0032400002,
+                "is_main": false,
+                "max_step": 2
+            },
+            "9": {
+                "id": 9,
+                "property": "CriticalDamageBase",
+                "base_value": 0.05184,
+                "level_value": null,
+                "step_value": 0.0064800004,
+                "is_main": false,
+                "max_step": 2
+            },
+            "10": {
+                "id": 10,
+                "property": "StatusProbabilityBase",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "11": {
+                "id": 11,
+                "property": "StatusResistanceBase",
+                "base_value": 0.034560002,
+                "level_value": null,
+                "step_value": 0.0043200003,
+                "is_main": false,
+                "max_step": 2
+            },
+            "12": {
+                "id": 12,
+                "property": "BreakDamageAddedRatioBase",
+                "base_value": 0.05184,
+                "level_value": null,
+                "step_value": 0.0064800004,
+                "is_main": false,
+                "max_step": 2
+            }
+        }
+    },
+    {
+        "id": 63186,
+        "set_id": 318,
         "type": "OBJECT",
         "rarity": 5,
         "main_affix_group": 56,

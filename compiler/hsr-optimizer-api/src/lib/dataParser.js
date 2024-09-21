@@ -242,6 +242,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.fnAshblazingSet(8),
+        PresetEffects.fnPioneerSet(4),
         PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.FUA,
@@ -1021,7 +1022,9 @@ export function getScoringMetadata() {
           Stats.ATK_P,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.fnPioneerSet(4),
+      ],
       sortOption: SortOption.ULT,
       simulation: {
         parts: {
@@ -1216,7 +1219,9 @@ export function getScoringMetadata() {
           Stats.ERR,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.fnPioneerSet(4),
+      ],
       sortOption: SortOption.SPD,
     },
     1107: { // Clara
@@ -1743,6 +1748,7 @@ export function getScoringMetadata() {
       presets: [
         PresetEffects.fnAshblazingSet(0),
         PresetEffects.BANANA_SET,
+        PresetEffects.fnPioneerSet(4),
       ],
       sortOption: SortOption.FUA,
       simulation: {
@@ -3235,6 +3241,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.VALOROUS_SET,
+        PresetEffects.fnPioneerSet(4),
         PresetEffects.fnAshblazingSet(8),
       ],
       sortOption: SortOption.FUA,
@@ -3810,6 +3817,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.VALOROUS_SET,
+        PresetEffects.fnPioneerSet(4),
       ],
       sortOption: SortOption.FUA,
       simulation: {
@@ -4439,7 +4447,9 @@ export function getScoringMetadata() {
           Stats.ATK_P,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.fnPioneerSet(4),
+      ],
       sortOption: SortOption.ULT,
       simulation: {
         parts: {
@@ -4717,10 +4727,10 @@ export function getScoringMetadata() {
         ],
       },
     },
-    1317: { // Rappa // TODO
+    1317: { // Rappa
       stats: {
-        [Stats.ATK]: 1,
-        [Stats.ATK_P]: 1,
+        [Stats.ATK]: 0.5,
+        [Stats.ATK_P]: 0.5,
         [Stats.DEF]: 0,
         [Stats.DEF_P]: 0,
         [Stats.HP]: 0,
@@ -4809,8 +4819,8 @@ export function getScoringMetadata() {
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1003', // Himeko
-            lightCone: '23000', // Milky way
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
