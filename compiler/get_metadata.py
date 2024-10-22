@@ -1,8 +1,13 @@
 from httpx import get
 
 url = "https://raw.githubusercontent.com/PaiGramTeam/hsr-optimizer/main/src/lib/"
-HEAD_DATA = """import { Parts, Sets, SetsRelics, Stats, Constants } from 'lib/constants.ts'
-import { SortOption } from 'lib/optimizer/sortOptions'
+HEAD_DATA = """import { Parts, PartsMainStats, Sets, SetsRelics, Stats, Constants } from 'lib/constants.ts'
+import { SortOption } from 'lib/sortOptions'
+
+const BASIC = 'BASIC'
+const SKILL = 'SKILL'
+const ULT = 'ULT'
+const FUA = 'FUA'
 
 export const PresetEffects = {
   fnAshblazingSet: (stacks) => {
@@ -15,11 +20,22 @@ export const PresetEffects = {
       form.setConditionals[Sets.PioneerDiverOfDeadWaters][1] = value
     }
   },
+  fnSacerdosSet: (value) => {
+    return (form) => {
+      form.setConditionals[Sets.SacerdosRelivedOrdeal][1] = value
+    }
+  },
   PRISONER_SET: (form) => {
     form.setConditionals[Sets.PrisonerInDeepConfinement][1] = 3
   },
   WASTELANDER_SET: (form) => {
     form.setConditionals[Sets.PrisonerInDeepConfinement][1] = 2
+  },
+  VALOROUS_SET: (form) => {
+    form.setConditionals[Sets.TheWindSoaringValorous][1] = true
+  },
+  BANANA_SET: (form) => {
+    form.setConditionals[Sets.TheWondrousBananAmusementPark][1] = true
   },
 }
 

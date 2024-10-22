@@ -9,12 +9,12 @@ def get_content() -> str:
 
 
 def save_content(content: str) -> None:
-    with open(
+    for p in [
         "../src/starrailrelicscore/data/game_data.json",
-        "w",
-        encoding="utf-8",
-    ) as file:
-        file.write(content)
+        "hsr-optimizer-api/src/data/game_data.json",
+    ]:
+        with open(p, "w", encoding="utf-8") as file:
+            file.write(content)
 
 
 def main():

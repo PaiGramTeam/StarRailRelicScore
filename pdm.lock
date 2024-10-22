@@ -4,8 +4,11 @@
 [metadata]
 groups = ["default", "test"]
 strategy = ["cross_platform", "inherit_metadata"]
-lock_version = "4.4.1"
-content_hash = "sha256:08ff69357facd66cd23a02333693cf5892994ce63dbf521abea9264a210fde4c"
+lock_version = "4.5.0"
+content_hash = "sha256:5945e9f666e6746fac988371bb6919db33102ba40a2c1397b90b8588ff9e105b"
+
+[[metadata.targets]]
+requires_python = ">=3.8"
 
 [[package]]
 name = "anyio"
@@ -83,6 +86,7 @@ summary = "Composable command line interface toolkit"
 groups = ["test"]
 dependencies = [
     "colorama; platform_system == \"Windows\"",
+    "importlib-metadata; python_version < \"3.8\"",
 ]
 files = [
     {file = "click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28"},
@@ -119,6 +123,9 @@ version = "0.14.0"
 requires_python = ">=3.7"
 summary = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
 groups = ["test"]
+dependencies = [
+    "typing-extensions; python_version < \"3.8\"",
+]
 files = [
     {file = "h11-0.14.0-py3-none-any.whl", hash = "sha256:e3fe4ac4b851c468cc8363d500db52c2ead036020723024a109d37346efaa761"},
     {file = "h11-0.14.0.tar.gz", hash = "sha256:8f19fbbe99e72420ff35c00b27a34cb9937e902a8b810e2c88300c6f0a3b699d"},
