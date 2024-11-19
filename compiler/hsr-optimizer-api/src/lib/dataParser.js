@@ -181,6 +181,7 @@ export function getScoringMetadata() {
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
@@ -394,6 +395,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
@@ -648,6 +650,7 @@ export function getScoringMetadata() {
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.BandOfSizzlingThunder, Sets.BandOfSizzlingThunder],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
@@ -933,6 +936,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [SetsRelics.GeniusOfBrilliantStars, SetsRelics.GeniusOfBrilliantStars],
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
@@ -1036,6 +1040,7 @@ export function getScoringMetadata() {
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.BandOfSizzlingThunder, Sets.BandOfSizzlingThunder],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
@@ -1483,6 +1488,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
@@ -1733,6 +1739,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
+        errRopeEidolon: 6,
         breakpoints: {},
         comboAbilities: [null, ULT, SKILL, FUA, FUA],
         comboDot: 0,
@@ -1844,6 +1851,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
+          [Sets.SacerdosRelivedOrdeal, Sets.SacerdosRelivedOrdeal],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
@@ -2252,6 +2260,7 @@ export function getScoringMetadata() {
         comboDot: 0,
         comboBreak: 1,
         relicSets: [
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.ChampionOfStreetwiseBoxing, Sets.ChampionOfStreetwiseBoxing],
           [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
@@ -2451,6 +2460,7 @@ export function getScoringMetadata() {
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
           [Sets.HunterOfGlacialForest, Sets.HunterOfGlacialForest],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
@@ -2636,6 +2646,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
+        errRopeEidolon: 0,
         breakpoints: {},
         comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
@@ -3084,6 +3095,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.TheWindSoaringValorous, Sets.TheWindSoaringValorous],
+          [Sets.EagleOfTwilightLine, Sets.EagleOfTwilightLine],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
@@ -3184,6 +3196,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
+        errRopeEidolon: 0,
         breakpoints: {},
         comboAbilities: [null, ULT, SKILL, FUA],
         comboDot: 0,
@@ -3599,6 +3612,7 @@ export function getScoringMetadata() {
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.ChampionOfStreetwiseBoxing, Sets.ChampionOfStreetwiseBoxing],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
@@ -4349,6 +4363,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.HunterOfGlacialForest, Sets.HunterOfGlacialForest],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
@@ -4749,6 +4764,7 @@ export function getScoringMetadata() {
         comboDot: 0,
         comboBreak: 1,
         relicSets: [
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.ChampionOfStreetwiseBoxing, Sets.ChampionOfStreetwiseBoxing],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
@@ -4852,6 +4868,7 @@ export function getScoringMetadata() {
         comboDot: 0,
         comboBreak: 1,
         relicSets: [
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.ChampionOfStreetwiseBoxing, Sets.ChampionOfStreetwiseBoxing],
           ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
         ],
@@ -5042,6 +5059,143 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.BE,
+    },
+    1225: { // Fugue
+      stats: {
+        [Stats.ATK]: 0,
+        [Stats.ATK_P]: 0,
+        [Stats.DEF]: 0,
+        [Stats.DEF_P]: 0,
+        [Stats.HP]: 0,
+        [Stats.HP_P]: 0,
+        [Stats.SPD]: 1,
+        [Stats.CR]: 0,
+        [Stats.CD]: 0,
+        [Stats.EHR]: 1,
+        [Stats.RES]: 0,
+        [Stats.BE]: 1,
+        [Stats.ERR]: 1,
+        [Stats.OHB]: 0,
+        [Stats.Physical_DMG]: 0,
+        [Stats.Fire_DMG]: 1,
+        [Stats.Ice_DMG]: 0,
+        [Stats.Lightning_DMG]: 0,
+        [Stats.Wind_DMG]: 0,
+        [Stats.Quantum_DMG]: 0,
+        [Stats.Imaginary_DMG]: 0,
+      },
+      parts: {
+        [Parts.Body]: [],
+        [Parts.Feet]: [
+          Stats.SPD,
+        ],
+        [Parts.PlanarSphere]: [],
+        [Parts.LinkRope]: [
+          Stats.ERR,
+          Stats.BE,
+        ],
+      },
+      presets: [],
+      sortOption: SortOption.BASIC,
+      simulation: {
+        parts: {
+          [Parts.Body]: [
+            Stats.CR,
+            Stats.ATK_P,
+            Stats.EHR,
+          ],
+          [Parts.Feet]: [
+            Stats.SPD,
+          ],
+          [Parts.PlanarSphere]: [
+            Stats.ATK_P,
+            Stats.Fire_DMG,
+          ],
+          [Parts.LinkRope]: [
+            Stats.BE,
+          ],
+        },
+        substats: [
+          Stats.BE,
+          Stats.ATK_P,
+          Stats.CR,
+          Stats.CD,
+          Stats.EHR,
+        ],
+        errRopeEidolon: 0,
+        breakpoints: {
+          [Stats.EHR]: 0.67,
+        },
+        maxBonusRolls: {},
+        comboAbilities: [null, ULT, BASIC, BASIC, BASIC],
+        comboDot: 0,
+        comboBreak: 1,
+        relicSets: [
+          [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
+        ],
+        ornamentSets: [
+          Sets.ForgeOfTheKalpagniLantern,
+        ],
+        teammates: [
+          {
+            characterId: '1310', // Firefly
+            lightCone: '23025', // Whereabouts
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1303', // Ruan Mei
+            lightCone: '23019', // Past self
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+        ],
+      },
+    },
+    1313: { // Sunday
+      stats: {
+        [Stats.ATK]: 0,
+        [Stats.ATK_P]: 0,
+        [Stats.DEF]: 0.5,
+        [Stats.DEF_P]: 0.5,
+        [Stats.HP]: 0.5,
+        [Stats.HP_P]: 0.5,
+        [Stats.SPD]: 1,
+        [Stats.CR]: 0,
+        [Stats.CD]: 1,
+        [Stats.EHR]: 0,
+        [Stats.RES]: 0.75,
+        [Stats.BE]: 0,
+        [Stats.ERR]: 1,
+        [Stats.OHB]: 0,
+        [Stats.Physical_DMG]: 0,
+        [Stats.Fire_DMG]: 0,
+        [Stats.Ice_DMG]: 0,
+        [Stats.Lightning_DMG]: 0,
+        [Stats.Wind_DMG]: 0,
+        [Stats.Quantum_DMG]: 0,
+        [Stats.Imaginary_DMG]: 1,
+      },
+      parts: {
+        [Parts.Body]: [
+          Stats.CD,
+        ],
+        [Parts.Feet]: [
+          Stats.SPD,
+        ],
+        [Parts.PlanarSphere]: [],
+        [Parts.LinkRope]: [
+          Stats.ERR,
+        ],
+      },
+      presets: [],
+      sortOption: SortOption.CD,
     },
   }
 }

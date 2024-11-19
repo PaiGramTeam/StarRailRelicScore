@@ -2,9 +2,9 @@
 import gameData from 'data/game_data.json'
 
 // Semver defined optimizer version
-export const CURRENT_OPTIMIZER_VERSION = 'v2.6.5'
+export const CURRENT_OPTIMIZER_VERSION = 'v2.7.1'
 // Represents the beta data content version, used for display but not for update notifications
-export const CURRENT_DATA_VERSION = '2.6v5'
+export const CURRENT_DATA_VERSION = '2.7v5'
 
 export const Stats = {
   ATK_P: 'ATK%',
@@ -414,7 +414,7 @@ export const SetsRelics = {
   WatchmakerMasterOfDreamMachinations: 'Watchmaker, Master of Dream Machinations',
   IronCavalryAgainstTheScourge: 'Iron Cavalry Against the Scourge',
   TheWindSoaringValorous: 'The Wind-Soaring Valorous',
-  SacerdosRelivedOrdeal: "Sacerdos' Relived Ordeal",
+  SacerdosRelivedOrdeal: 'Sacerdos\' Relived Ordeal',
   ScholarLostInErudition: 'Scholar Lost in Erudition',
 }
 
@@ -744,7 +744,6 @@ export const COMPUTE_ENGINE_GPU_EXPERIMENTAL = 'GPU Experimental'
 
 export const SACERDOS_RELIVED_ORDEAL_1_STACK = 'Sacerdos\' Relived Ordeal 1x'
 export const SACERDOS_RELIVED_ORDEAL_2_STACK = 'Sacerdos\' Relived Ordeal 2x'
-
 
 export const ConditionalType = {
   SET: 0,
