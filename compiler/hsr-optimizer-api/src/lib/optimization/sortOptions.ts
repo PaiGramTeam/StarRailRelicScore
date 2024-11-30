@@ -1,6 +1,43 @@
 // This file tracks the mapping between various stat property references between the optimizer / worker / grid / buffer packer
 // This sucks - clean up the discrepancies eventually
-export const SortOption = {
+
+
+
+export type SortOptionProperties = {
+  key: string
+  gpuProperty: string
+  basicProperty: string
+  combatProperty: string
+  basicGridColumn: string
+  combatGridColumn: string
+  optimizerKey: number
+  isComputedRating?: boolean
+}
+
+export const SortOption: {
+  ATK: SortOptionProperties
+  DEF: SortOptionProperties
+  HP: SortOptionProperties
+  SPD: SortOptionProperties
+  CR: SortOptionProperties
+  CD: SortOptionProperties
+  EHR: SortOptionProperties
+  RES: SortOptionProperties
+  BE: SortOptionProperties
+  OHB: SortOptionProperties
+  ERR: SortOptionProperties
+  ELEMENTAL_DMG: SortOptionProperties
+  EHP: SortOptionProperties
+  BASIC: SortOptionProperties
+  SKILL: SortOptionProperties
+  ULT: SortOptionProperties
+  FUA: SortOptionProperties
+  DOT: SortOptionProperties
+  BREAK: SortOptionProperties
+  COMBO: SortOptionProperties
+  HEAL: SortOptionProperties
+  SHIELD: SortOptionProperties
+} = {
   ATK: {
     key: 'ATK',
     gpuProperty: 'ATK',
@@ -8,6 +45,7 @@ export const SortOption = {
     combatProperty: 'ATK',
     basicGridColumn: 'ATK',
     combatGridColumn: 'xATK',
+    optimizerKey: 0,
   },
   DEF: {
     key: 'DEF',
@@ -16,6 +54,7 @@ export const SortOption = {
     combatProperty: 'DEF',
     basicGridColumn: 'DEF',
     combatGridColumn: 'xDEF',
+    optimizerKey: 0,
   },
   HP: {
     key: 'HP',
@@ -24,6 +63,7 @@ export const SortOption = {
     combatProperty: 'HP',
     basicGridColumn: 'HP',
     combatGridColumn: 'xHP',
+    optimizerKey: 0,
   },
   SPD: {
     key: 'SPD',
@@ -32,6 +72,7 @@ export const SortOption = {
     combatProperty: 'SPD',
     basicGridColumn: 'SPD',
     combatGridColumn: 'xSPD',
+    optimizerKey: 0,
   },
   CR: {
     key: 'CR',
@@ -40,6 +81,7 @@ export const SortOption = {
     combatProperty: 'CRIT Rate',
     basicGridColumn: 'CRIT Rate',
     combatGridColumn: 'xCR',
+    optimizerKey: 0,
   },
   CD: {
     key: 'CD',
@@ -48,6 +90,7 @@ export const SortOption = {
     combatProperty: 'CRIT DMG',
     basicGridColumn: 'CRIT DMG',
     combatGridColumn: 'xCD',
+    optimizerKey: 0,
   },
   EHR: {
     key: 'EHR',
@@ -56,6 +99,7 @@ export const SortOption = {
     combatProperty: 'Effect Hit Rate',
     basicGridColumn: 'Effect Hit Rate',
     combatGridColumn: 'xEHR',
+    optimizerKey: 0,
   },
   RES: {
     key: 'RES',
@@ -64,6 +108,7 @@ export const SortOption = {
     combatProperty: 'Effect RES',
     basicGridColumn: 'Effect RES',
     combatGridColumn: 'xRES',
+    optimizerKey: 0,
   },
   BE: {
     key: 'BE',
@@ -72,6 +117,7 @@ export const SortOption = {
     combatProperty: 'Break Effect',
     basicGridColumn: 'Break Effect',
     combatGridColumn: 'xBE',
+    optimizerKey: 0,
   },
   OHB: {
     key: 'OHB',
@@ -80,6 +126,7 @@ export const SortOption = {
     combatProperty: 'Outgoing Healing Boost',
     basicGridColumn: 'Outgoing Healing Boost',
     combatGridColumn: 'xOHB',
+    optimizerKey: 0,
   },
   ERR: {
     key: 'ERR',
@@ -88,6 +135,7 @@ export const SortOption = {
     combatProperty: 'Energy Regeneration Rate',
     basicGridColumn: 'Energy Regeneration Rate',
     combatGridColumn: 'xERR',
+    optimizerKey: 0,
   },
   ELEMENTAL_DMG: {
     key: 'ELEMENTAL_DMG',
@@ -96,6 +144,7 @@ export const SortOption = {
     combatProperty: 'ELEMENTAL_DMG',
     basicGridColumn: 'ED',
     combatGridColumn: 'xELEMENTAL_DMG',
+    optimizerKey: 0,
     isComputedRating: true,
   },
   EHP: {
@@ -105,6 +154,7 @@ export const SortOption = {
     combatProperty: 'EHP',
     basicGridColumn: 'EHP',
     combatGridColumn: 'EHP',
+    optimizerKey: 0,
     isComputedRating: true,
   },
   BASIC: {
@@ -114,6 +164,7 @@ export const SortOption = {
     combatProperty: 'BASIC_DMG',
     basicGridColumn: 'BASIC',
     combatGridColumn: 'BASIC',
+    optimizerKey: 0,
     isComputedRating: true,
   },
   SKILL: {
@@ -123,6 +174,7 @@ export const SortOption = {
     combatProperty: 'SKILL_DMG',
     basicGridColumn: 'SKILL',
     combatGridColumn: 'SKILL',
+    optimizerKey: 0,
     isComputedRating: true,
   },
   ULT: {
@@ -132,6 +184,7 @@ export const SortOption = {
     combatProperty: 'ULT_DMG',
     basicGridColumn: 'ULT',
     combatGridColumn: 'ULT',
+    optimizerKey: 0,
     isComputedRating: true,
   },
   FUA: {
@@ -141,6 +194,7 @@ export const SortOption = {
     combatProperty: 'FUA_DMG',
     basicGridColumn: 'FUA',
     combatGridColumn: 'FUA',
+    optimizerKey: 0,
     isComputedRating: true,
   },
   DOT: {
@@ -150,6 +204,7 @@ export const SortOption = {
     combatProperty: 'DOT_DMG',
     basicGridColumn: 'DOT',
     combatGridColumn: 'DOT',
+    optimizerKey: 0,
     isComputedRating: true,
   },
   BREAK: {
@@ -159,6 +214,7 @@ export const SortOption = {
     combatProperty: 'BREAK_DMG',
     basicGridColumn: 'BREAK',
     combatGridColumn: 'BREAK',
+    optimizerKey: 0,
     isComputedRating: true,
   },
   COMBO: {
@@ -168,6 +224,27 @@ export const SortOption = {
     combatProperty: 'COMBO_DMG',
     basicGridColumn: 'COMBO',
     combatGridColumn: 'COMBO',
+    optimizerKey: 0,
+    isComputedRating: true,
+  },
+  HEAL: {
+    key: 'HEAL',
+    gpuProperty: 'HEAL_VALUE',
+    basicProperty: 'HEAL_VALUE',
+    combatProperty: 'HEAL_VALUE',
+    basicGridColumn: 'HEAL',
+    combatGridColumn: 'HEAL',
+    optimizerKey: 0,
+    isComputedRating: true,
+  },
+  SHIELD: {
+    key: 'SHIELD',
+    gpuProperty: 'SHIELD_VALUE',
+    basicProperty: 'SHIELD_VALUE',
+    combatProperty: 'SHIELD_VALUE',
+    basicGridColumn: 'SHIELD',
+    combatGridColumn: 'SHIELD',
+    optimizerKey: 0,
     isComputedRating: true,
   },
 }

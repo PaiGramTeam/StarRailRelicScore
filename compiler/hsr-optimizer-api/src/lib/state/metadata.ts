@@ -1,6 +1,7 @@
-import { Parts, PartsMainStats, Sets, SetsRelics, Stats, Constants } from 'lib/constants.ts'
-import { SortOption } from 'lib/sortOptions'
+import { Parts, PartsMainStats, Sets, SetsRelics, Stats, Constants } from 'lib/constants/constants'
+import { SortOption } from 'lib/optimization/sortOptions'
 
+const NULL = null as unknown as string
 const BASIC = 'BASIC'
 const SKILL = 'SKILL'
 const ULT = 'ULT'
@@ -38,9 +39,10 @@ export const PresetEffects = {
 
 const RELICS_2P_BREAK_EFFECT_SPEED = [
   Sets.MessengerTraversingHackerspace,
+  Sets.SacerdosRelivedOrdeal,
   Sets.ThiefOfShootingMeteor,
   Sets.WatchmakerMasterOfDreamMachinations,
-  Sets.IronCavalryAgainstScourge,
+  Sets.IronCavalryAgainstTheScourge,
 ]
 
 const SPREAD_RELICS_2P_GENERAL_CONDITIONALS = [
@@ -105,7 +107,8 @@ export function getScoringMetadata() {
       presets: [
         PresetEffects.VALOROUS_SET,
       ],
-      sortOption: SortOption.DEF,
+      sortOption: SortOption.SHIELD,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SKILL, SortOption.DOT],
     },
     1002: { // Dan Heng
       stats: {
@@ -152,6 +155,7 @@ export function getScoringMetadata() {
         PresetEffects.fnPioneerSet(4),
       ],
       sortOption: SortOption.ULT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -176,8 +180,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -258,6 +261,7 @@ export function getScoringMetadata() {
         PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.FUA,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -282,8 +286,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, FUA, SKILL, FUA, SKILL, FUA],
+        comboAbilities: [NULL, ULT, FUA, SKILL, FUA, SKILL, FUA],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -365,6 +368,7 @@ export function getScoringMetadata() {
         PresetEffects.fnPioneerSet(4),
       ],
       sortOption: SortOption.SKILL,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -389,8 +393,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -470,6 +473,7 @@ export function getScoringMetadata() {
         PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.DOT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -497,7 +501,7 @@ export function getScoringMetadata() {
         breakpoints: {
           [Stats.EHR]: 0.282,
         },
-        comboAbilities: [null, ULT, SKILL, FUA, SKILL, FUA],
+        comboAbilities: [NULL, ULT, SKILL, FUA, SKILL, FUA],
         comboDot: 16,
         comboBreak: 0,
         relicSets: [
@@ -577,6 +581,7 @@ export function getScoringMetadata() {
         PresetEffects.fnPioneerSet(4),
       ],
       sortOption: SortOption.ULT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
     },
     1008: { // Arlan
       stats: {
@@ -621,6 +626,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.SKILL,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -645,8 +651,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -717,6 +722,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.SPD,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.ULT, SortOption.FUA],
     },
     1013: { // Herta
       stats: {
@@ -764,6 +770,7 @@ export function getScoringMetadata() {
         PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.FUA,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -788,8 +795,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, FUA, SKILL, FUA, SKILL, FUA],
+        comboAbilities: [NULL, ULT, FUA, SKILL, FUA, SKILL, FUA],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -862,6 +868,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.CD,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.ULT, SortOption.DOT],
     },
     1102: { // Seele
       stats: {
@@ -906,6 +913,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.SKILL,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -930,8 +938,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -1011,6 +1018,7 @@ export function getScoringMetadata() {
         PresetEffects.fnPioneerSet(4),
       ],
       sortOption: SortOption.ULT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -1035,8 +1043,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -1112,7 +1119,8 @@ export function getScoringMetadata() {
         ],
       },
       presets: [],
-      sortOption: SortOption.DEF,
+      sortOption: SortOption.SHIELD,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
     },
     1105: { // Natasha
       stats: {
@@ -1156,7 +1164,8 @@ export function getScoringMetadata() {
         ],
       },
       presets: [],
-      sortOption: SortOption.EHP,
+      sortOption: SortOption.HEAL,
+      hiddenColumns: [SortOption.SHIELD, SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
     },
     1106: { // Pela
       stats: {
@@ -1204,6 +1213,7 @@ export function getScoringMetadata() {
         PresetEffects.fnPioneerSet(4),
       ],
       sortOption: SortOption.SPD,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
     },
     1107: { // Clara
       stats: {
@@ -1251,6 +1261,7 @@ export function getScoringMetadata() {
         PresetEffects.fnSacerdosSet(1),
       ],
       sortOption: SortOption.FUA,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.ULT, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -1275,8 +1286,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, FUA, FUA, FUA],
+        comboAbilities: [NULL, ULT, SKILL, FUA, FUA, FUA],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -1357,6 +1367,7 @@ export function getScoringMetadata() {
         PresetEffects.PRISONER_SET,
       ],
       sortOption: SortOption.DOT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -1381,8 +1392,7 @@ export function getScoringMetadata() {
           Stats.CR,
           Stats.CD,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 60,
         comboBreak: 0,
         relicSets: [
@@ -1458,6 +1468,7 @@ export function getScoringMetadata() {
         PresetEffects.fnPioneerSet(4),
       ],
       sortOption: SortOption.SKILL,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -1482,8 +1493,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -1559,7 +1569,8 @@ export function getScoringMetadata() {
         ],
       },
       presets: [],
-      sortOption: SortOption.EHP,
+      sortOption: SortOption.HEAL,
+      hiddenColumns: [SortOption.SHIELD, SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
     },
     1111: { // Luka
       stats: {
@@ -1607,6 +1618,7 @@ export function getScoringMetadata() {
         PresetEffects.PRISONER_SET,
       ],
       sortOption: SortOption.DOT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -1632,8 +1644,7 @@ export function getScoringMetadata() {
           Stats.EHR,
           Stats.CR,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, BASIC, BASIC],
+        comboAbilities: [NULL, ULT, SKILL, BASIC, BASIC],
         comboDot: 5,
         comboBreak: 1,
         relicSets: [
@@ -1715,6 +1726,7 @@ export function getScoringMetadata() {
         PresetEffects.fnSacerdosSet(1),
       ],
       sortOption: SortOption.FUA,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.ULT, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -1740,8 +1752,7 @@ export function getScoringMetadata() {
           Stats.ATK,
         ],
         errRopeEidolon: 6,
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, FUA, FUA],
+        comboAbilities: [NULL, ULT, SKILL, FUA, FUA],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -1821,6 +1832,7 @@ export function getScoringMetadata() {
         PresetEffects.fnSacerdosSet(2),
       ],
       sortOption: SortOption.BASIC,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -1845,8 +1857,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, BASIC, FUA, BASIC, FUA],
+        comboAbilities: [NULL, ULT, BASIC, FUA, BASIC, FUA],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -1925,6 +1936,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.SPD,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.ULT, SortOption.FUA, SortOption.DOT],
     },
     1203: { // Luocha
       stats: {
@@ -1973,6 +1985,7 @@ export function getScoringMetadata() {
         PresetEffects.WASTELANDER_SET,
       ],
       sortOption: SortOption.SPD,
+      hiddenColumns: [SortOption.SHIELD, SortOption.SKILL, SortOption.FUA, SortOption.DOT],
     },
     1204: { // Jing Yuan
       stats: {
@@ -2021,6 +2034,7 @@ export function getScoringMetadata() {
         PresetEffects.BANANA_SET,
       ],
       sortOption: SortOption.FUA,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -2045,8 +2059,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL, FUA],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL, FUA],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -2127,6 +2140,7 @@ export function getScoringMetadata() {
         PresetEffects.fnSacerdosSet(1),
       ],
       sortOption: SortOption.BASIC,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -2152,8 +2166,7 @@ export function getScoringMetadata() {
           Stats.HP,
           Stats.ATK_P,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, BASIC, FUA, BASIC],
+        comboAbilities: [NULL, ULT, BASIC, FUA, BASIC],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -2230,6 +2243,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.SKILL,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -2255,8 +2269,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.BE,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 1,
         relicSets: [
@@ -2338,6 +2351,7 @@ export function getScoringMetadata() {
         PresetEffects.fnSacerdosSet(1),
       ],
       sortOption: SortOption.ULT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.FUA, SortOption.DOT],
     },
     1208: { // Fu Xuan
       stats: {
@@ -2385,6 +2399,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.EHP,
+      hiddenColumns: [SortOption.SHIELD, SortOption.SKILL, SortOption.FUA, SortOption.DOT],
     },
     1209: { // Yanqing
       stats: {
@@ -2432,6 +2447,7 @@ export function getScoringMetadata() {
         PresetEffects.fnAshblazingSet(2),
       ],
       sortOption: SortOption.ULT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -2455,8 +2471,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, FUA, SKILL, FUA, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, FUA, SKILL, FUA, SKILL],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -2536,6 +2551,7 @@ export function getScoringMetadata() {
         PresetEffects.PRISONER_SET,
       ],
       sortOption: SortOption.DOT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA],
     },
     1211: { // Bailu
       stats: {
@@ -2578,7 +2594,8 @@ export function getScoringMetadata() {
         ],
       },
       presets: [],
-      sortOption: SortOption.EHP,
+      sortOption: SortOption.HEAL,
+      hiddenColumns: [SortOption.SHIELD, SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
     },
     1212: { // Jingliu
       stats: {
@@ -2623,6 +2640,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.SKILL,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -2647,8 +2665,7 @@ export function getScoringMetadata() {
           Stats.ATK,
         ],
         errRopeEidolon: 0,
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -2727,6 +2744,7 @@ export function getScoringMetadata() {
         PresetEffects.WASTELANDER_SET,
       ],
       sortOption: SortOption.BASIC,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -2751,8 +2769,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, BASIC, BASIC],
+        comboAbilities: [NULL, ULT, BASIC, BASIC],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -2833,6 +2850,7 @@ export function getScoringMetadata() {
         PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.SKILL,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -2859,8 +2877,7 @@ export function getScoringMetadata() {
           Stats.CD,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, FUA, SKILL, FUA, SKILL, FUA],
+        comboAbilities: [NULL, ULT, FUA, SKILL, FUA, SKILL, FUA],
         comboDot: 0,
         comboBreak: 1,
         relicSets: [
@@ -2931,6 +2948,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.SPD,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.ULT, SortOption.FUA, SortOption.DOT],
     },
     1217: { // Huohuo
       stats: {
@@ -2974,7 +2992,8 @@ export function getScoringMetadata() {
         ],
       },
       presets: [],
-      sortOption: SortOption.EHP,
+      sortOption: SortOption.HEAL,
+      hiddenColumns: [SortOption.SHIELD, SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
     },
     1218: { // Jiaoqiu
       stats: {
@@ -3017,6 +3036,7 @@ export function getScoringMetadata() {
         PresetEffects.PRISONER_SET,
       ],
       sortOption: SortOption.EHR,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA],
     },
     1220: { // Feixiao
       stats: {
@@ -3064,6 +3084,7 @@ export function getScoringMetadata() {
         PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.ULT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -3088,9 +3109,7 @@ export function getScoringMetadata() {
           Stats.CD,
           Stats.ATK,
         ],
-        breakpoints: {},
-        maxBonusRolls: {},
-        comboAbilities: [null, ULT, SKILL, FUA, FUA, ULT, SKILL, FUA, FUA],
+        comboAbilities: [NULL, ULT, SKILL, FUA, FUA, ULT, SKILL, FUA, FUA],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -3172,6 +3191,7 @@ export function getScoringMetadata() {
         PresetEffects.fnAshblazingSet(8),
       ],
       sortOption: SortOption.FUA,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.ULT, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -3197,8 +3217,7 @@ export function getScoringMetadata() {
           Stats.ATK,
         ],
         errRopeEidolon: 0,
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, FUA],
+        comboAbilities: [NULL, ULT, SKILL, FUA],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -3284,6 +3303,7 @@ export function getScoringMetadata() {
         PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.BE,
+      hiddenColumns: [SortOption.SHIELD, SortOption.DOT],
     },
     1223: { // Moze
       stats: {
@@ -3332,6 +3352,7 @@ export function getScoringMetadata() {
         PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.FUA,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -3356,9 +3377,7 @@ export function getScoringMetadata() {
           Stats.CD,
           Stats.ATK,
         ],
-        breakpoints: {},
-        maxBonusRolls: {},
-        comboAbilities: [null, SKILL, ULT, FUA, FUA],
+        comboAbilities: [NULL, SKILL, ULT, FUA, FUA],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -3440,6 +3459,7 @@ export function getScoringMetadata() {
         PresetEffects.VALOROUS_SET,
       ],
       sortOption: SortOption.BASIC,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -3464,9 +3484,7 @@ export function getScoringMetadata() {
           Stats.CD,
           Stats.ATK,
         ],
-        breakpoints: {},
-        maxBonusRolls: {},
-        comboAbilities: [null, ULT, BASIC, FUA],
+        comboAbilities: [NULL, ULT, BASIC, FUA],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -3539,6 +3557,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.BE,
+      hiddenColumns: [SortOption.SHIELD, SortOption.SKILL, SortOption.FUA, SortOption.DOT],
     },
     1302: { // Argenti
       stats: {
@@ -3583,6 +3602,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.ULT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -3607,8 +3627,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -3678,6 +3697,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.BE,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
     },
     1304: { // Aventurine
       stats: {
@@ -3727,6 +3747,7 @@ export function getScoringMetadata() {
         PresetEffects.fnPioneerSet(4),
       ],
       sortOption: SortOption.FUA,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SKILL, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -3755,7 +3776,7 @@ export function getScoringMetadata() {
         breakpoints: {
           [Stats.DEF]: 4000,
         },
-        comboAbilities: [null, ULT, BASIC, FUA, BASIC, FUA],
+        comboAbilities: [NULL, ULT, BASIC, FUA, BASIC, FUA],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -3842,6 +3863,7 @@ export function getScoringMetadata() {
         PresetEffects.WASTELANDER_SET,
       ],
       sortOption: SortOption.FUA,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -3866,8 +3888,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, FUA, FUA, SKILL, FUA, FUA],
+        comboAbilities: [NULL, ULT, SKILL, FUA, FUA, SKILL, FUA, FUA],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -3939,6 +3960,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.CD,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
     },
     1307: { // Black Swan
       stats: {
@@ -3985,6 +4007,7 @@ export function getScoringMetadata() {
         PresetEffects.PRISONER_SET,
       ],
       sortOption: SortOption.DOT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -4013,7 +4036,7 @@ export function getScoringMetadata() {
         breakpoints: {
           [Stats.EHR]: 1.20,
         },
-        comboAbilities: [null, SKILL, ULT, BASIC, BASIC],
+        comboAbilities: [NULL, SKILL, ULT, BASIC, BASIC],
         comboDot: 16,
         comboBreak: 0,
         relicSets: [
@@ -4090,6 +4113,7 @@ export function getScoringMetadata() {
         PresetEffects.fnPioneerSet(4),
       ],
       sortOption: SortOption.ULT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -4114,8 +4138,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -4190,6 +4213,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.ATK,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.FUA, SortOption.DOT],
     },
     1310: { // Firefly
       stats: {
@@ -4232,6 +4256,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.SKILL,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.ULT, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -4255,9 +4280,7 @@ export function getScoringMetadata() {
           Stats.CR,
           Stats.CD,
         ],
-        breakpoints: {},
-        maxBonusRolls: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 1,
         relicSets: [
@@ -4333,6 +4356,7 @@ export function getScoringMetadata() {
         PresetEffects.fnPioneerSet(4),
       ],
       sortOption: SortOption.ULT,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -4357,8 +4381,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -4440,6 +4463,7 @@ export function getScoringMetadata() {
         PresetEffects.fnAshblazingSet(8),
       ],
       sortOption: SortOption.FUA,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -4464,8 +4488,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, FUA, BASIC, FUA, BASIC],
+        comboAbilities: [NULL, ULT, FUA, BASIC, FUA, BASIC],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
@@ -4536,6 +4559,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.BASIC,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -4560,8 +4584,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, BASIC, BASIC, BASIC],
+        comboAbilities: [NULL, ULT, BASIC, BASIC, BASIC],
         comboDot: 0,
         comboBreak: 1,
         relicSets: [
@@ -4633,6 +4656,7 @@ export function getScoringMetadata() {
         PresetEffects.WASTELANDER_SET,
       ],
       sortOption: SortOption.BASIC,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.ULT, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -4659,7 +4683,7 @@ export function getScoringMetadata() {
         breakpoints: {
           [Stats.ATK]: 3200,
         },
-        comboAbilities: [null, ULT, BASIC, BASIC, BASIC, SKILL],
+        comboAbilities: [NULL, ULT, BASIC, BASIC, BASIC, SKILL],
         comboDot: 0,
         comboBreak: 1,
         relicSets: [
@@ -4734,6 +4758,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.SKILL,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -4759,8 +4784,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 1,
         relicSets: [
@@ -4838,6 +4862,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.SKILL,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -4863,8 +4888,7 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        breakpoints: {},
-        comboAbilities: [null, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 1,
         relicSets: [
@@ -4939,7 +4963,8 @@ export function getScoringMetadata() {
         ],
       },
       presets: [],
-      sortOption: SortOption.DEF,
+      sortOption: SortOption.SHIELD,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SKILL, SortOption.FUA, SortOption.DOT],
     },
     8004: { // Fire Trailblazer F
       stats: {
@@ -4982,7 +5007,8 @@ export function getScoringMetadata() {
         ],
       },
       presets: [],
-      sortOption: SortOption.DEF,
+      sortOption: SortOption.SHIELD,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SKILL, SortOption.FUA, SortOption.DOT],
     },
     8005: { // Imaginary Trailblazer M
       stats: {
@@ -5021,6 +5047,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.BE,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.ULT, SortOption.FUA, SortOption.DOT],
     },
     8006: { // Imaginary Trailblazer F
       stats: {
@@ -5059,6 +5086,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.BE,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.ULT, SortOption.FUA, SortOption.DOT],
     },
     1225: { // Fugue
       stats: {
@@ -5097,6 +5125,7 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.BASIC,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.FUA, SortOption.DOT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -5106,6 +5135,7 @@ export function getScoringMetadata() {
           ],
           [Parts.Feet]: [
             Stats.SPD,
+            Stats.ATK_P,
           ],
           [Parts.PlanarSphere]: [
             Stats.ATK_P,
@@ -5126,10 +5156,9 @@ export function getScoringMetadata() {
         breakpoints: {
           [Stats.EHR]: 0.67,
         },
-        maxBonusRolls: {},
-        comboAbilities: [null, ULT, BASIC, BASIC, BASIC],
+        comboAbilities: [NULL, ULT, BASIC, BASIC, BASIC],
         comboDot: 0,
-        comboBreak: 1,
+        comboBreak: 3,
         relicSets: [
           [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
         ],
@@ -5196,6 +5225,8 @@ export function getScoringMetadata() {
       },
       presets: [],
       sortOption: SortOption.CD,
+      hiddenColumns: [SortOption.OHB, SortOption.HEAL, SortOption.SHIELD, SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
     },
   }
 }
+
