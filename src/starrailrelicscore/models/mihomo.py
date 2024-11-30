@@ -13,10 +13,10 @@ class Relic(BaseModel):
     tid: int
     level: Optional[int] = 0
     mainAffixId: int
-    subAffixList: Optional[List[SubAffix]]
+    subAffixList: Optional[List[SubAffix]] = None
     type: int
 
 
 class Avatar(BaseModel):
     avatarId: int
-    relicList: Optional[List[Relic]]
+    relicList: Optional[List[Relic]] = None
