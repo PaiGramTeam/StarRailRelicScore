@@ -79,11 +79,13 @@ def find_middle(js_content: str) -> str:
     start_index = js_content.find(start)
     # end_index = js_content.find(end)
     return js_content[start_index + len(start) :]
-  
+
 
 def fix_sort_options(js_content: str) -> str:
-  c = js_content.replace("import { Key } from 'lib/optimization/computedStatsArray'", "")
-  return re.sub(r'Key\.\w+', '0', c)
+    c = js_content.replace(
+        "import { Key } from 'lib/optimization/computedStatsArray'", ""
+    )
+    return re.sub(r"Key\.\w+", "0", c)
 
 
 def try_save_content(js_content: str, name: str, need_append: bool = False) -> None:
@@ -98,7 +100,10 @@ def main():
     middle = find_middle(js_content)
     try_save_content(middle, "state/metadata.ts", True)
     try_save_content(get_js_content("constants/constants.ts"), "constants/constants.ts")
-    try_save_content(fix_sort_options(get_js_content("optimization/sortOptions.ts")), "optimization/sortOptions.ts")
+    try_save_content(
+        fix_sort_options(get_js_content("optimization/sortOptions.ts")),
+        "optimization/sortOptions.ts",
+    )
 
 
 if __name__ == "__main__":
