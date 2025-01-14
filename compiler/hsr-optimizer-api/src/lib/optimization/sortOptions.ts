@@ -10,6 +10,8 @@ export type SortOptionProperties = {
   combatProperty: string
   basicGridColumn: string
   combatGridColumn: string
+  memoBasicGridColumn: string
+  memoCombatGridColumn: string
   optimizerKey: number
   isComputedRating?: boolean
 }
@@ -32,6 +34,7 @@ export const SortOption: {
   SKILL: SortOptionProperties
   ULT: SortOptionProperties
   FUA: SortOptionProperties
+  MEMO_SKILL: SortOptionProperties
   DOT: SortOptionProperties
   BREAK: SortOptionProperties
   COMBO: SortOptionProperties
@@ -45,6 +48,8 @@ export const SortOption: {
     combatProperty: 'ATK',
     basicGridColumn: 'ATK',
     combatGridColumn: 'xATK',
+    memoBasicGridColumn: 'mATK',
+    memoCombatGridColumn: 'mxATK',
     optimizerKey: 0,
   },
   DEF: {
@@ -54,6 +59,8 @@ export const SortOption: {
     combatProperty: 'DEF',
     basicGridColumn: 'DEF',
     combatGridColumn: 'xDEF',
+    memoBasicGridColumn: 'mATK',
+    memoCombatGridColumn: 'mxATK',
     optimizerKey: 0,
   },
   HP: {
@@ -63,6 +70,8 @@ export const SortOption: {
     combatProperty: 'HP',
     basicGridColumn: 'HP',
     combatGridColumn: 'xHP',
+    memoBasicGridColumn: 'mATK',
+    memoCombatGridColumn: 'mxATK',
     optimizerKey: 0,
   },
   SPD: {
@@ -72,6 +81,8 @@ export const SortOption: {
     combatProperty: 'SPD',
     basicGridColumn: 'SPD',
     combatGridColumn: 'xSPD',
+    memoBasicGridColumn: 'mSPD',
+    memoCombatGridColumn: 'mxSPD',
     optimizerKey: 0,
   },
   CR: {
@@ -81,6 +92,8 @@ export const SortOption: {
     combatProperty: 'CRIT Rate',
     basicGridColumn: 'CRIT Rate',
     combatGridColumn: 'xCR',
+    memoBasicGridColumn: 'mCR',
+    memoCombatGridColumn: 'mxCR',
     optimizerKey: 0,
   },
   CD: {
@@ -90,6 +103,8 @@ export const SortOption: {
     combatProperty: 'CRIT DMG',
     basicGridColumn: 'CRIT DMG',
     combatGridColumn: 'xCD',
+    memoBasicGridColumn: 'mCD',
+    memoCombatGridColumn: 'mxCD',
     optimizerKey: 0,
   },
   EHR: {
@@ -99,6 +114,8 @@ export const SortOption: {
     combatProperty: 'Effect Hit Rate',
     basicGridColumn: 'Effect Hit Rate',
     combatGridColumn: 'xEHR',
+    memoBasicGridColumn: 'mEHR',
+    memoCombatGridColumn: 'mxEHR',
     optimizerKey: 0,
   },
   RES: {
@@ -108,6 +125,8 @@ export const SortOption: {
     combatProperty: 'Effect RES',
     basicGridColumn: 'Effect RES',
     combatGridColumn: 'xRES',
+    memoBasicGridColumn: 'mRES',
+    memoCombatGridColumn: 'mxRES',
     optimizerKey: 0,
   },
   BE: {
@@ -117,6 +136,8 @@ export const SortOption: {
     combatProperty: 'Break Effect',
     basicGridColumn: 'Break Effect',
     combatGridColumn: 'xBE',
+    memoBasicGridColumn: 'mBE',
+    memoCombatGridColumn: 'mxBE',
     optimizerKey: 0,
   },
   OHB: {
@@ -126,6 +147,8 @@ export const SortOption: {
     combatProperty: 'Outgoing Healing Boost',
     basicGridColumn: 'Outgoing Healing Boost',
     combatGridColumn: 'xOHB',
+    memoBasicGridColumn: 'mOHB',
+    memoCombatGridColumn: 'mxOHB',
     optimizerKey: 0,
   },
   ERR: {
@@ -135,6 +158,8 @@ export const SortOption: {
     combatProperty: 'Energy Regeneration Rate',
     basicGridColumn: 'Energy Regeneration Rate',
     combatGridColumn: 'xERR',
+    memoBasicGridColumn: 'mERR',
+    memoCombatGridColumn: 'mxERR',
     optimizerKey: 0,
   },
   ELEMENTAL_DMG: {
@@ -144,6 +169,8 @@ export const SortOption: {
     combatProperty: 'ELEMENTAL_DMG',
     basicGridColumn: 'ED',
     combatGridColumn: 'xELEMENTAL_DMG',
+    memoBasicGridColumn: 'mELEMENTAL_DMG',
+    memoCombatGridColumn: 'mxELEMENTAL_DMG',
     optimizerKey: 0,
     isComputedRating: true,
   },
@@ -154,6 +181,8 @@ export const SortOption: {
     combatProperty: 'EHP',
     basicGridColumn: 'EHP',
     combatGridColumn: 'EHP',
+    memoBasicGridColumn: 'mxEHP',
+    memoCombatGridColumn: 'mxEHP',
     optimizerKey: 0,
     isComputedRating: true,
   },
@@ -164,6 +193,8 @@ export const SortOption: {
     combatProperty: 'BASIC_DMG',
     basicGridColumn: 'BASIC',
     combatGridColumn: 'BASIC',
+    memoBasicGridColumn: 'BASIC',
+    memoCombatGridColumn: 'BASIC',
     optimizerKey: 0,
     isComputedRating: true,
   },
@@ -174,6 +205,8 @@ export const SortOption: {
     combatProperty: 'SKILL_DMG',
     basicGridColumn: 'SKILL',
     combatGridColumn: 'SKILL',
+    memoBasicGridColumn: 'SKILL',
+    memoCombatGridColumn: 'SKILL',
     optimizerKey: 0,
     isComputedRating: true,
   },
@@ -184,6 +217,8 @@ export const SortOption: {
     combatProperty: 'ULT_DMG',
     basicGridColumn: 'ULT',
     combatGridColumn: 'ULT',
+    memoBasicGridColumn: 'ULT',
+    memoCombatGridColumn: 'ULT',
     optimizerKey: 0,
     isComputedRating: true,
   },
@@ -194,6 +229,20 @@ export const SortOption: {
     combatProperty: 'FUA_DMG',
     basicGridColumn: 'FUA',
     combatGridColumn: 'FUA',
+    memoBasicGridColumn: 'FUA',
+    memoCombatGridColumn: 'FUA',
+    optimizerKey: 0,
+    isComputedRating: true,
+  },
+  MEMO_SKILL: {
+    key: 'MEMO_SKILL',
+    gpuProperty: 'MEMO_SKILL_DMG',
+    basicProperty: 'MEMO_SKILL_DMG',
+    combatProperty: 'MEMO_SKILL_DMG',
+    basicGridColumn: 'MEMO_SKILL',
+    combatGridColumn: 'MEMO_SKILL',
+    memoBasicGridColumn: 'MEMO_SKILL',
+    memoCombatGridColumn: 'MEMO_SKILL',
     optimizerKey: 0,
     isComputedRating: true,
   },
@@ -204,6 +253,8 @@ export const SortOption: {
     combatProperty: 'DOT_DMG',
     basicGridColumn: 'DOT',
     combatGridColumn: 'DOT',
+    memoBasicGridColumn: 'DOT',
+    memoCombatGridColumn: 'DOT',
     optimizerKey: 0,
     isComputedRating: true,
   },
@@ -214,6 +265,8 @@ export const SortOption: {
     combatProperty: 'BREAK_DMG',
     basicGridColumn: 'BREAK',
     combatGridColumn: 'BREAK',
+    memoBasicGridColumn: 'BREAK',
+    memoCombatGridColumn: 'BREAK',
     optimizerKey: 0,
     isComputedRating: true,
   },
@@ -224,6 +277,8 @@ export const SortOption: {
     combatProperty: 'COMBO_DMG',
     basicGridColumn: 'COMBO',
     combatGridColumn: 'COMBO',
+    memoBasicGridColumn: 'COMBO',
+    memoCombatGridColumn: 'COMBO',
     optimizerKey: 0,
     isComputedRating: true,
   },
@@ -234,6 +289,8 @@ export const SortOption: {
     combatProperty: 'HEAL_VALUE',
     basicGridColumn: 'HEAL',
     combatGridColumn: 'HEAL',
+    memoBasicGridColumn: 'HEAL',
+    memoCombatGridColumn: 'HEAL',
     optimizerKey: 0,
     isComputedRating: true,
   },
@@ -244,6 +301,8 @@ export const SortOption: {
     combatProperty: 'SHIELD_VALUE',
     basicGridColumn: 'SHIELD',
     combatGridColumn: 'SHIELD',
+    memoBasicGridColumn: 'SHIELD',
+    memoCombatGridColumn: 'SHIELD',
     optimizerKey: 0,
     isComputedRating: true,
   },

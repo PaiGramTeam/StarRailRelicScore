@@ -2,9 +2,10 @@
 import gameData from 'data/game_data.json'
 
 // Semver defined optimizer version
-export const CURRENT_OPTIMIZER_VERSION = 'v3.0.1'
+export const CURRENT_OPTIMIZER_VERSION = 'v3.1.1'
 // Represents the beta data content version, used for display but not for update notifications
-export const CURRENT_DATA_VERSION = '3.0v1'
+
+export const CURRENT_DATA_VERSION = '3.1v1'
 
 export const Stats = {
   ATK_P: 'ATK%',
@@ -417,6 +418,8 @@ export const SetsRelics = {
   TheWindSoaringValorous: 'The Wind-Soaring Valorous',
   SacerdosRelivedOrdeal: 'Sacerdos\' Relived Ordeal',
   ScholarLostInErudition: 'Scholar Lost in Erudition',
+  HeroOfTriumphantSong: 'Hero of Triumphant Song',
+  PoetOfMourningCollapse: 'Poet of Mourning Collapse',
 } as const
 
 export const SetsOrnaments = {
@@ -438,6 +441,8 @@ export const SetsOrnaments = {
   ForgeOfTheKalpagniLantern: 'Forge of the Kalpagni Lantern',
   LushakaTheSunkenSeas: 'Lushaka, the Sunken Seas',
   TheWondrousBananAmusementPark: 'The Wondrous BananAmusement Park',
+  BoneCollectionsSereneDemesne: 'Bone Collection\'s Serene Demesne',
+  GiantTreeOfRaptBrooding: 'Giant Tree of Rapt Brooding',
 } as const
 
 // Delete unreleased data
@@ -556,6 +561,7 @@ export const RelicSetFilterOptions = {
 }
 
 export const DEFAULT_STAT_DISPLAY = 'combat'
+export const DEFAULT_MEMO_DISPLAY = 'summoner'
 
 export const CombatBuffs = {
   ATK: {
@@ -668,6 +674,8 @@ export const setToId = {
   [Sets.TheWindSoaringValorous]: '120',
   [Sets.SacerdosRelivedOrdeal]: '121',
   [Sets.ScholarLostInErudition]: '122',
+  [Sets.HeroOfTriumphantSong]: '123',
+  [Sets.PoetOfMourningCollapse]: '124',
 
   [Sets.SpaceSealingStation]: '301',
   [Sets.FleetOfTheAgeless]: '302',
@@ -687,6 +695,8 @@ export const setToId = {
   [Sets.ForgeOfTheKalpagniLantern]: '316',
   [Sets.LushakaTheSunkenSeas]: '317',
   [Sets.TheWondrousBananAmusementPark]: '318',
+  [Sets.BoneCollectionsSereneDemesne]: '319',
+  [Sets.GiantTreeOfRaptBrooding]: '320',
 } as const
 
 export const DamageKeys = ['BASIC', 'SKILL', 'ULT', 'FUA', 'DOT', 'BREAK']
@@ -697,6 +707,7 @@ export const SETTINGS_TEAM = 'Settings'
 
 export const SIMULATION_SCORE = 'Combat Simulation Score'
 export const CHARACTER_SCORE = 'Character Score'
+export const NONE_SCORE = 'None'
 
 export const DAMAGE_UPGRADES = 'Damage Upgrades'
 export const COMBAT_STATS = 'Combat Stats'

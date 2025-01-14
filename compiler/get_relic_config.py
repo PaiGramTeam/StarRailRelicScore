@@ -1,6 +1,6 @@
 from httpx import get
 
-url = "https://raw.githubusercontent.com/PaiGramTeam/HonkaiStarRailWikiDataParser/remote/data/relic_config.json"
+url = "https://raw.githubusercontent.com/PaiGramTeam/HonkaiStarRailWikiDataParser/remote/data/mihomo_map/relic_config.json"
 
 
 def get_content() -> str:

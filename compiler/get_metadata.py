@@ -10,6 +10,7 @@ const BASIC = 'BASIC'
 const SKILL = 'SKILL'
 const ULT = 'ULT'
 const FUA = 'FUA'
+const MEMO_SKILL = 'MEMO_SKILL'
 
 export const PresetEffects = {
   fnAshblazingSet: (stacks) => {
@@ -50,8 +51,9 @@ const RELICS_2P_BREAK_EFFECT_SPEED = [
 ]
 
 const SPREAD_RELICS_2P_GENERAL_CONDITIONALS = [
-  [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
+  [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
   [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
+  [Sets.EagleOfTwilightLine, Sets.EagleOfTwilightLine],
 ]
 
 const SPREAD_ORNAMENTS_2P_FUA = [
@@ -61,8 +63,20 @@ const SPREAD_ORNAMENTS_2P_FUA = [
 ]
 
 const SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS = [
-  Sets.FirmamentFrontlineGlamoth,
   Sets.SigoniaTheUnclaimedDesolation,
+]
+
+const SPREAD_ORNAMENTS_2P_ENERGY_REGEN = [
+  Sets.SprightlyVonwacq,
+  Sets.PenaconyLandOfTheDreams,
+  Sets.LushakaTheSunkenSeas,
+]
+
+const SPREAD_ORNAMENTS_2P_SUPPORT = [
+  Sets.BrokenKeel,
+  Sets.PenaconyLandOfTheDreams,
+  Sets.FleetOfTheAgeless,
+  Sets.LushakaTheSunkenSeas,
 ]
 
 export function getScoringMetadata() {"""
