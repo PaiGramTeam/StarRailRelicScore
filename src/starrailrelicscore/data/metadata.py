@@ -1,11 +1,18 @@
 import json
 import os
 
-from typing import Dict, Union, List
+from typing import Dict, Union, List, Tuple, TypedDict
 
 from ..models.enums import Stats, Parts
 
-METADATA_CH_TYPE = Dict[str, Union[Dict[Parts, List[Stats]], Dict[Stats, float]]]
+
+class METADATA_CH_TYPE(TypedDict):
+    stats: Dict[Stats, float]
+    parts: Dict[Parts, List[Stats]]
+    sortedSubstats: List[Tuple[Stats, float]]
+
+
+# METADATA_CH_TYPE = Dict[str, Union[Dict[Parts, List[Stats]], Dict[Stats, float], List[Tuple[Parts, List[Stats]]]]]
 METADATA_TYPE = Dict[str, METADATA_CH_TYPE]
 
 PATH = os.path.dirname(os.path.abspath(__file__))

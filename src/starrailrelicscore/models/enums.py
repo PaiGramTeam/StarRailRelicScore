@@ -48,6 +48,22 @@ class Stats(str, Enum):
     """ 速度 百分比 """
 
 
+SubStats = [
+    Stats.HP_P,
+    Stats.ATK_P,
+    Stats.DEF_P,
+    Stats.HP,
+    Stats.ATK,
+    Stats.DEF,
+    Stats.SPD,
+    Stats.CR,
+    Stats.CD,
+    Stats.EHR,
+    Stats.RES,
+    Stats.BE,
+]
+
+
 class Parts(str, Enum):
     Head = "Head"
     Hands = "Hands"
@@ -166,3 +182,12 @@ def fix_relic_affix(mihomo_affix: RelicAffix) -> Stats:
         RelicAffix.WindAddedRatio: Stats.Wind_DMG,
     }
     return affix_map.get(mihomo_affix)
+
+
+class RelicPotentialCases(str, Enum):
+    SINGLE_STAT = "SINGLE_STAT"
+    HP = "HP"
+    ATK = "ATK"
+    DEF = "DEF"
+    NORMAL = "NORMAL"
+    NONE = "NONE"

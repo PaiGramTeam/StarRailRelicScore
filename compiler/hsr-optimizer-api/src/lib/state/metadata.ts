@@ -46,7 +46,7 @@ const RELICS_2P_BREAK_EFFECT_SPEED = [
   Sets.IronCavalryAgainstTheScourge,
 ]
 
-const SPREAD_RELICS_2P_GENERAL_CONDITIONALS = [
+const SPREAD_RELICS_4P_GENERAL_CONDITIONALS = [
   [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
   [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
   [Sets.EagleOfTwilightLine, Sets.EagleOfTwilightLine],
@@ -69,6 +69,7 @@ const SPREAD_ORNAMENTS_2P_ENERGY_REGEN = [
 ]
 
 const SPREAD_ORNAMENTS_2P_SUPPORT = [
+  Sets.SprightlyVonwacq,
   Sets.BrokenKeel,
   Sets.PenaconyLandOfTheDreams,
   Sets.FleetOfTheAgeless,
@@ -201,7 +202,7 @@ export function getScoringMetadata() {
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -306,7 +307,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.DuranDynastyOfRunningWolves,
@@ -415,7 +416,7 @@ export function getScoringMetadata() {
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -524,6 +525,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.PrisonerInDeepConfinement, Sets.PrisonerInDeepConfinement],
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.FirmamentFrontlineGlamoth,
@@ -674,7 +676,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -708,8 +710,8 @@ export function getScoringMetadata() {
         [Stats.ATK_P]: 0.5,
         [Stats.DEF]: 0.5,
         [Stats.DEF_P]: 0.5,
-        [Stats.HP]: 1,
-        [Stats.HP_P]: 1,
+        [Stats.HP]: 0.75,
+        [Stats.HP_P]: 0.75,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
@@ -819,7 +821,7 @@ export function getScoringMetadata() {
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.HunterOfGlacialForest, Sets.HunterOfGlacialForest],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.DuranDynastyOfRunningWolves,
@@ -962,7 +964,7 @@ export function getScoringMetadata() {
         relicSets: [
           [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -1066,12 +1068,13 @@ export function getScoringMetadata() {
         comboDot: 0,
         comboBreak: 0,
         errRopeEidolon: 0,
+        deprioritizeBuffs: true,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.BandOfSizzlingThunder, Sets.BandOfSizzlingThunder],
           [Sets.EagleOfTwilightLine, Sets.EagleOfTwilightLine],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.FirmamentFrontlineGlamoth,
@@ -1317,7 +1320,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.ChampionOfStreetwiseBoxing, Sets.ChampionOfStreetwiseBoxing],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.DuranDynastyOfRunningWolves,
@@ -1423,6 +1426,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.PrisonerInDeepConfinement, Sets.PrisonerInDeepConfinement],
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.FirmamentFrontlineGlamoth,
@@ -1525,7 +1529,7 @@ export function getScoringMetadata() {
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -1677,7 +1681,7 @@ export function getScoringMetadata() {
         comboBreak: 1,
         relicSets: [
           [Sets.PrisonerInDeepConfinement, Sets.PrisonerInDeepConfinement],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
           RELICS_2P_BREAK_EFFECT_SPEED,
         ],
         ornamentSets: [
@@ -1783,9 +1787,10 @@ export function getScoringMetadata() {
         comboAbilities: [NULL, ULT, SKILL, FUA, FUA],
         comboDot: 0,
         comboBreak: 0,
+        deprioritizeBuffs: true,
         relicSets: [
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.DuranDynastyOfRunningWolves,
@@ -1893,7 +1898,7 @@ export function getScoringMetadata() {
           [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
           [Sets.SacerdosRelivedOrdeal, Sets.SacerdosRelivedOrdeal],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -1924,8 +1929,8 @@ export function getScoringMetadata() {
     },
     1202: { // Tingyun
       stats: {
-        [Stats.ATK]: 1,
-        [Stats.ATK_P]: 1,
+        [Stats.ATK]: 0.75,
+        [Stats.ATK_P]: 0.75,
         [Stats.DEF]: 0.75,
         [Stats.DEF_P]: 0.75,
         [Stats.HP]: 0.75,
@@ -2095,7 +2100,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.TheWondrousBananAmusementPark,
@@ -2202,7 +2207,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.LongevousDisciple, Sets.LongevousDisciple],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -2308,7 +2313,7 @@ export function getScoringMetadata() {
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.ChampionOfStreetwiseBoxing, Sets.ChampionOfStreetwiseBoxing],
           [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.FirmamentFrontlineGlamoth,
@@ -2511,7 +2516,7 @@ export function getScoringMetadata() {
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.HunterOfGlacialForest, Sets.HunterOfGlacialForest],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -2542,8 +2547,8 @@ export function getScoringMetadata() {
     },
     1210: { // Guinaifen
       stats: {
-        [Stats.ATK]: 1,
-        [Stats.ATK_P]: 1,
+        [Stats.ATK]: 0.75,
+        [Stats.ATK_P]: 0.75,
         [Stats.DEF]: 0.5,
         [Stats.DEF_P]: 0.5,
         [Stats.HP]: 0.5,
@@ -2706,7 +2711,7 @@ export function getScoringMetadata() {
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.HunterOfGlacialForest, Sets.HunterOfGlacialForest],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -2810,7 +2815,7 @@ export function getScoringMetadata() {
         relicSets: [
           [Sets.MusketeerOfWildWheat, Sets.MusketeerOfWildWheat],
           [Sets.WastelanderOfBanditryDesert, Sets.WastelanderOfBanditryDesert],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -2918,7 +2923,7 @@ export function getScoringMetadata() {
         relicSets: [
           [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.TaliaKingdomOfBanditry,
@@ -3155,7 +3160,7 @@ export function getScoringMetadata() {
           [Sets.TheWindSoaringValorous, Sets.TheWindSoaringValorous],
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
           [Sets.EagleOfTwilightLine, Sets.EagleOfTwilightLine],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.DuranDynastyOfRunningWolves,
@@ -3262,7 +3267,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.TheWindSoaringValorous, Sets.TheWindSoaringValorous],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.DuranDynastyOfRunningWolves,
@@ -3329,6 +3334,7 @@ export function getScoringMetadata() {
           Constants.Stats.ATK_P,
           Constants.Stats.DEF_P,
           Constants.Stats.HP_P,
+          Constants.Stats.Fire_DMG,
         ],
         [Constants.Parts.LinkRope]: [
           Constants.Stats.BE,
@@ -3420,10 +3426,11 @@ export function getScoringMetadata() {
         comboAbilities: [NULL, SKILL, ULT, FUA, FUA],
         comboDot: 0,
         comboBreak: 0,
+        deprioritizeBuffs: true,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.DuranDynastyOfRunningWolves,
@@ -3527,10 +3534,11 @@ export function getScoringMetadata() {
         comboAbilities: [NULL, ULT, BASIC, FUA],
         comboDot: 0,
         comboBreak: 0,
+        deprioritizeBuffs: true,
         relicSets: [
           [Sets.MusketeerOfWildWheat, Sets.MusketeerOfWildWheat],
           [Sets.WastelanderOfBanditryDesert, Sets.WastelanderOfBanditryDesert],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -3630,10 +3638,12 @@ export function getScoringMetadata() {
         comboAbilities: [NULL, ULT, BASIC, BASIC, BASIC],
         comboDot: 0,
         comboBreak: 3,
+        deprioritizeBuffs: true,
         relicSets: [
           [Sets.ThiefOfShootingMeteor, Sets.ThiefOfShootingMeteor],
           [Sets.EagleOfTwilightLine, Sets.EagleOfTwilightLine],
           RELICS_2P_BREAK_EFFECT_SPEED,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.ForgeOfTheKalpagniLantern,
@@ -3775,10 +3785,11 @@ export function getScoringMetadata() {
         comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
+        errRopeEidolon: 0,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.ChampionOfStreetwiseBoxing, Sets.ChampionOfStreetwiseBoxing],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.InertSalsotto,
@@ -3925,11 +3936,12 @@ export function getScoringMetadata() {
         comboAbilities: [NULL, ULT, BASIC, FUA, BASIC, FUA],
         comboDot: 0,
         comboBreak: 0,
+        deprioritizeBuffs: true,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
           [Sets.KnightOfPurityPalace, Sets.KnightOfPurityPalace],
           [Sets.TheAshblazingGrandDuke, Sets.KnightOfPurityPalace, Sets.PioneerDiverOfDeadWaters],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.DuranDynastyOfRunningWolves,
@@ -4038,7 +4050,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.DuranDynastyOfRunningWolves,
@@ -4187,6 +4199,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.PrisonerInDeepConfinement, Sets.PrisonerInDeepConfinement],
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.FirmamentFrontlineGlamoth,
@@ -4290,7 +4303,7 @@ export function getScoringMetadata() {
         comboBreak: 0,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.IzumoGenseiAndTakamaDivineRealm,
@@ -4432,6 +4445,7 @@ export function getScoringMetadata() {
         comboBreak: 1,
         relicSets: [
           [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.ForgeOfTheKalpagniLantern,
@@ -4534,7 +4548,7 @@ export function getScoringMetadata() {
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -4680,7 +4694,7 @@ export function getScoringMetadata() {
           [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
           [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.DuranDynastyOfRunningWolves,
@@ -4778,7 +4792,7 @@ export function getScoringMetadata() {
           [Sets.ThiefOfShootingMeteor, Sets.WatchmakerMasterOfDreamMachinations],
           [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
           RELICS_2P_BREAK_EFFECT_SPEED,
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.TaliaKingdomOfBanditry,
@@ -4876,6 +4890,7 @@ export function getScoringMetadata() {
         relicSets: [
           [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
           [Sets.EagleOfTwilightLine, Sets.EagleOfTwilightLine],
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.TaliaKingdomOfBanditry,
@@ -4977,7 +4992,7 @@ export function getScoringMetadata() {
         comboBreak: 1,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -5081,7 +5096,7 @@ export function getScoringMetadata() {
         comboBreak: 1,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
@@ -5439,7 +5454,7 @@ export function getScoringMetadata() {
         errRopeEidolon: 0,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.IzumoGenseiAndTakamaDivineRealm,
@@ -5545,7 +5560,7 @@ export function getScoringMetadata() {
         errRopeEidolon: 0,
         relicSets: [
           [Sets.HeroOfTriumphantSong, Sets.HeroOfTriumphantSong],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.TheWondrousBananAmusementPark,
@@ -5582,7 +5597,7 @@ export function getScoringMetadata() {
         [Stats.DEF_P]: 0,
         [Stats.HP]: 0.75,
         [Stats.HP_P]: 0.75,
-        [Stats.SPD]: 1,
+        [Stats.SPD]: 0,
         [Stats.CR]: 1,
         [Stats.CD]: 1,
         [Stats.EHR]: 0,
@@ -5650,14 +5665,12 @@ export function getScoringMetadata() {
         comboDot: 0,
         comboBreak: 0,
         errRopeEidolon: 0,
+        deprioritizeBuffs: true,
         relicSets: [
-          [Sets.LongevousDisciple, Sets.LongevousDisciple],
-          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
-          Sets.GiantTreeOfRaptBrooding,
-          Sets.InertSalsotto,
           Sets.BoneCollectionsSereneDemesne,
           ...SPREAD_ORNAMENTS_2P_FUA,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
@@ -5759,10 +5772,8 @@ export function getScoringMetadata() {
         comboDot: 0,
         comboBreak: 0,
         relicSets: [
-          [Sets.LongevousDisciple, Sets.LongevousDisciple],
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
-          [Sets.WastelanderOfBanditryDesert, Sets.WastelanderOfBanditryDesert],
-          ...SPREAD_RELICS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,

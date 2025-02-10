@@ -50,7 +50,7 @@ const RELICS_2P_BREAK_EFFECT_SPEED = [
   Sets.IronCavalryAgainstTheScourge,
 ]
 
-const SPREAD_RELICS_2P_GENERAL_CONDITIONALS = [
+const SPREAD_RELICS_4P_GENERAL_CONDITIONALS = [
   [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
   [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
   [Sets.EagleOfTwilightLine, Sets.EagleOfTwilightLine],
@@ -73,6 +73,7 @@ const SPREAD_ORNAMENTS_2P_ENERGY_REGEN = [
 ]
 
 const SPREAD_ORNAMENTS_2P_SUPPORT = [
+  Sets.SprightlyVonwacq,
   Sets.BrokenKeel,
   Sets.PenaconyLandOfTheDreams,
   Sets.FleetOfTheAgeless,

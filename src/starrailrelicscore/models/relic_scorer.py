@@ -2,8 +2,6 @@ from typing import Optional, List
 
 from pydantic import BaseModel
 
-from starrailrelicscore.models.enums import Parts
-
 
 class Rating(BaseModel):
     threshold: int

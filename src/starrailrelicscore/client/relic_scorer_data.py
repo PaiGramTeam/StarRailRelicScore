@@ -1,7 +1,13 @@
-from starrailrelicscore.models.enums import Stats, Parts
-from starrailrelicscore.models.relic_scorer import Rating
+from starrailrelicscore.models.enums import Stats, SubStats, Parts
 
+flat_stat_scaling = {
+    Stats.HP: 0.4,
+    Stats.ATK: 0.4,
+    Stats.DEF: 0.4,
+}
+percent_to_score = 0.582
 min_roll_value = 5.1
+possible_sub_stats = set(SubStats)
 
 main_stat_free_rolls = {
     Parts.Body: {
@@ -40,16 +46,25 @@ main_stat_free_rolls = {
     },
 }
 
-rating_to_rolls = {
-    "F": 1,
-    "D": 2,
-    "C": 3,
-    "B": 4,
-    "A": 5,
-    "S": 6,
-    "SS": 7,
-    "SSS": 8,
-    "WTF": 9,
-}
-
-ratings = [Rating(rating=k, threshold=v) for k, v in rating_to_rolls.items()]
+ratings = [
+    "F",
+    "F",
+    "F",
+    "F+",
+    "D",
+    "D+",
+    "C",
+    "C+",
+    "B",
+    "B+",
+    "A",
+    "A+",
+    "S",
+    "S+",
+    "SS",
+    "SS+",
+    "SSS",
+    "SSS+",
+    "WTF",
+    "WTF+",
+]
