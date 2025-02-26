@@ -35,6 +35,7 @@ export const SortOption: {
   ULT: SortOptionProperties
   FUA: SortOptionProperties
   MEMO_SKILL: SortOptionProperties
+  MEMO_TALENT: SortOptionProperties
   DOT: SortOptionProperties
   BREAK: SortOptionProperties
   COMBO: SortOptionProperties
@@ -243,6 +244,18 @@ export const SortOption: {
     combatGridColumn: 'MEMO_SKILL',
     memoBasicGridColumn: 'MEMO_SKILL',
     memoCombatGridColumn: 'MEMO_SKILL',
+    optimizerKey: 0,
+    isComputedRating: true,
+  },
+  MEMO_TALENT: {
+    key: 'MEMO_TALENT',
+    gpuProperty: 'MEMO_TALENT_DMG',
+    basicProperty: 'MEMO_TALENT_DMG',
+    combatProperty: 'MEMO_TALENT_DMG',
+    basicGridColumn: 'MEMO_TALENT',
+    combatGridColumn: 'MEMO_TALENT',
+    memoBasicGridColumn: 'MEMO_TALENT',
+    memoCombatGridColumn: 'MEMO_TALENT',
     optimizerKey: 0,
     isComputedRating: true,
   },

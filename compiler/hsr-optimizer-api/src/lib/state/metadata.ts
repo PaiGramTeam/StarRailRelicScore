@@ -7,6 +7,7 @@ const SKILL = 'SKILL'
 const ULT = 'ULT'
 const FUA = 'FUA'
 const MEMO_SKILL = 'MEMO_SKILL'
+const MEMO_TALENT = 'MEMO_TALENT'
 
 export const PresetEffects = {
   fnAshblazingSet: (stacks) => {
@@ -2210,6 +2211,7 @@ export function getScoringMetadata() {
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
+          Sets.BoneCollectionsSereneDemesne,
           Sets.RutilantArena,
           Sets.InertSalsotto,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
@@ -5331,7 +5333,9 @@ export function getScoringMetadata() {
           Stats.ERR,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.BANANA_SET,
+      ],
       sortOption: SortOption.CD,
       hiddenColumns: [SortOption.SKILL, SortOption.FUA, SortOption.DOT],
       addedColumns: [SortOption.MEMO_SKILL],
@@ -5374,7 +5378,9 @@ export function getScoringMetadata() {
           Stats.ERR,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.BANANA_SET,
+      ],
       sortOption: SortOption.CD,
       hiddenColumns: [SortOption.SKILL, SortOption.FUA, SortOption.DOT],
       addedColumns: [SortOption.MEMO_SKILL],
@@ -5526,10 +5532,12 @@ export function getScoringMetadata() {
           Stats.ERR,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.BANANA_SET,
+      ],
       sortOption: SortOption.BASIC,
       hiddenColumns: [SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
-      addedColumns: [SortOption.MEMO_SKILL],
+      addedColumns: [SortOption.MEMO_SKILL, SortOption.MEMO_TALENT],
       simulation: {
         parts: {
           [Parts.Body]: [
@@ -5597,7 +5605,7 @@ export function getScoringMetadata() {
         [Stats.DEF_P]: 0,
         [Stats.HP]: 0.75,
         [Stats.HP_P]: 0.75,
-        [Stats.SPD]: 0,
+        [Stats.SPD]: 1,
         [Stats.CR]: 1,
         [Stats.CD]: 1,
         [Stats.EHR]: 0,
@@ -5632,7 +5640,9 @@ export function getScoringMetadata() {
           Stats.ERR,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.VALOROUS_SET,
+      ],
       sortOption: SortOption.FUA,
       hiddenColumns: [],
       simulation: {
@@ -5661,12 +5671,14 @@ export function getScoringMetadata() {
           Stats.HP,
           Stats.ATK_P,
         ],
-        comboAbilities: [NULL, ULT, FUA, FUA, BASIC, FUA, FUA],
+        comboAbilities: [NULL, ULT, FUA, BASIC, FUA, FUA],
         comboDot: 0,
         comboBreak: 0,
         errRopeEidolon: 0,
         deprioritizeBuffs: true,
         relicSets: [
+          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
+          [Sets.LongevousDisciple, Sets.LongevousDisciple],
           [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
@@ -5740,7 +5752,9 @@ export function getScoringMetadata() {
           Stats.HP_P,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.WASTELANDER_SET,
+      ],
       sortOption: SortOption.SKILL,
       hiddenColumns: [],
       simulation: {
@@ -5796,6 +5810,217 @@ export function getScoringMetadata() {
           {
             characterId: '1203', // Luocha
             lightCone: '23008', // Coffin
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+        ],
+      },
+    },
+    1405: { // Anaxa
+      stats: {
+        [Stats.ATK]: 0.75,
+        [Stats.ATK_P]: 0.75,
+        [Stats.DEF]: 0,
+        [Stats.DEF_P]: 0,
+        [Stats.HP]: 0,
+        [Stats.HP_P]: 0,
+        [Stats.SPD]: 1,
+        [Stats.CR]: 1,
+        [Stats.CD]: 1,
+        [Stats.EHR]: 0,
+        [Stats.RES]: 0,
+        [Stats.BE]: 0,
+        [Stats.ERR]: 0,
+        [Stats.OHB]: 0,
+        [Stats.Physical_DMG]: 0,
+        [Stats.Fire_DMG]: 0,
+        [Stats.Ice_DMG]: 0,
+        [Stats.Lightning_DMG]: 0,
+        [Stats.Wind_DMG]: 1,
+        [Stats.Quantum_DMG]: 0,
+        [Stats.Imaginary_DMG]: 0,
+      },
+      parts: {
+        [Parts.Body]: [
+          Stats.CR,
+          Stats.CD,
+        ],
+        [Parts.Feet]: [
+          Stats.ATK_P,
+          Stats.SPD,
+        ],
+        [Parts.PlanarSphere]: [
+          Stats.ATK_P,
+          Stats.Wind_DMG,
+        ],
+        [Parts.LinkRope]: [
+          Stats.ATK_P,
+        ],
+      },
+      presets: [
+        PresetEffects.fnPioneerSet(4),
+      ],
+      sortOption: SortOption.SKILL,
+      hiddenColumns: [SortOption.FUA, SortOption.DOT],
+      simulation: {
+        parts: {
+          [Parts.Body]: [
+            Stats.CR,
+            Stats.CD,
+          ],
+          [Parts.Feet]: [
+            Stats.ATK_P,
+            Stats.SPD,
+          ],
+          [Parts.PlanarSphere]: [
+            Stats.ATK_P,
+            Stats.Wind_DMG,
+          ],
+          [Parts.LinkRope]: [
+            Stats.ATK_P,
+          ],
+        },
+        substats: [
+          Stats.CD,
+          Stats.CR,
+          Stats.ATK_P,
+          Stats.ATK,
+        ],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboDot: 0,
+        comboBreak: 0,
+        deprioritizeBuffs: true,
+        relicSets: [
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
+          [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
+        ],
+        ornamentSets: [
+          Sets.RutilantArena,
+          Sets.IzumoGenseiAndTakamaDivineRealm,
+          ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
+        ],
+        teammates: [
+          {
+            characterId: '1401', // The Herta
+            lightCone: '23037', // Unreachable
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // Flower
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+        ],
+      },
+    },
+    1407: { // Castorice
+      stats: {
+        [Stats.ATK]: 0,
+        [Stats.ATK_P]: 0,
+        [Stats.DEF]: 0,
+        [Stats.DEF_P]: 0,
+        [Stats.HP]: 1,
+        [Stats.HP_P]: 1,
+        [Stats.SPD]: 0,
+        [Stats.CR]: 1,
+        [Stats.CD]: 1,
+        [Stats.EHR]: 0,
+        [Stats.RES]: 0,
+        [Stats.BE]: 0,
+        [Stats.ERR]: 0,
+        [Stats.OHB]: 0,
+        [Stats.Physical_DMG]: 0,
+        [Stats.Fire_DMG]: 0,
+        [Stats.Ice_DMG]: 0,
+        [Stats.Lightning_DMG]: 0,
+        [Stats.Wind_DMG]: 0,
+        [Stats.Quantum_DMG]: 1,
+        [Stats.Imaginary_DMG]: 0,
+      },
+      parts: {
+        [Parts.Body]: [
+          Stats.CR,
+          Stats.CD,
+          Stats.HP_P,
+        ],
+        [Parts.Feet]: [
+          Stats.HP_P,
+        ],
+        [Parts.PlanarSphere]: [
+          Stats.HP_P,
+          Stats.Quantum_DMG,
+        ],
+        [Parts.LinkRope]: [
+          Stats.HP_P,
+        ],
+      },
+      presets: [
+        PresetEffects.BANANA_SET,
+      ],
+      sortOption: SortOption.MEMO_SKILL,
+      addedColumns: [SortOption.MEMO_SKILL, SortOption.MEMO_TALENT],
+      hiddenColumns: [SortOption.FUA, SortOption.DOT, SortOption.ULT],
+      simulation: {
+        parts: {
+          [Parts.Body]: [
+            Stats.CR,
+            Stats.CD,
+            Stats.HP_P,
+          ],
+          [Parts.Feet]: [
+            Stats.HP_P,
+            Stats.SPD,
+          ],
+          [Parts.PlanarSphere]: [
+            Stats.HP_P,
+            Stats.Quantum_DMG,
+          ],
+          [Parts.LinkRope]: [
+            Stats.HP_P,
+          ],
+        },
+        substats: [
+          Stats.CD,
+          Stats.CR,
+          Stats.HP_P,
+          Stats.HP,
+        ],
+        comboAbilities: [NULL, SKILL, SKILL, ULT, MEMO_SKILL, MEMO_SKILL, MEMO_SKILL, MEMO_SKILL, MEMO_TALENT],
+        comboDot: 0,
+        comboBreak: 0,
+        relicSets: [
+          [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
+        ],
+        ornamentSets: [
+          Sets.BoneCollectionsSereneDemesne,
+          ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
+        ],
+        teammates: [
+          {
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // Flower
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '8008', // RMC
+            lightCone: '21050', // Victory
+            characterEidolon: 6,
+            lightConeSuperimposition: 5,
+          },
+          {
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },

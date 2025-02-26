@@ -11,6 +11,7 @@ const SKILL = 'SKILL'
 const ULT = 'ULT'
 const FUA = 'FUA'
 const MEMO_SKILL = 'MEMO_SKILL'
+const MEMO_TALENT = 'MEMO_TALENT'
 
 export const PresetEffects = {
   fnAshblazingSet: (stacks) => {
