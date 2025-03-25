@@ -4279,6 +4279,7 @@ export function getScoringMetadata() {
       simulation: {
         parts: {
           [Parts.Body]: [
+            Stats.ATK_P,
             Stats.CR,
             Stats.CD,
           ],
@@ -5790,8 +5791,8 @@ export function getScoringMetadata() {
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
-          Sets.RutilantArena,
           Sets.BoneCollectionsSereneDemesne,
+          Sets.RutilantArena,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
         ],
         teammates: [
@@ -5844,6 +5845,7 @@ export function getScoringMetadata() {
         [Parts.Body]: [
           Stats.CR,
           Stats.CD,
+          Stats.ATK_P,
         ],
         [Parts.Feet]: [
           Stats.ATK_P,
@@ -5859,6 +5861,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.fnPioneerSet(4),
+        PresetEffects.GENIUS_SET,
       ],
       sortOption: SortOption.SKILL,
       hiddenColumns: [SortOption.FUA, SortOption.DOT],
@@ -5867,6 +5870,7 @@ export function getScoringMetadata() {
           [Parts.Body]: [
             Stats.CR,
             Stats.CD,
+            Stats.ATK_P,
           ],
           [Parts.Feet]: [
             Stats.ATK_P,
@@ -5886,36 +5890,40 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
-        deprioritizeBuffs: true,
+        errRopeEidolon: 0,
+        deprioritizeBuffs: false,
         relicSets: [
-          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
+          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
           Sets.IzumoGenseiAndTakamaDivineRealm,
+          Sets.SpaceSealingStation,
+          Sets.FirmamentFrontlineGlamoth,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
         ],
         teammates: [
           {
-            characterId: '1401', // The Herta
-            lightCone: '23037', // Unreachable
+            characterId: '1313', // Sunday
+            lightCone: '23034', // Grounded
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1403', // Tribbie
-            lightCone: '23038', // Flower
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1222', // Lingsha
-            lightCone: '23032', // Scent
+            characterId: '1217', // Huohuo
+            lightCone: '23017', // Night of Fright
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -5994,7 +6002,7 @@ export function getScoringMetadata() {
           Stats.HP_P,
           Stats.HP,
         ],
-        comboAbilities: [NULL, SKILL, SKILL, ULT, MEMO_SKILL, MEMO_SKILL, MEMO_SKILL, MEMO_SKILL, MEMO_TALENT],
+        comboAbilities: [NULL, ULT, MEMO_SKILL, MEMO_SKILL, MEMO_SKILL, MEMO_SKILL, MEMO_TALENT, SKILL, SKILL],
         comboDot: 0,
         comboBreak: 0,
         relicSets: [

@@ -2,10 +2,16 @@
 import gameData from 'data/game_data.json' with { type: 'json' }
 
 // Semver defined optimizer version
-export const CURRENT_OPTIMIZER_VERSION = 'v3.2.1'
+export const CURRENT_OPTIMIZER_VERSION = 'v3.2.3'
 // Represents the beta data content version, used for display but not for update notifications
 
-export const CURRENT_DATA_VERSION = '3.2v1'
+export const CURRENT_DATA_VERSION = '3.2v6'
+
+const generateMessage = (message: string) => `Current version: (${CURRENT_DATA_VERSION}) ${message ? ' - ' + message : ''}`
+export const CharacterAnnouncementMessages: Record<string, string> = {
+  1407: generateMessage('E1 conditionals pending more testing.'), // Castorice
+  1405: generateMessage('Added ATK % body to benchmark mains, removed light cone Crit Rate. Now defaults to Main DPS with Sunday/Robin/Huohuo.'), // Anaxa
+}
 
 export const Stats = {
   ATK_P: 'ATK%',
@@ -509,7 +515,6 @@ for (let i = 0; i < SetsRelicsNames.length; i++) {
 export const RelicSetCount = Object.values(SetsRelics).length
 export const OrnamentSetCount = Object.values(SetsOrnaments).length
 
-// TODO: This shouldn't be used anymore?
 export const PathNames = {
   Abundance: 'Abundance',
   Destruction: 'Destruction',
@@ -519,7 +524,19 @@ export const PathNames = {
   Nihility: 'Nihility',
   Preservation: 'Preservation',
   Remembrance: 'Remembrance',
-}
+} as const
+export type PathName = typeof PathNames[keyof typeof PathNames]
+
+export const ElementNames = {
+  Physical: 'Physical',
+  Quantum: 'Quantum',
+  Imaginary: 'Imaginary',
+  Ice: 'Ice',
+  Wind: 'Wind',
+  Fire: 'Fire',
+  Lightning: 'Lightning',
+} as const
+export type ElementName = typeof ElementNames[keyof typeof ElementNames]
 
 export const ElementToDamage = {
   Physical: Stats.Physical_DMG,
