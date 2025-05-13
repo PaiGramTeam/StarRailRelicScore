@@ -2,45 +2,74 @@ import re
 from httpx import get
 
 url = "https://raw.githubusercontent.com/PaiGramTeam/hsr-optimizer/main/src/lib/"
-HEAD_DATA = """import { Parts, PartsMainStats, Sets, SetsRelics, Stats, Constants } from 'lib/constants/constants'
+HEAD_DATA = """import { Constants, Parts, PartsMainStats, Sets, Stats, SetsRelics, SetsOrnaments } from 'lib/constants/constants'
+import { DEFAULT_BASIC, DEFAULT_BREAK, DEFAULT_DOT, DEFAULT_FUA, DEFAULT_MEMO_SKILL, DEFAULT_MEMO_TALENT, DEFAULT_SKILL, DEFAULT_ULT, END_BASIC, END_BREAK, END_DOT, END_FUA, END_SKILL, END_ULT, NULL_TURN_ABILITY_NAME, START_BASIC, START_SKILL, START_ULT, WHOLE_BASIC, WHOLE_SKILL } from 'lib/optimization/rotation/turnAbilityConfig'
 import { SortOption } from 'lib/optimization/sortOptions'
 
-const NULL = null as unknown as string
-const BASIC = 'BASIC'
-const SKILL = 'SKILL'
-const ULT = 'ULT'
-const FUA = 'FUA'
-const MEMO_SKILL = 'MEMO_SKILL'
-const MEMO_TALENT = 'MEMO_TALENT'
+export type PresetDefinition = {
+  name: string
+  set: SetsRelics | SetsOrnaments
+  value: number | boolean
+  index?: number
+}
 
 export const PresetEffects = {
-  fnAshblazingSet: (stacks) => {
-    return (form) => {
-      form.setConditionals[Sets.TheAshblazingGrandDuke][1] = stacks
+  // Dynamic values
+
+  fnAshblazingSet: (stacks: number): PresetDefinition => {
+    return {
+      name: 'fnAshblazingSet',
+      value: stacks,
+      set: Sets.TheAshblazingGrandDuke,
     }
   },
-  fnPioneerSet: (value) => {
-    return (form) => {
-      form.setConditionals[Sets.PioneerDiverOfDeadWaters][1] = value
+  fnPioneerSet: (value: number): PresetDefinition => {
+    return {
+      name: 'fnPioneerSet',
+      value: value,
+      set: Sets.PioneerDiverOfDeadWaters,
     }
   },
-  fnSacerdosSet: (value) => {
-    return (form) => {
-      form.setConditionals[Sets.SacerdosRelivedOrdeal][1] = value
+  fnSacerdosSet: (value: number): PresetDefinition => {
+    return {
+      name: 'fnSacerdosSet',
+      value: value,
+      set: Sets.SacerdosRelivedOrdeal,
     }
   },
-  PRISONER_SET: (form) => {
-    form.setConditionals[Sets.PrisonerInDeepConfinement][1] = 3
-  },
-  WASTELANDER_SET: (form) => {
-    form.setConditionals[Sets.PrisonerInDeepConfinement][1] = 2
-  },
-  VALOROUS_SET: (form) => {
-    form.setConditionals[Sets.TheWindSoaringValorous][1] = true
-  },
-  BANANA_SET: (form) => {
-    form.setConditionals[Sets.TheWondrousBananAmusementPark][1] = true
-  },
+
+  // Preset values
+
+  PRISONER_SET: {
+    name: 'PRISONER_SET',
+    value: 3,
+    set: Sets.PrisonerInDeepConfinement,
+  } as PresetDefinition,
+  WASTELANDER_SET: {
+    name: 'WASTELANDER_SET',
+    value: 2,
+    set: Sets.WastelanderOfBanditryDesert,
+  } as PresetDefinition,
+  VALOROUS_SET: {
+    name: 'VALOROUS_SET',
+    value: true,
+    set: Sets.TheWindSoaringValorous,
+  } as PresetDefinition,
+  BANANA_SET: {
+    name: 'BANANA_SET',
+    value: true,
+    set: Sets.TheWondrousBananAmusementPark,
+  } as PresetDefinition,
+  GENIUS_SET: {
+    name: 'GENIUS_SET',
+    value: true,
+    set: Sets.GeniusOfBrilliantStars,
+  } as PresetDefinition,
+  WARRIOR_SET: {
+    name: 'WARRIOR_SET',
+    value: true,
+    set: Sets.WarriorGoddessOfSunAndThunder,
+  } as PresetDefinition,
 }
 
 const RELICS_2P_BREAK_EFFECT_SPEED = [
@@ -119,6 +148,10 @@ def main():
     try_save_content(
         fix_sort_options(get_js_content("optimization/sortOptions.ts")),
         "optimization/sortOptions.ts",
+    )
+    try_save_content(
+        get_js_content("optimization/rotation/turnAbilityConfig.ts"),
+        "optimization/rotation/turnAbilityConfig.ts",
     )
 
 

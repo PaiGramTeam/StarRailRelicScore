@@ -2,10 +2,14 @@
 import gameData from 'data/game_data.json' with { type: 'json' }
 
 // Semver defined optimizer version
-export const CURRENT_OPTIMIZER_VERSION = 'v3.2.1'
-// Represents the beta data content version, used for display but not for update notifications
+export const CURRENT_OPTIMIZER_VERSION = 'v3.3.6'
 
-export const CURRENT_DATA_VERSION = '3.2v1'
+// Represents the beta data content version, used for display but not for update notifications
+export const CURRENT_DATA_VERSION = '3.3v6'
+
+const generateMessage = (message?: string) => `__VERSION__${message ? ' - ' + message : ''}`
+export const CharacterAnnouncementMessages: Record<string, string> = {
+}
 
 export const Stats = {
   ATK_P: 'ATK%',
@@ -57,6 +61,31 @@ export const MainStats = [
   Stats.Imaginary_DMG,
 ]
 export type MainStats = typeof MainStats[number]
+
+export const AllStats = [
+  Stats.ATK_P,
+  Stats.ATK,
+  Stats.BE,
+  Stats.CD,
+  Stats.CR,
+  Stats.DEF_P,
+  Stats.DEF,
+  Stats.EHR,
+  Stats.ERR,
+  Stats.Fire_DMG,
+  Stats.HP_P,
+  Stats.HP,
+  Stats.Ice_DMG,
+  Stats.Imaginary_DMG,
+  Stats.Lightning_DMG,
+  Stats.OHB,
+  Stats.Physical_DMG,
+  Stats.Quantum_DMG,
+  Stats.RES,
+  Stats.SPD_P,
+  Stats.SPD,
+  Stats.Wind_DMG,
+]
 
 export const MainStatsValues: Record<string, Record<number, { base: number; increment: number }>> = {
   [Stats.HP_P]: {
@@ -291,81 +320,6 @@ export const StatsToReadable = {
   [Stats.Imaginary_DMG]: 'Imaginary DMG',
 }
 
-export const StatsToReadableShort = {
-  [Stats.HP_P]: 'HP %',
-  [Stats.ATK_P]: 'ATK %',
-  [Stats.DEF_P]: 'DEF %',
-  [Stats.SPD_P]: 'SPD %',
-  [Stats.HP]: 'HP',
-  [Stats.ATK]: 'ATK',
-  [Stats.DEF]: 'DEF',
-  [Stats.SPD]: 'SPD',
-  [Stats.CR]: 'CRIT Rate',
-  [Stats.CD]: 'CRIT DMG',
-  [Stats.EHR]: 'HIT',
-  [Stats.RES]: 'RES',
-  [Stats.BE]: 'Break',
-  [Stats.ERR]: 'Energy',
-  [Stats.OHB]: 'Healing',
-  [Stats.Physical_DMG]: 'Physical',
-  [Stats.Fire_DMG]: 'Fire',
-  [Stats.Ice_DMG]: 'Ice',
-  [Stats.Lightning_DMG]: 'Lightning',
-  [Stats.Wind_DMG]: 'Wind',
-  [Stats.Quantum_DMG]: 'Quantum',
-  [Stats.Imaginary_DMG]: 'Imaginary',
-}
-
-export const StatsToShort = {
-  [Stats.HP_P]: 'HP%',
-  [Stats.ATK_P]: 'ATK%',
-  [Stats.DEF_P]: 'DEF%',
-  [Stats.SPD_P]: 'SPD%',
-  [Stats.HP]: 'HP',
-  [Stats.ATK]: 'ATK',
-  [Stats.DEF]: 'DEF',
-  [Stats.SPD]: 'SPD',
-  [Stats.CR]: 'CR',
-  [Stats.CD]: 'CD',
-  [Stats.EHR]: 'EHR',
-  [Stats.RES]: 'RES',
-  [Stats.BE]: 'BE',
-  [Stats.ERR]: 'ERR',
-  [Stats.OHB]: 'OHB',
-  [Stats.Physical_DMG]: 'Physical',
-  [Stats.Fire_DMG]: 'Fire',
-  [Stats.Ice_DMG]: 'Ice',
-  [Stats.Lightning_DMG]: 'Lightning',
-  [Stats.Wind_DMG]: 'Wind',
-  [Stats.Quantum_DMG]: 'Quantum',
-  [Stats.Imaginary_DMG]: 'Imaginary',
-}
-
-export const StatsToShortSpaced = {
-  [Stats.HP_P]: 'HP %',
-  [Stats.ATK_P]: 'ATK %',
-  [Stats.DEF_P]: 'DEF %',
-  [Stats.SPD_P]: 'SPD %',
-  [Stats.HP]: 'HP',
-  [Stats.ATK]: 'ATK',
-  [Stats.DEF]: 'DEF',
-  [Stats.SPD]: 'SPD',
-  [Stats.CR]: 'CR',
-  [Stats.CD]: 'CD',
-  [Stats.EHR]: 'EHR',
-  [Stats.RES]: 'RES',
-  [Stats.BE]: 'BE',
-  [Stats.ERR]: 'ERR',
-  [Stats.OHB]: 'OHB',
-  [Stats.Physical_DMG]: 'Physical',
-  [Stats.Fire_DMG]: 'Fire',
-  [Stats.Ice_DMG]: 'Ice',
-  [Stats.Lightning_DMG]: 'Lightning',
-  [Stats.Wind_DMG]: 'Wind',
-  [Stats.Quantum_DMG]: 'Quantum',
-  [Stats.Imaginary_DMG]: 'Imaginary',
-}
-
 export const Parts = {
   Head: 'Head',
   Hands: 'Hands',
@@ -375,6 +329,14 @@ export const Parts = {
   LinkRope: 'LinkRope',
 } as const
 export type Parts = typeof Parts[keyof typeof Parts]
+export const PartsArray = [
+  Parts.Head,
+  Parts.Hands,
+  Parts.Body,
+  Parts.Feet,
+  Parts.PlanarSphere,
+  Parts.LinkRope,
+] as const
 
 export const MainStatParts = {
   Body: 'Body',
@@ -392,7 +354,6 @@ export const PartsToReadable = {
   [Parts.PlanarSphere]: 'Sphere',
   [Parts.LinkRope]: 'Rope',
 } as const
-export type PartsToReadable = typeof PartsToReadable[keyof typeof PartsToReadable]
 
 export const PartsMainStats = {
   [Parts.Head]: [Stats.HP],
@@ -428,6 +389,8 @@ export const SetsRelics = {
   ScholarLostInErudition: 'Scholar Lost in Erudition',
   HeroOfTriumphantSong: 'Hero of Triumphant Song',
   PoetOfMourningCollapse: 'Poet of Mourning Collapse',
+  WarriorGoddessOfSunAndThunder: 'Warrior Goddess of Sun and Thunder',
+  WavestriderCaptain: 'Wavestrider Captain',
 } as const
 
 export const SetsOrnaments = {
@@ -509,7 +472,6 @@ for (let i = 0; i < SetsRelicsNames.length; i++) {
 export const RelicSetCount = Object.values(SetsRelics).length
 export const OrnamentSetCount = Object.values(SetsOrnaments).length
 
-// TODO: This shouldn't be used anymore?
 export const PathNames = {
   Abundance: 'Abundance',
   Destruction: 'Destruction',
@@ -519,7 +481,19 @@ export const PathNames = {
   Nihility: 'Nihility',
   Preservation: 'Preservation',
   Remembrance: 'Remembrance',
-}
+} as const
+export type PathName = typeof PathNames[keyof typeof PathNames]
+
+export const ElementNames = {
+  Physical: 'Physical',
+  Quantum: 'Quantum',
+  Imaginary: 'Imaginary',
+  Ice: 'Ice',
+  Wind: 'Wind',
+  Fire: 'Fire',
+  Lightning: 'Lightning',
+} as const
+export type ElementName = typeof ElementNames[keyof typeof ElementNames]
 
 export const ElementToDamage = {
   Physical: Stats.Physical_DMG,
@@ -684,6 +658,8 @@ export const setToId = {
   [Sets.ScholarLostInErudition]: '122',
   [Sets.HeroOfTriumphantSong]: '123',
   [Sets.PoetOfMourningCollapse]: '124',
+  [Sets.WarriorGoddessOfSunAndThunder]: '125',
+  [Sets.WavestriderCaptain]: '126',
 
   [Sets.SpaceSealingStation]: '301',
   [Sets.FleetOfTheAgeless]: '302',
@@ -707,18 +683,13 @@ export const setToId = {
   [Sets.GiantTreeOfRaptBrooding]: '320',
 } as const
 
+export const ABILITY_LIMIT = 12
+
 export const DamageKeys = ['BASIC', 'SKILL', 'ULT', 'FUA', 'DOT', 'BREAK']
 
 export const DEFAULT_TEAM = 'Default'
 export const CUSTOM_TEAM = 'Custom'
 export const SETTINGS_TEAM = 'Settings'
-
-export const SIMULATION_SCORE = 'Combat Simulation Score'
-export const CHARACTER_SCORE = 'Character Score'
-export const NONE_SCORE = 'None'
-
-export const DAMAGE_UPGRADES = 'Damage Upgrades'
-export const COMBAT_STATS = 'Combat Stats'
 
 export const COMPUTE_ENGINE_CPU = 'CPU'
 export const COMPUTE_ENGINE_GPU_STABLE = 'GPU Stable'

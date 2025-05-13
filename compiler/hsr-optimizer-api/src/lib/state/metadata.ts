@@ -1,42 +1,71 @@
-import { Parts, PartsMainStats, Sets, SetsRelics, Stats, Constants } from 'lib/constants/constants'
+import { Constants, Parts, PartsMainStats, Sets, Stats, SetsRelics, SetsOrnaments } from 'lib/constants/constants'
+import { DEFAULT_BASIC, DEFAULT_BREAK, DEFAULT_DOT, DEFAULT_FUA, DEFAULT_MEMO_SKILL, DEFAULT_MEMO_TALENT, DEFAULT_SKILL, DEFAULT_ULT, END_BASIC, END_BREAK, END_DOT, END_FUA, END_SKILL, END_ULT, NULL_TURN_ABILITY_NAME, START_BASIC, START_SKILL, START_ULT, WHOLE_BASIC, WHOLE_SKILL } from 'lib/optimization/rotation/turnAbilityConfig'
 import { SortOption } from 'lib/optimization/sortOptions'
 
-const NULL = null as unknown as string
-const BASIC = 'BASIC'
-const SKILL = 'SKILL'
-const ULT = 'ULT'
-const FUA = 'FUA'
-const MEMO_SKILL = 'MEMO_SKILL'
-const MEMO_TALENT = 'MEMO_TALENT'
+export type PresetDefinition = {
+  name: string
+  set: SetsRelics | SetsOrnaments
+  value: number | boolean
+  index?: number
+}
 
 export const PresetEffects = {
-  fnAshblazingSet: (stacks) => {
-    return (form) => {
-      form.setConditionals[Sets.TheAshblazingGrandDuke][1] = stacks
+  // Dynamic values
+
+  fnAshblazingSet: (stacks: number): PresetDefinition => {
+    return {
+      name: 'fnAshblazingSet',
+      value: stacks,
+      set: Sets.TheAshblazingGrandDuke,
     }
   },
-  fnPioneerSet: (value) => {
-    return (form) => {
-      form.setConditionals[Sets.PioneerDiverOfDeadWaters][1] = value
+  fnPioneerSet: (value: number): PresetDefinition => {
+    return {
+      name: 'fnPioneerSet',
+      value: value,
+      set: Sets.PioneerDiverOfDeadWaters,
     }
   },
-  fnSacerdosSet: (value) => {
-    return (form) => {
-      form.setConditionals[Sets.SacerdosRelivedOrdeal][1] = value
+  fnSacerdosSet: (value: number): PresetDefinition => {
+    return {
+      name: 'fnSacerdosSet',
+      value: value,
+      set: Sets.SacerdosRelivedOrdeal,
     }
   },
-  PRISONER_SET: (form) => {
-    form.setConditionals[Sets.PrisonerInDeepConfinement][1] = 3
-  },
-  WASTELANDER_SET: (form) => {
-    form.setConditionals[Sets.PrisonerInDeepConfinement][1] = 2
-  },
-  VALOROUS_SET: (form) => {
-    form.setConditionals[Sets.TheWindSoaringValorous][1] = true
-  },
-  BANANA_SET: (form) => {
-    form.setConditionals[Sets.TheWondrousBananAmusementPark][1] = true
-  },
+
+  // Preset values
+
+  PRISONER_SET: {
+    name: 'PRISONER_SET',
+    value: 3,
+    set: Sets.PrisonerInDeepConfinement,
+  } as PresetDefinition,
+  WASTELANDER_SET: {
+    name: 'WASTELANDER_SET',
+    value: 2,
+    set: Sets.WastelanderOfBanditryDesert,
+  } as PresetDefinition,
+  VALOROUS_SET: {
+    name: 'VALOROUS_SET',
+    value: true,
+    set: Sets.TheWindSoaringValorous,
+  } as PresetDefinition,
+  BANANA_SET: {
+    name: 'BANANA_SET',
+    value: true,
+    set: Sets.TheWondrousBananAmusementPark,
+  } as PresetDefinition,
+  GENIUS_SET: {
+    name: 'GENIUS_SET',
+    value: true,
+    set: Sets.GeniusOfBrilliantStars,
+  } as PresetDefinition,
+  WARRIOR_SET: {
+    name: 'WARRIOR_SET',
+    value: true,
+    set: Sets.WarriorGoddessOfSunAndThunder,
+  } as PresetDefinition,
 }
 
 const RELICS_2P_BREAK_EFFECT_SPEED = [
@@ -85,23 +114,14 @@ export function getScoringMetadata() {
         [Stats.ATK_P]: 0,
         [Stats.DEF]: 1,
         [Stats.DEF_P]: 1,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 1,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.50,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -122,6 +142,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.VALOROUS_SET,
+        PresetEffects.WARRIOR_SET,
       ],
       sortOption: SortOption.SHIELD,
       addedColumns: [SortOption.SHIELD],
@@ -141,15 +162,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 1,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -197,9 +209,14 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_SKILL,
+          END_ULT,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
@@ -212,13 +229,13 @@ export function getScoringMetadata() {
         teammates: [
           {
             characterId: '1101', // Bronya
-            lightCone: '23003', // But the battle
+            lightCone: '23003', // BTBIO
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1303', // Ruan Mei
-            lightCone: '23019', // Past self
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -245,15 +262,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0.5,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 1,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -303,9 +311,17 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, FUA, SKILL, FUA, SKILL, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_FUA,
+          END_SKILL,
+          DEFAULT_FUA,
+          START_SKILL,
+          END_BREAK,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -317,8 +333,8 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1112', // Topaz
-            lightCone: '23016', // Worrisome
+            characterId: '1225', // Fugue
+            lightCone: '23035', // Long Road
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -329,8 +345,8 @@ export function getScoringMetadata() {
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1304', // Aventurine
-            lightCone: '23023', // Unjust destiny
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -351,15 +367,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 1,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 1,
       },
       parts: {
         [Parts.Body]: [
@@ -410,9 +417,14 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         errRopeEidolon: 0,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
@@ -433,14 +445,14 @@ export function getScoringMetadata() {
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1106', // Pela
-            lightCone: '21015', // Pearls
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
+            characterId: '1218', // Jiaoqiu
+            lightCone: '23029', // Springs
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
           {
-            characterId: '1217', // Huohuo
-            lightCone: '23017', // Night of Fright
+            characterId: '1304', // Aventurine
+            lightCone: '23023', // Unjust destiny
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -461,15 +473,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0.5,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 1,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -521,9 +524,21 @@ export function getScoringMetadata() {
         breakpoints: {
           [Stats.EHR]: 0.282,
         },
-        comboAbilities: [NULL, ULT, SKILL, FUA, SKILL, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_DOT,
+          DEFAULT_SKILL,
+          END_DOT,
+          DEFAULT_FUA,
+          START_SKILL,
+          END_DOT,
+          DEFAULT_FUA,
+          START_SKILL,
+          END_DOT,
+          DEFAULT_FUA,
+        ],
         comboDot: 16,
-        comboBreak: 0,
         relicSets: [
           [Sets.PrisonerInDeepConfinement, Sets.PrisonerInDeepConfinement],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -557,25 +572,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.5,
-        [Stats.DEF_P]: 0.5,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 1,
-        [Stats.RES]: 0.5,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 1,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -618,15 +624,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 1,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -672,9 +669,14 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -685,20 +687,20 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1101', // Bronya
-            lightCone: '23003', // But the battle
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // If time were a flower
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1303', // Ruan Mei
-            lightCone: '23019', // Past self
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1217', // Huohuo
-            lightCone: '23017', // Night of Fright
+            characterId: '1409', // Hyacine
+            lightCone: '23042', // Long may Rainbows adorn the sky
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -707,27 +709,18 @@ export function getScoringMetadata() {
     },
     1009: { // Asta
       stats: {
-        [Stats.ATK]: 0.5,
-        [Stats.ATK_P]: 0.5,
-        [Stats.DEF]: 0.5,
-        [Stats.DEF_P]: 0.5,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.ATK]: 0,
+        [Stats.ATK_P]: 0,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.5,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 0.5,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 1,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [],
@@ -758,15 +751,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 1,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -783,6 +767,7 @@ export function getScoringMetadata() {
         ],
         [Parts.LinkRope]: [
           Stats.ATK_P,
+          Stats.ERR,
         ],
       },
       presets: [
@@ -815,9 +800,17 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, FUA, SKILL, FUA, SKILL, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_FUA,
+          END_SKILL,
+          DEFAULT_FUA,
+          WHOLE_SKILL,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
+        errRopeEidolon: 0,
         relicSets: [
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
@@ -831,20 +824,20 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1003', // Himeko
-            lightCone: '23000', // Milky way
+            characterId: '1401', // The Herta
+            lightCone: '23037', // Unreachable Veil
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1303', // Ruan Mei
-            lightCone: '23019', // Past self
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // If Time Were a Flower
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1217', // Huohuo
-            lightCone: '23017', // Night of Fright
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -855,25 +848,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.5,
-        [Stats.DEF_P]: 0.5,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 1,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 1,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -905,15 +889,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 1,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -959,9 +934,14 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_SKILL,
+          DEFAULT_SKILL,
+          END_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
@@ -974,8 +954,8 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1006', // SW
-            lightCone: '23007', // Rain
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -986,10 +966,10 @@ export function getScoringMetadata() {
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1217', // Huohuo
-            lightCone: '23017', // Night of Fright
+            characterId: '1203', // Luocha
+            lightCone: '21021', // QPQ
             characterEidolon: 0,
-            lightConeSuperimposition: 1,
+            lightConeSuperimposition: 5,
           },
         ],
       },
@@ -1008,15 +988,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 1,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -1065,9 +1036,13 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         errRopeEidolon: 0,
         deprioritizeBuffs: true,
         relicSets: [
@@ -1086,20 +1061,20 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1005', // Kafka
-            lightCone: '23006', // Patience
+            characterId: '1401', // The Herta
+            lightCone: '23037', // Veil
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1303', // Ruan Mei
-            lightCone: '23019', // Past self
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // Flower
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1217', // Huohuo
-            lightCone: '23017', // Night of Fright
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -1112,23 +1087,14 @@ export function getScoringMetadata() {
         [Stats.ATK_P]: 0,
         [Stats.DEF]: 1,
         [Stats.DEF_P]: 1,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0.75,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.50,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -1155,25 +1121,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
         [Stats.HP]: 1,
         [Stats.HP_P]: 1,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.50,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 1,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -1192,7 +1149,9 @@ export function getScoringMetadata() {
           Stats.ERR,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.WARRIOR_SET,
+      ],
       sortOption: SortOption.HEAL,
       addedColumns: [SortOption.OHB, SortOption.HEAL],
       hiddenColumns: [SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
@@ -1201,25 +1160,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 1,
-        [Stats.RES]: 0.5,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 1,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -1259,15 +1209,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 1,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -1316,9 +1257,17 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, FUA, FUA, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          DEFAULT_FUA,
+          DEFAULT_FUA,
+          WHOLE_SKILL,
+          DEFAULT_FUA,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.ChampionOfStreetwiseBoxing, Sets.ChampionOfStreetwiseBoxing],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -1330,22 +1279,22 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1112', // Topaz
-            lightCone: '23016', // Worrisome
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // Flower
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1303', // Ruan Mei
-            lightCone: '23019', // Past self
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
             characterId: '1304', // Aventurine
-            lightCone: '21016', // Trend
+            lightCone: '23023', // Inherently Unjust Destiny
             characterEidolon: 0,
-            lightConeSuperimposition: 5,
+            lightConeSuperimposition: 1,
           },
         ],
       },
@@ -1363,16 +1312,7 @@ export function getScoringMetadata() {
         [Stats.CD]: 0,
         [Stats.EHR]: 1,
         [Stats.RES]: 0,
-        [Stats.BE]: 1,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 1,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
+        [Stats.BE]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -1422,9 +1362,17 @@ export function getScoringMetadata() {
           Stats.CR,
           Stats.CD,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          DEFAULT_DOT,
+          WHOLE_SKILL,
+          DEFAULT_DOT,
+          WHOLE_SKILL,
+          DEFAULT_DOT,
+        ],
         comboDot: 60,
-        comboBreak: 0,
         relicSets: [
           [Sets.PrisonerInDeepConfinement, Sets.PrisonerInDeepConfinement],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -1468,15 +1416,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 1,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -1524,9 +1463,15 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
@@ -1539,20 +1484,20 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1101', // Bronya
+            characterId: '1306', // Sparkle
             lightCone: '23003', // But the battle
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1303', // Ruan Mei
-            lightCone: '23019', // Past self
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // If Time Were a Flower
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1217', // Huohuo
-            lightCone: '23017', // Night of Fright
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent alone stays true
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -1563,25 +1508,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
         [Stats.HP]: 1,
         [Stats.HP_P]: 1,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.50,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 1,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -1600,7 +1536,9 @@ export function getScoringMetadata() {
           Stats.ERR,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.WARRIOR_SET,
+      ],
       sortOption: SortOption.HEAL,
       addedColumns: [SortOption.OHB, SortOption.HEAL],
       hiddenColumns: [SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
@@ -1618,16 +1556,7 @@ export function getScoringMetadata() {
         [Stats.CD]: 0,
         [Stats.EHR]: 1,
         [Stats.RES]: 0,
-        [Stats.BE]: 0.75,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 1,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
+        [Stats.BE]: 1,
       },
       parts: {
         [Parts.Body]: [
@@ -1677,9 +1606,20 @@ export function getScoringMetadata() {
           Stats.EHR,
           Stats.CR,
         ],
-        comboAbilities: [NULL, ULT, SKILL, BASIC, BASIC],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_SKILL,
+          END_BREAK,
+          DEFAULT_DOT,
+          START_BASIC,
+          END_DOT,
+          DEFAULT_DOT,
+          START_BASIC,
+          END_DOT,
+          DEFAULT_DOT,
+        ],
         comboDot: 5,
-        comboBreak: 1,
         relicSets: [
           [Sets.PrisonerInDeepConfinement, Sets.PrisonerInDeepConfinement],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -1691,8 +1631,8 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1005', // Kafka
-            lightCone: '23006', // Patience
+            characterId: '1225', // Fugue
+            lightCone: '23035', // Long Road
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -1703,8 +1643,8 @@ export function getScoringMetadata() {
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1217', // Huohuo
-            lightCone: '23017', // Night of Fright
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent alone stays true
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -1725,15 +1665,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 1,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -1750,6 +1681,7 @@ export function getScoringMetadata() {
         ],
         [Parts.LinkRope]: [
           Stats.ATK_P,
+          Stats.ERR,
         ],
       },
       presets: [
@@ -1785,9 +1717,20 @@ export function getScoringMetadata() {
           Stats.ATK,
         ],
         errRopeEidolon: 6,
-        comboAbilities: [NULL, ULT, SKILL, FUA, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_BASIC,
+          DEFAULT_FUA,
+          DEFAULT_FUA,
+          WHOLE_SKILL,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         deprioritizeBuffs: true,
         relicSets: [
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
@@ -1801,8 +1744,8 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1305', // Ratio
-            lightCone: '23020', // Baptism
+            characterId: '1220', // Feixiao
+            lightCone: '23031', // Venture Forth
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -1835,15 +1778,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 1,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -1892,9 +1826,17 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, BASIC, FUA, BASIC, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_SKILL,
+          DEFAULT_ULT,
+          END_BASIC,
+          DEFAULT_FUA,
+          START_SKILL,
+          END_BASIC,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
@@ -1908,8 +1850,8 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1006', // SW
-            lightCone: '23007', // Rain
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // Flower
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -1932,25 +1874,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0.75,
         [Stats.ATK_P]: 0.75,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.5,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -1978,25 +1911,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 1,
         [Stats.ATK_P]: 1,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.50,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 1,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -2019,6 +1943,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.WASTELANDER_SET,
+        PresetEffects.WARRIOR_SET,
       ],
       sortOption: SortOption.SPD,
       addedColumns: [SortOption.OHB, SortOption.HEAL],
@@ -2038,15 +1963,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 1,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -2096,9 +2012,21 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          WHOLE_SKILL,
+          DEFAULT_FUA,
+          WHOLE_SKILL,
+          START_ULT,
+          END_SKILL,
+          DEFAULT_FUA,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -2111,14 +2039,14 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1306', // Sparkle
-            lightCone: '23003', // But the battle
+            characterId: '1313', // Sunday
+            lightCone: '23034', // Grounded Ascent
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1303', // Ruan Mei
-            lightCone: '23019', // Past self
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -2145,15 +2073,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 1,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -2203,9 +2122,18 @@ export function getScoringMetadata() {
           Stats.HP,
           Stats.ATK_P,
         ],
-        comboAbilities: [NULL, ULT, BASIC, FUA, BASIC],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_SKILL,
+          DEFAULT_ULT,
+          END_BASIC,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.LongevousDisciple, Sets.LongevousDisciple],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -2218,22 +2146,22 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1212', // Jingliu
-            lightCone: '23014', // I shall
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // Flower
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1101', // Bronya
-            lightCone: '23003', // But the battle
+            characterId: '1407', // Castorice
+            lightCone: '23040', // Farewells
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1203', // Luocha
-            lightCone: '20015', // Multi
+            characterId: '1409', // Hyacine
+            lightCone: '23042', // Rainbows
             characterEidolon: 0,
-            lightConeSuperimposition: 5,
+            lightConeSuperimposition: 1,
           },
         ],
       },
@@ -2252,15 +2180,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0.5,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 1,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -2308,9 +2227,16 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.BE,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_SKILL,
+          DEFAULT_ULT,
+          END_BREAK,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 1,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.ChampionOfStreetwiseBoxing, Sets.ChampionOfStreetwiseBoxing],
@@ -2325,10 +2251,10 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '8006', // Stelle
-            lightCone: '21004', // Memories
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
+            characterId: '1225', // Fugue
+            lightCone: '23035', // Long Road
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
           {
             characterId: '1303', // Ruan Mei
@@ -2337,10 +2263,10 @@ export function getScoringMetadata() {
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1301', // Gallagher
-            lightCone: '20015', // Multi
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
         ],
       },
@@ -2359,15 +2285,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 1,
       },
       parts: {
         [Parts.Body]: [
@@ -2397,8 +2314,8 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 1,
-        [Stats.DEF_P]: 1,
+        [Stats.DEF]: 0.75,
+        [Stats.DEF_P]: 0.75,
         [Stats.HP]: 1,
         [Stats.HP_P]: 1,
         [Stats.SPD]: 1,
@@ -2407,15 +2324,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0.5,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -2437,7 +2345,9 @@ export function getScoringMetadata() {
           Stats.ERR,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.WARRIOR_SET,
+      ],
       sortOption: SortOption.EHP,
       addedColumns: [SortOption.OHB, SortOption.HEAL],
       hiddenColumns: [SortOption.SKILL, SortOption.FUA, SortOption.DOT],
@@ -2456,15 +2366,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 1,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -2512,9 +2413,17 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, FUA, SKILL, FUA, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_SKILL,
+          END_FUA,
+          START_SKILL,
+          END_FUA,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.HunterOfGlacialForest, Sets.HunterOfGlacialForest],
@@ -2527,20 +2436,20 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1303', // Ruan Mei
-            lightCone: '23019', // Past self
+            characterId: '1101', // Bronya
+            lightCone: '23003', // But the battle
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1106', // Pela
-            lightCone: '21015', // Pearls
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
           {
-            characterId: '1217', // Huohuo
-            lightCone: '23017', // Night of Fright
+            characterId: '1304', // Aventurine
+            lightCone: '23023', // Unjust Destiny
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -2549,27 +2458,18 @@ export function getScoringMetadata() {
     },
     1210: { // Guinaifen
       stats: {
-        [Stats.ATK]: 0.75,
-        [Stats.ATK_P]: 0.75,
-        [Stats.DEF]: 0.5,
-        [Stats.DEF_P]: 0.5,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.ATK]: 0.5,
+        [Stats.ATK_P]: 0.5,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 1,
-        [Stats.RES]: 0.5,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 1,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -2598,25 +2498,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
         [Stats.HP]: 1,
         [Stats.HP_P]: 1,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.50,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 1,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -2634,7 +2525,9 @@ export function getScoringMetadata() {
           Stats.ERR,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.WARRIOR_SET,
+      ],
       sortOption: SortOption.HEAL,
       addedColumns: [SortOption.OHB, SortOption.HEAL],
       hiddenColumns: [SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
@@ -2653,15 +2546,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 1,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -2678,6 +2562,7 @@ export function getScoringMetadata() {
         ],
         [Parts.LinkRope]: [
           Stats.ATK_P,
+          Stats.ERR,
         ],
       },
       presets: [],
@@ -2707,9 +2592,16 @@ export function getScoringMetadata() {
           Stats.ATK,
         ],
         errRopeEidolon: 0,
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          DEFAULT_ULT,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+          START_SKILL,
+          END_ULT,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.HunterOfGlacialForest, Sets.HunterOfGlacialForest],
@@ -2755,15 +2647,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 1,
       },
       parts: {
         [Parts.Body]: [
@@ -2811,9 +2694,14 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, BASIC, BASIC],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_BASIC,
+          WHOLE_BASIC,
+          WHOLE_BASIC,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.MusketeerOfWildWheat, Sets.MusketeerOfWildWheat],
           [Sets.WastelanderOfBanditryDesert, Sets.WastelanderOfBanditryDesert],
@@ -2825,22 +2713,22 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1306', // Sparkle
-            lightCone: '23003', // But the battle
+            characterId: '1313', // Sunday
+            lightCone: '23034', // Ascent
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1202', // Tingyun
-            lightCone: '21018', // Dance
-            characterEidolon: 6,
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1203', // Luocha
+            lightCone: '21021', // QPQ
+            characterEidolon: 0,
             lightConeSuperimposition: 5,
-          },
-          {
-            characterId: '1217', // Huohuo
-            lightCone: '23017', // Night of Fright
-            characterEidolon: 0,
-            lightConeSuperimposition: 1,
           },
         ],
       },
@@ -2859,15 +2747,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 1,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 1,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -2919,9 +2798,18 @@ export function getScoringMetadata() {
           Stats.CD,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, FUA, SKILL, FUA, SKILL, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_BREAK,
+          DEFAULT_FUA,
+          END_SKILL,
+          DEFAULT_FUA,
+          WHOLE_SKILL,
+          DEFAULT_FUA,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 1,
         relicSets: [
           [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
@@ -2937,22 +2825,22 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '8006', // Stelle
-            lightCone: '21004', // Memories
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
-          },
-          {
-            characterId: '1303', // Ruan Mei
-            lightCone: '23019', // Past self
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // Flower
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1301', // Gallagher
-            lightCone: '20015', // Multi
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
+            characterId: '1225', // Fugue
+            lightCone: '23035', // Long Road
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
         ],
       },
@@ -2961,25 +2849,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.5,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [],
@@ -2999,25 +2878,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
         [Stats.HP]: 1,
         [Stats.HP_P]: 1,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.50,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 1,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -3036,7 +2906,9 @@ export function getScoringMetadata() {
           Stats.ERR,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.WARRIOR_SET,
+      ],
       sortOption: SortOption.HEAL,
       addedColumns: [SortOption.OHB, SortOption.HEAL],
       hiddenColumns: [SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
@@ -3045,25 +2917,16 @@ export function getScoringMetadata() {
       stats: {
         [Constants.Stats.ATK]: 0.5,
         [Constants.Stats.ATK_P]: 0.5,
-        [Constants.Stats.DEF]: 0.5,
-        [Constants.Stats.DEF_P]: 0.5,
-        [Constants.Stats.HP]: 0.5,
-        [Constants.Stats.HP_P]: 0.5,
+        [Constants.Stats.DEF]: 0.25,
+        [Constants.Stats.DEF_P]: 0.25,
+        [Constants.Stats.HP]: 0.25,
+        [Constants.Stats.HP_P]: 0.25,
         [Constants.Stats.SPD]: 1,
         [Constants.Stats.CR]: 0,
         [Constants.Stats.CD]: 0,
         [Constants.Stats.EHR]: 1,
-        [Constants.Stats.RES]: 0.5,
+        [Constants.Stats.RES]: 0.25,
         [Constants.Stats.BE]: 0,
-        [Constants.Stats.ERR]: 0,
-        [Constants.Stats.OHB]: 0,
-        [Constants.Stats.Physical_DMG]: 0,
-        [Constants.Stats.Fire_DMG]: 1,
-        [Constants.Stats.Ice_DMG]: 0,
-        [Constants.Stats.Lightning_DMG]: 0,
-        [Constants.Stats.Wind_DMG]: 0,
-        [Constants.Stats.Quantum_DMG]: 0,
-        [Constants.Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Constants.Parts.Body]: [
@@ -3098,15 +2961,6 @@ export function getScoringMetadata() {
         [Constants.Stats.EHR]: 0,
         [Constants.Stats.RES]: 0,
         [Constants.Stats.BE]: 0,
-        [Constants.Stats.ERR]: 0,
-        [Constants.Stats.OHB]: 0,
-        [Constants.Stats.Physical_DMG]: 0,
-        [Constants.Stats.Fire_DMG]: 0,
-        [Constants.Stats.Ice_DMG]: 0,
-        [Constants.Stats.Lightning_DMG]: 0,
-        [Constants.Stats.Wind_DMG]: 1,
-        [Constants.Stats.Quantum_DMG]: 0,
-        [Constants.Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Constants.Parts.Body]: [
@@ -3155,9 +3009,18 @@ export function getScoringMetadata() {
           Stats.CD,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, FUA, FUA, ULT, SKILL, FUA, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_SKILL,
+          END_FUA,
+          DEFAULT_FUA,
+          START_ULT,
+          WHOLE_SKILL,
+          END_FUA,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.TheWindSoaringValorous, Sets.TheWindSoaringValorous],
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
@@ -3172,7 +3035,7 @@ export function getScoringMetadata() {
         teammates: [
           {
             characterId: '1112', // Topaz
-            lightCone: '23016', // Worrisome
+            lightCone: '23016', // Worrisome Blissful
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -3205,15 +3068,6 @@ export function getScoringMetadata() {
         [Constants.Stats.EHR]: 0,
         [Constants.Stats.RES]: 0,
         [Constants.Stats.BE]: 0,
-        [Constants.Stats.ERR]: 0,
-        [Constants.Stats.OHB]: 0,
-        [Constants.Stats.Physical_DMG]: 1,
-        [Constants.Stats.Fire_DMG]: 0,
-        [Constants.Stats.Ice_DMG]: 0,
-        [Constants.Stats.Lightning_DMG]: 0,
-        [Constants.Stats.Wind_DMG]: 0,
-        [Constants.Stats.Quantum_DMG]: 0,
-        [Constants.Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Constants.Parts.Body]: [
@@ -3230,6 +3084,7 @@ export function getScoringMetadata() {
         ],
         [Constants.Parts.LinkRope]: [
           Constants.Stats.ATK_P,
+          Stats.ERR,
         ],
       },
       presets: [
@@ -3264,9 +3119,14 @@ export function getScoringMetadata() {
           Stats.ATK,
         ],
         errRopeEidolon: 0,
-        comboAbilities: [NULL, ULT, SKILL, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          DEFAULT_FUA,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.TheWindSoaringValorous, Sets.TheWindSoaringValorous],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -3285,7 +3145,7 @@ export function getScoringMetadata() {
           },
           {
             characterId: '1202', // Tingyun
-            lightCone: '21018', // Dance
+            lightCone: '21004', // MOTP
             characterEidolon: 6,
             lightConeSuperimposition: 5,
           },
@@ -3300,27 +3160,18 @@ export function getScoringMetadata() {
     },
     1222: { // Lingsha
       stats: {
-        [Constants.Stats.ATK]: 0.75,
-        [Constants.Stats.ATK_P]: 0.75,
-        [Constants.Stats.DEF]: 0.5,
-        [Constants.Stats.DEF_P]: 0.5,
-        [Constants.Stats.HP]: 0.5,
-        [Constants.Stats.HP_P]: 0.5,
+        [Constants.Stats.ATK]: 1.00,
+        [Constants.Stats.ATK_P]: 1.00,
+        [Constants.Stats.DEF]: 0.25,
+        [Constants.Stats.DEF_P]: 0.25,
+        [Constants.Stats.HP]: 0.25,
+        [Constants.Stats.HP_P]: 0.25,
         [Constants.Stats.SPD]: 1,
         [Constants.Stats.CR]: 0,
         [Constants.Stats.CD]: 0,
         [Constants.Stats.EHR]: 0,
-        [Constants.Stats.RES]: 0.75,
+        [Constants.Stats.RES]: 0.50,
         [Constants.Stats.BE]: 1,
-        [Constants.Stats.ERR]: 1,
-        [Constants.Stats.OHB]: 0,
-        [Constants.Stats.Physical_DMG]: 0,
-        [Constants.Stats.Fire_DMG]: 1,
-        [Constants.Stats.Ice_DMG]: 0,
-        [Constants.Stats.Lightning_DMG]: 0,
-        [Constants.Stats.Wind_DMG]: 0,
-        [Constants.Stats.Quantum_DMG]: 0,
-        [Constants.Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Constants.Parts.Body]: [
@@ -3348,6 +3199,7 @@ export function getScoringMetadata() {
         PresetEffects.BANANA_SET,
         PresetEffects.fnAshblazingSet(6),
         PresetEffects.VALOROUS_SET,
+        PresetEffects.WARRIOR_SET,
       ],
       sortOption: SortOption.BE,
       addedColumns: [SortOption.OHB, SortOption.HEAL],
@@ -3367,15 +3219,6 @@ export function getScoringMetadata() {
         [Constants.Stats.EHR]: 0,
         [Constants.Stats.RES]: 0,
         [Constants.Stats.BE]: 0,
-        [Constants.Stats.ERR]: 0,
-        [Constants.Stats.OHB]: 0,
-        [Constants.Stats.Physical_DMG]: 0,
-        [Constants.Stats.Fire_DMG]: 0,
-        [Constants.Stats.Ice_DMG]: 0,
-        [Constants.Stats.Lightning_DMG]: 1,
-        [Constants.Stats.Wind_DMG]: 0,
-        [Constants.Stats.Quantum_DMG]: 0,
-        [Constants.Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Constants.Parts.Body]: [
@@ -3392,6 +3235,7 @@ export function getScoringMetadata() {
         ],
         [Constants.Parts.LinkRope]: [
           Constants.Stats.ATK_P,
+          Stats.ERR,
         ],
       },
       presets: [
@@ -3425,10 +3269,17 @@ export function getScoringMetadata() {
           Stats.CD,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, SKILL, ULT, FUA, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          WHOLE_SKILL,
+          DEFAULT_ULT,
+          DEFAULT_FUA,
+          DEFAULT_FUA,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         deprioritizeBuffs: true,
+        errRopeEidolon: 0,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
@@ -3442,8 +3293,8 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1112', // Topaz
-            lightCone: '23016', // Worrisome
+            characterId: '1220', // Feixiao
+            lightCone: '23031', // Venture Forth
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -3476,15 +3327,6 @@ export function getScoringMetadata() {
         [Constants.Stats.EHR]: 0,
         [Constants.Stats.RES]: 0,
         [Constants.Stats.BE]: 0,
-        [Constants.Stats.ERR]: 0,
-        [Constants.Stats.OHB]: 0,
-        [Constants.Stats.Physical_DMG]: 0,
-        [Constants.Stats.Fire_DMG]: 0,
-        [Constants.Stats.Ice_DMG]: 0,
-        [Constants.Stats.Lightning_DMG]: 0,
-        [Constants.Stats.Wind_DMG]: 0,
-        [Constants.Stats.Quantum_DMG]: 0,
-        [Constants.Stats.Imaginary_DMG]: 1,
       },
       parts: {
         [Constants.Parts.Body]: [
@@ -3533,9 +3375,18 @@ export function getScoringMetadata() {
           Stats.CD,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, BASIC, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_BREAK,
+          END_BASIC,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         deprioritizeBuffs: true,
         relicSets: [
           [Sets.MusketeerOfWildWheat, Sets.MusketeerOfWildWheat],
@@ -3549,8 +3400,8 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1112', // Topaz
-            lightCone: '23016', // Worrisome
+            characterId: '1220', // Feixiao
+            lightCone: '23031', // Venture Forth
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -3583,15 +3434,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 1,
         [Stats.RES]: 0,
         [Stats.BE]: 1,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 1,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [],
@@ -3637,9 +3479,17 @@ export function getScoringMetadata() {
         breakpoints: {
           [Stats.EHR]: 0.67,
         },
-        comboAbilities: [NULL, ULT, BASIC, BASIC, BASIC],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_BASIC,
+          END_BREAK,
+          START_BASIC,
+          END_BREAK,
+          START_BASIC,
+          END_BREAK,
+        ],
         comboDot: 0,
-        comboBreak: 3,
         deprioritizeBuffs: true,
         relicSets: [
           [Sets.ThiefOfShootingMeteor, Sets.ThiefOfShootingMeteor],
@@ -3678,25 +3528,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.75,
-        [Stats.DEF_P]: 0.75,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.50,
         [Stats.BE]: 1,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 1,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -3711,7 +3552,9 @@ export function getScoringMetadata() {
           Stats.BE,
         ],
       },
-      presets: [],
+      presets: [
+        PresetEffects.WARRIOR_SET,
+      ],
       sortOption: SortOption.BE,
       addedColumns: [SortOption.OHB, SortOption.HEAL],
       hiddenColumns: [SortOption.SKILL, SortOption.FUA, SortOption.DOT],
@@ -3730,15 +3573,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 1,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -3755,6 +3589,7 @@ export function getScoringMetadata() {
         ],
         [Parts.LinkRope]: [
           Stats.ATK_P,
+          Stats.ERR,
         ],
       },
       presets: [],
@@ -3784,9 +3619,17 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          START_ULT,
+          DEFAULT_ULT,
+          END_SKILL,
+          START_ULT,
+          END_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         errRopeEidolon: 0,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
@@ -3800,20 +3643,20 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1303', // Ruan Mei
-            lightCone: '23019', // Past self
+            characterId: '1401', // The Herta
+            lightCone: '23037', // Veil
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1202', // Tingyun
-            lightCone: '21018', // Dance
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // Flower
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
           {
-            characterId: '1217', // Huohuo
-            lightCone: '23017', // Night of Fright
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -3824,25 +3667,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.5,
-        [Stats.DEF_P]: 0.5,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.5,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 1,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [],
@@ -3871,15 +3705,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 1,
       },
       parts: {
         [Parts.Body]: [
@@ -3935,9 +3760,18 @@ export function getScoringMetadata() {
         breakpoints: {
           [Stats.DEF]: 4000,
         },
-        comboAbilities: [NULL, ULT, BASIC, FUA, BASIC, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_FUA,
+          END_BASIC,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         deprioritizeBuffs: true,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
@@ -3955,7 +3789,7 @@ export function getScoringMetadata() {
         teammates: [
           {
             characterId: '1112', // Topaz
-            lightCone: '23016', // Worrisome
+            lightCone: '23016', // Worrisome Blissful
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -3966,8 +3800,8 @@ export function getScoringMetadata() {
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1305', // Ratio
-            lightCone: '23020', // Baptism
+            characterId: '1220', // Feixiao
+            lightCone: '23031', // Venture Forth
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -3988,15 +3822,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 1,
       },
       parts: {
         [Parts.Body]: [
@@ -4047,9 +3872,19 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, FUA, FUA, SKILL, FUA, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_SKILL,
+          END_FUA,
+          DEFAULT_FUA,
+          START_SKILL,
+          END_FUA,
+          DEFAULT_FUA,
+          START_SKILL,
+          END_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -4063,7 +3898,7 @@ export function getScoringMetadata() {
         teammates: [
           {
             characterId: '1112', // Topaz
-            lightCone: '23016', // Worrisome
+            lightCone: '23016', // Worrisome Blissful
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -4086,25 +3921,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.5,
-        [Stats.DEF_P]: 0.5,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 1,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.5,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -4136,15 +3962,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 1,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 1,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -4196,9 +4013,19 @@ export function getScoringMetadata() {
         breakpoints: {
           [Stats.EHR]: 1.20,
         },
-        comboAbilities: [NULL, SKILL, ULT, BASIC, BASIC],
-        comboDot: 16,
-        comboBreak: 0,
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          DEFAULT_DOT,
+          WHOLE_BASIC,
+          DEFAULT_DOT,
+          WHOLE_SKILL,
+          DEFAULT_DOT,
+          WHOLE_BASIC,
+          DEFAULT_DOT,
+        ],
+        comboDot: 8,
         relicSets: [
           [Sets.PrisonerInDeepConfinement, Sets.PrisonerInDeepConfinement],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -4243,15 +4070,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 1,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -4279,6 +4097,7 @@ export function getScoringMetadata() {
       simulation: {
         parts: {
           [Parts.Body]: [
+            Stats.ATK_P,
             Stats.CR,
             Stats.CD,
           ],
@@ -4300,9 +4119,13 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -4313,22 +4136,22 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
+            characterId: '1218', // Jiaoqiu
+            lightCone: '23029', // Springs
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
             characterId: '1106', // Pela
             lightCone: '21015', // Pearls
             characterEidolon: 6,
             lightConeSuperimposition: 5,
           },
           {
-            characterId: '1006', // SW
-            lightCone: '23007', // Rain
+            characterId: '1304', // Aventurine
+            lightCone: '23023', // Unjust Destiny
             characterEidolon: 0,
             lightConeSuperimposition: 1,
-          },
-          {
-            characterId: '1304', // Aventurine
-            lightCone: '21016', // Trend
-            characterEidolon: 0,
-            lightConeSuperimposition: 5,
           },
         ],
       },
@@ -4337,25 +4160,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 1,
         [Stats.ATK_P]: 1,
-        [Stats.DEF]: 0.5,
-        [Stats.DEF_P]: 0.5,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.5,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 1,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -4391,15 +4205,6 @@ export function getScoringMetadata() {
         [Constants.Stats.EHR]: 0,
         [Constants.Stats.RES]: 0,
         [Constants.Stats.BE]: 1,
-        [Constants.Stats.ERR]: 0,
-        [Constants.Stats.OHB]: 0,
-        [Constants.Stats.Physical_DMG]: 0,
-        [Constants.Stats.Fire_DMG]: 0,
-        [Constants.Stats.Ice_DMG]: 0,
-        [Constants.Stats.Lightning_DMG]: 0,
-        [Constants.Stats.Wind_DMG]: 0,
-        [Constants.Stats.Quantum_DMG]: 0,
-        [Constants.Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Constants.Parts.Body]: [
@@ -4442,9 +4247,16 @@ export function getScoringMetadata() {
           Stats.CR,
           Stats.CD,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_SKILL,
+          END_BREAK,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 1,
         relicSets: [
           [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -4454,10 +4266,10 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '8006', // Stelle
-            lightCone: '21004', // Memories
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
+            characterId: '1225', // Fugue
+            lightCone: '23035', // Long Road
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
           {
             characterId: '1303', // Ruan Mei
@@ -4466,10 +4278,10 @@ export function getScoringMetadata() {
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1301', // Gallagher
-            lightCone: '20015', // Multi
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
         ],
       },
@@ -4488,15 +4300,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 1,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -4544,9 +4347,14 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
@@ -4566,10 +4374,10 @@ export function getScoringMetadata() {
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1106', // Pela
-            lightCone: '21015', // Pearls
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
+            characterId: '1306', // Sparkle
+            lightCone: '23003', // BTBIO
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
           {
             characterId: '1217', // Huohuo
@@ -4584,25 +4392,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.5,
-        [Stats.DEF_P]: 0.5,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 1,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 1,
       },
       parts: {
         [Parts.Body]: [
@@ -4632,15 +4431,6 @@ export function getScoringMetadata() {
         [Constants.Stats.EHR]: 0,
         [Constants.Stats.RES]: 0,
         [Constants.Stats.BE]: 0,
-        [Constants.Stats.ERR]: 0,
-        [Constants.Stats.OHB]: 0,
-        [Constants.Stats.Physical_DMG]: 0,
-        [Constants.Stats.Fire_DMG]: 0,
-        [Constants.Stats.Ice_DMG]: 0,
-        [Constants.Stats.Lightning_DMG]: 0,
-        [Constants.Stats.Wind_DMG]: 0,
-        [Constants.Stats.Quantum_DMG]: 1,
-        [Constants.Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Constants.Parts.Body]: [
@@ -4689,13 +4479,23 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, FUA, BASIC, FUA, BASIC],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          WHOLE_SKILL,
+          DEFAULT_ULT,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
           [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
+          [Sets.SacerdosRelivedOrdeal, Sets.SacerdosRelivedOrdeal],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
@@ -4706,20 +4506,20 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1112', // Topaz
-            lightCone: '23016', // Worrisome
+            characterId: '1401', // The Herta
+            lightCone: '23037', // Veil
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1309', // Robin
-            lightCone: '23026', // Nightglow
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // Flower
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1304', // Aventurine
-            lightCone: '23023', // Unjust destiny
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent alone stays true
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -4740,15 +4540,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 1,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 1,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [],
@@ -4787,9 +4578,17 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, BASIC, BASIC, BASIC],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_SKILL,
+          DEFAULT_ULT,
+          DEFAULT_BASIC,
+          END_BREAK,
+          WHOLE_BASIC,
+          START_BASIC,
+          END_BREAK,
+        ],
         comboDot: 0,
-        comboBreak: 1,
         relicSets: [
           [Sets.ThiefOfShootingMeteor, Sets.WatchmakerMasterOfDreamMachinations],
           [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
@@ -4801,10 +4600,10 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '8006', // Stelle
-            lightCone: '21004', // Memories
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
+            characterId: '1225', // Fugue
+            lightCone: '23035', // Long Road
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
           {
             characterId: '1303', // Ruan Mei
@@ -4813,10 +4612,10 @@ export function getScoringMetadata() {
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1301', // Gallagher
-            lightCone: '20015', // Multi
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
+            characterId: '1222', // Lingsha
+            lightCone: '23032', // Scent alone stays true
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
         ],
       },
@@ -4835,15 +4634,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 1,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 1,
       },
       parts: {
         [Parts.Body]: [],
@@ -4886,9 +4676,16 @@ export function getScoringMetadata() {
         breakpoints: {
           [Stats.ATK]: 3200,
         },
-        comboAbilities: [NULL, ULT, BASIC, BASIC, BASIC, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_BASIC,
+          WHOLE_BASIC,
+          START_BASIC,
+          END_BREAK,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 1,
         relicSets: [
           [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
           [Sets.EagleOfTwilightLine, Sets.EagleOfTwilightLine],
@@ -4899,10 +4696,10 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '8006', // Stelle
-            lightCone: '21004', // Memories
-            characterEidolon: 6,
-            lightConeSuperimposition: 5,
+            characterId: '1225', // Fugue
+            lightCone: '23035', // Long Road
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
           },
           {
             characterId: '1303', // Ruan Mei
@@ -4912,7 +4709,7 @@ export function getScoringMetadata() {
           },
           {
             characterId: '1222', // Lingsha
-            lightCone: '23032', // Scent
+            lightCone: '23032', // Scent alone stays true
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -4933,15 +4730,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0.5,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 1,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -4989,9 +4777,14 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 1,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -5037,15 +4830,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0.5,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 1,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -5093,9 +4877,14 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 1,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -5133,23 +4922,14 @@ export function getScoringMetadata() {
         [Stats.ATK_P]: 0,
         [Stats.DEF]: 1,
         [Stats.DEF_P]: 1,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0.75,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.5,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -5178,23 +4958,14 @@ export function getScoringMetadata() {
         [Stats.ATK_P]: 0,
         [Stats.DEF]: 1,
         [Stats.DEF_P]: 1,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0.75,
-        [Stats.RES]: 0.75,
+        [Stats.RES]: 0.50,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -5221,25 +4992,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.5,
-        [Stats.DEF_P]: 0.5,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.5,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 1,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [],
@@ -5260,25 +5022,16 @@ export function getScoringMetadata() {
       stats: {
         [Stats.ATK]: 0,
         [Stats.ATK_P]: 0,
-        [Stats.DEF]: 0.5,
-        [Stats.DEF_P]: 0.5,
-        [Stats.HP]: 0.5,
-        [Stats.HP_P]: 0.5,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
         [Stats.CR]: 0,
         [Stats.CD]: 0,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0.5,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 1,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [],
@@ -5297,31 +5050,23 @@ export function getScoringMetadata() {
     },
     8007: { // Remembrance Trailblazer M
       stats: {
-        [Stats.ATK]: 0.25,
-        [Stats.ATK_P]: 0.25,
-        [Stats.DEF]: 0,
-        [Stats.DEF_P]: 0,
-        [Stats.HP]: 0,
-        [Stats.HP_P]: 0,
+        [Stats.ATK]: 0,
+        [Stats.ATK_P]: 0,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
-        [Stats.CR]: 0.25,
+        [Stats.CR]: 0,
         [Stats.CD]: 1,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 1,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
           Stats.CD,
+          Stats.OHB,
         ],
         [Parts.Feet]: [
           Stats.ATK_P,
@@ -5335,6 +5080,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.BANANA_SET,
+        PresetEffects.WARRIOR_SET,
       ],
       sortOption: SortOption.CD,
       hiddenColumns: [SortOption.SKILL, SortOption.FUA, SortOption.DOT],
@@ -5342,31 +5088,23 @@ export function getScoringMetadata() {
     },
     8008: { // Remembrance Trailblazer F
       stats: {
-        [Stats.ATK]: 0.25,
-        [Stats.ATK_P]: 0.25,
-        [Stats.DEF]: 0,
-        [Stats.DEF_P]: 0,
-        [Stats.HP]: 0,
-        [Stats.HP_P]: 0,
+        [Stats.ATK]: 0,
+        [Stats.ATK_P]: 0,
+        [Stats.DEF]: 0.25,
+        [Stats.DEF_P]: 0.25,
+        [Stats.HP]: 0.25,
+        [Stats.HP_P]: 0.25,
         [Stats.SPD]: 1,
-        [Stats.CR]: 0.25,
+        [Stats.CR]: 0,
         [Stats.CD]: 1,
         [Stats.EHR]: 0,
-        [Stats.RES]: 0,
+        [Stats.RES]: 0.25,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 1,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
           Stats.CD,
+          Stats.OHB,
         ],
         [Parts.Feet]: [
           Stats.ATK_P,
@@ -5380,6 +5118,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.BANANA_SET,
+        PresetEffects.WARRIOR_SET,
       ],
       sortOption: SortOption.CD,
       hiddenColumns: [SortOption.SKILL, SortOption.FUA, SortOption.DOT],
@@ -5399,15 +5138,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 1,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -5454,9 +5184,14 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_SKILL,
+          END_ULT,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         errRopeEidolon: 0,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
@@ -5475,8 +5210,8 @@ export function getScoringMetadata() {
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1309', // Robin
-            lightCone: '23026', // Nightglow
+            characterId: '1403', // Tribbie
+            lightCone: '23038', // Flower
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -5491,8 +5226,8 @@ export function getScoringMetadata() {
     },
     1402: { // Aglaea
       stats: {
-        [Stats.ATK]: 0.75,
-        [Stats.ATK_P]: 0.75,
+        [Stats.ATK]: 0.5,
+        [Stats.ATK_P]: 0.5,
         [Stats.DEF]: 0,
         [Stats.DEF_P]: 0,
         [Stats.HP]: 0,
@@ -5503,15 +5238,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 1,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 1,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -5527,13 +5253,13 @@ export function getScoringMetadata() {
           Stats.Lightning_DMG,
         ],
         [Parts.LinkRope]: [
-          Stats.ERR,
           Stats.ATK_P,
           Stats.ERR,
         ],
       },
       presets: [
         PresetEffects.BANANA_SET,
+        PresetEffects.WARRIOR_SET,
       ],
       sortOption: SortOption.BASIC,
       hiddenColumns: [SortOption.SKILL, SortOption.ULT, SortOption.FUA, SortOption.DOT],
@@ -5562,9 +5288,21 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, BASIC, MEMO_SKILL, MEMO_SKILL, BASIC, MEMO_SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_BASIC,
+          DEFAULT_MEMO_SKILL,
+          DEFAULT_MEMO_SKILL,
+          DEFAULT_MEMO_SKILL,
+          WHOLE_BASIC,
+          WHOLE_BASIC,
+          DEFAULT_MEMO_SKILL,
+          DEFAULT_MEMO_SKILL,
+          DEFAULT_MEMO_SKILL,
+          WHOLE_BASIC,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         errRopeEidolon: 0,
         relicSets: [
           [Sets.HeroOfTriumphantSong, Sets.HeroOfTriumphantSong],
@@ -5603,23 +5341,14 @@ export function getScoringMetadata() {
         [Stats.ATK_P]: 0,
         [Stats.DEF]: 0,
         [Stats.DEF_P]: 0,
-        [Stats.HP]: 0.75,
-        [Stats.HP_P]: 0.75,
+        [Stats.HP]: 1,
+        [Stats.HP_P]: 1,
         [Stats.SPD]: 1,
         [Stats.CR]: 1,
         [Stats.CD]: 1,
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 1,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -5671,9 +5400,21 @@ export function getScoringMetadata() {
           Stats.HP,
           Stats.ATK_P,
         ],
-        comboAbilities: [NULL, ULT, FUA, BASIC, FUA, FUA],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_SKILL,
+          END_ULT,
+          DEFAULT_FUA,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+          DEFAULT_ULT,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+          DEFAULT_FUA,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         errRopeEidolon: 0,
         deprioritizeBuffs: true,
         relicSets: [
@@ -5690,20 +5431,20 @@ export function getScoringMetadata() {
         ],
         teammates: [
           {
-            characterId: '1401', // The Herta
-            lightCone: '23037', // Veil
+            characterId: '1407', // Castorice
+            lightCone: '23040', // Farewells
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1103', // Serval
-            lightCone: '20013', // Passkey
+            characterId: '8008', // Stelle (Remembrance)
+            lightCone: '24005', // Memory's Curtain
             characterEidolon: 6,
             lightConeSuperimposition: 5,
           },
           {
-            characterId: '1222', // Lingsha
-            lightCone: '23032', // Scent
+            characterId: '1409', // Hyacine
+            lightCone: '23042', // Rainbows
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -5724,15 +5465,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 1,
       },
       parts: {
         [Parts.Body]: [
@@ -5780,18 +5512,21 @@ export function getScoringMetadata() {
           Stats.CR,
           Stats.HP_P,
           Stats.HP,
-          Stats.ATK_P,
         ],
-        comboAbilities: [NULL, SKILL, ULT, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          END_SKILL,
+          WHOLE_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
-          Sets.RutilantArena,
           Sets.BoneCollectionsSereneDemesne,
+          Sets.RutilantArena,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
         ],
         teammates: [
@@ -5808,8 +5543,8 @@ export function getScoringMetadata() {
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1203', // Luocha
-            lightCone: '23008', // Coffin
+            characterId: '1409', // Hyacine
+            lightCone: '23042', // Rainbows
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -5818,8 +5553,8 @@ export function getScoringMetadata() {
     },
     1405: { // Anaxa
       stats: {
-        [Stats.ATK]: 0.75,
-        [Stats.ATK_P]: 0.75,
+        [Stats.ATK]: 1,
+        [Stats.ATK_P]: 1,
         [Stats.DEF]: 0,
         [Stats.DEF_P]: 0,
         [Stats.HP]: 0,
@@ -5830,20 +5565,12 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 1,
-        [Stats.Quantum_DMG]: 0,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
           Stats.CR,
           Stats.CD,
+          Stats.ATK_P,
         ],
         [Parts.Feet]: [
           Stats.ATK_P,
@@ -5855,10 +5582,12 @@ export function getScoringMetadata() {
         ],
         [Parts.LinkRope]: [
           Stats.ATK_P,
+          Stats.ERR,
         ],
       },
       presets: [
         PresetEffects.fnPioneerSet(4),
+        PresetEffects.GENIUS_SET,
       ],
       sortOption: SortOption.SKILL,
       hiddenColumns: [SortOption.FUA, SortOption.DOT],
@@ -5867,6 +5596,7 @@ export function getScoringMetadata() {
           [Parts.Body]: [
             Stats.CR,
             Stats.CD,
+            Stats.ATK_P,
           ],
           [Parts.Feet]: [
             Stats.ATK_P,
@@ -5886,36 +5616,47 @@ export function getScoringMetadata() {
           Stats.ATK_P,
           Stats.ATK,
         ],
-        comboAbilities: [NULL, ULT, SKILL, SKILL, SKILL],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_SKILL,
+          END_SKILL,
+          START_SKILL,
+          END_SKILL,
+        ],
         comboDot: 0,
-        comboBreak: 0,
-        deprioritizeBuffs: true,
+        errRopeEidolon: 0,
+        deprioritizeBuffs: false,
         relicSets: [
-          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
+          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
+          Sets.FirmamentFrontlineGlamoth,
           Sets.IzumoGenseiAndTakamaDivineRealm,
+          Sets.SpaceSealingStation,
+          Sets.FirmamentFrontlineGlamoth,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
         ],
         teammates: [
           {
-            characterId: '1401', // The Herta
-            lightCone: '23037', // Unreachable
+            characterId: '1101', // Bronya
+            lightCone: '23003', // BTBIO
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1403', // Tribbie
-            lightCone: '23038', // Flower
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
           {
-            characterId: '1222', // Lingsha
-            lightCone: '23032', // Scent
+            characterId: '1217', // Huohuo
+            lightCone: '23017', // Night of Fright
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
@@ -5936,15 +5677,6 @@ export function getScoringMetadata() {
         [Stats.EHR]: 0,
         [Stats.RES]: 0,
         [Stats.BE]: 0,
-        [Stats.ERR]: 0,
-        [Stats.OHB]: 0,
-        [Stats.Physical_DMG]: 0,
-        [Stats.Fire_DMG]: 0,
-        [Stats.Ice_DMG]: 0,
-        [Stats.Lightning_DMG]: 0,
-        [Stats.Wind_DMG]: 0,
-        [Stats.Quantum_DMG]: 1,
-        [Stats.Imaginary_DMG]: 0,
       },
       parts: {
         [Parts.Body]: [
@@ -5965,6 +5697,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.BANANA_SET,
+        PresetEffects.WARRIOR_SET,
       ],
       sortOption: SortOption.MEMO_SKILL,
       addedColumns: [SortOption.MEMO_SKILL, SortOption.MEMO_TALENT],
@@ -5994,9 +5727,18 @@ export function getScoringMetadata() {
           Stats.HP_P,
           Stats.HP,
         ],
-        comboAbilities: [NULL, SKILL, SKILL, ULT, MEMO_SKILL, MEMO_SKILL, MEMO_SKILL, MEMO_SKILL, MEMO_TALENT],
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          WHOLE_SKILL,
+          WHOLE_SKILL,
+          DEFAULT_ULT,
+          DEFAULT_MEMO_SKILL,
+          DEFAULT_MEMO_SKILL,
+          DEFAULT_MEMO_SKILL,
+          DEFAULT_MEMO_SKILL,
+          DEFAULT_MEMO_TALENT,
+        ],
         comboDot: 0,
-        comboBreak: 0,
         relicSets: [
           [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -6014,13 +5756,169 @@ export function getScoringMetadata() {
           },
           {
             characterId: '8008', // RMC
-            lightCone: '21050', // Victory
+            lightCone: '24005', // Memory's Curtain
             characterEidolon: 6,
             lightConeSuperimposition: 5,
           },
           {
-            characterId: '1222', // Lingsha
-            lightCone: '23032', // Scent
+            characterId: '1409', // Hyacine
+            lightCone: '23042', // Rainbows
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+        ],
+      },
+    },
+    1409: { // Hyacine
+      stats: {
+        [Constants.Stats.ATK]: 0,
+        [Constants.Stats.ATK_P]: 0,
+        [Constants.Stats.DEF]: 0,
+        [Constants.Stats.DEF_P]: 0,
+        [Constants.Stats.HP]: 1,
+        [Constants.Stats.HP_P]: 1,
+        [Constants.Stats.SPD]: 1,
+        [Constants.Stats.CR]: 0,
+        [Constants.Stats.CD]: 0.50,
+        [Constants.Stats.EHR]: 0,
+        [Constants.Stats.RES]: 0.50,
+        [Constants.Stats.BE]: 0,
+      },
+      parts: {
+        [Constants.Parts.Body]: [
+          Constants.Stats.OHB,
+          Constants.Stats.HP_P,
+        ],
+        [Constants.Parts.Feet]: [
+          Constants.Stats.SPD,
+        ],
+        [Constants.Parts.PlanarSphere]: [
+          Constants.Stats.HP_P,
+        ],
+        [Constants.Parts.LinkRope]: [
+          Constants.Stats.ERR,
+          Constants.Stats.HP_P,
+        ],
+      },
+      presets: [
+        PresetEffects.BANANA_SET,
+        PresetEffects.WARRIOR_SET,
+      ],
+      sortOption: SortOption.HEAL,
+      addedColumns: [SortOption.OHB, SortOption.HEAL],
+      hiddenColumns: [SortOption.DOT],
+    },
+    1406: { // Cipher
+      stats: {
+        [Constants.Stats.ATK]: 0.75,
+        [Constants.Stats.ATK_P]: 0.75,
+        [Constants.Stats.DEF]: 0,
+        [Constants.Stats.DEF_P]: 0,
+        [Constants.Stats.HP]: 0,
+        [Constants.Stats.HP_P]: 0,
+        [Constants.Stats.SPD]: 1,
+        [Constants.Stats.CR]: 1,
+        [Constants.Stats.CD]: 1,
+        [Constants.Stats.EHR]: 0.50,
+        [Constants.Stats.RES]: 0,
+        [Constants.Stats.BE]: 0,
+      },
+      parts: {
+        [Constants.Parts.Body]: [
+          Constants.Stats.CR,
+          Constants.Stats.CD,
+          Constants.Stats.EHR,
+        ],
+        [Constants.Parts.Feet]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.SPD,
+        ],
+        [Constants.Parts.PlanarSphere]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.Quantum_DMG,
+        ],
+        [Constants.Parts.LinkRope]: [
+          Constants.Stats.ATK_P,
+          Constants.Stats.ERR,
+        ],
+      },
+      presets: [
+        PresetEffects.fnAshblazingSet(4),
+        PresetEffects.fnPioneerSet(4),
+        PresetEffects.VALOROUS_SET,
+      ],
+      sortOption: SortOption.FUA,
+      hiddenColumns: [SortOption.DOT],
+      simulation: {
+        parts: {
+          [Parts.Body]: [
+            Stats.CR,
+            Stats.CD,
+          ],
+          [Parts.Feet]: [
+            Stats.ATK_P,
+            Stats.SPD,
+          ],
+          [Parts.PlanarSphere]: [
+            Stats.ATK_P,
+            Stats.Quantum_DMG,
+          ],
+          [Parts.LinkRope]: [
+            Stats.ATK_P,
+          ],
+        },
+        substats: [
+          Stats.ATK_P,
+          Stats.CR,
+          Stats.CD,
+          Stats.ATK,
+          Stats.EHR,
+        ],
+        breakpoints: {
+          [Stats.EHR]: 0.19,
+        },
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          DEFAULT_ULT,
+          WHOLE_SKILL,
+          DEFAULT_FUA,
+          WHOLE_SKILL,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+        ],
+        deprioritizeBuffs: true,
+        comboDot: 0,
+        errRopeEidolon: 0,
+        relicSets: [
+          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
+          [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
+        ],
+        ornamentSets: [
+          Sets.InertSalsotto,
+          Sets.DuranDynastyOfRunningWolves,
+          Sets.FirmamentFrontlineGlamoth,
+          ...SPREAD_ORNAMENTS_2P_FUA,
+          ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
+          ...SPREAD_ORNAMENTS_2P_SUPPORT,
+        ],
+        teammates: [
+          {
+            characterId: '1220', // Feixiao
+            lightCone: '23031', // Venture
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1309', // Robin
+            lightCone: '23026', // Nightglow
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: '1304', // Aventurine
+            lightCone: '23023', // Unjust destiny
             characterEidolon: 0,
             lightConeSuperimposition: 1,
           },
