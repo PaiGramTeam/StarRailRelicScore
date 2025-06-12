@@ -2,9 +2,52 @@ import re
 from httpx import get
 
 url = "https://raw.githubusercontent.com/PaiGramTeam/hsr-optimizer/main/src/lib/"
-HEAD_DATA = """import { Constants, Parts, PartsMainStats, Sets, Stats, SetsRelics, SetsOrnaments } from 'lib/constants/constants'
-import { DEFAULT_BASIC, DEFAULT_BREAK, DEFAULT_DOT, DEFAULT_FUA, DEFAULT_MEMO_SKILL, DEFAULT_MEMO_TALENT, DEFAULT_SKILL, DEFAULT_ULT, END_BASIC, END_BREAK, END_DOT, END_FUA, END_SKILL, END_ULT, NULL_TURN_ABILITY_NAME, START_BASIC, START_SKILL, START_ULT, WHOLE_BASIC, WHOLE_SKILL } from 'lib/optimization/rotation/turnAbilityConfig'
+HEAD_DATA = """import {
+  Constants,
+  Parts,
+  PartsMainStats,
+  Sets,
+  Stats,
+} from 'lib/constants/constants'
+import {
+  DEFAULT_BASIC,
+  DEFAULT_BREAK,
+  DEFAULT_DOT,
+  DEFAULT_FUA,
+  DEFAULT_MEMO_SKILL,
+  DEFAULT_MEMO_TALENT,
+  DEFAULT_SKILL,
+  DEFAULT_ULT,
+  END_BASIC,
+  END_BREAK,
+  END_DOT,
+  END_FUA,
+  END_SKILL,
+  END_ULT,
+  NULL_TURN_ABILITY_NAME,
+  START_BASIC,
+  START_SKILL,
+  START_ULT,
+  WHOLE_BASIC,
+  WHOLE_SKILL,
+} from 'lib/optimization/rotation/turnAbilityConfig'
 import { SortOption } from 'lib/optimization/sortOptions'
+import {
+  A_GROUNDED_ASCENT,
+  CIPHER,
+  DANCE_DANCE_DANCE,
+  EARTHLY_ESCAPADE,
+  FLOWING_NIGHTGLOW,
+  HUOHUO,
+  LIES_DANCE_ON_THE_BREEZE,
+  LUOCHA,
+  MULTIPLICATION,
+  NIGHT_OF_FRIGHT,
+  ROBIN,
+  SPARKLE,
+  SUNDAY,
+  TINGYUN,
+} from 'lib/simulations/tests/testMetadataConstants'
 
 export type PresetDefinition = {
   name: string
@@ -152,6 +195,10 @@ def main():
     try_save_content(
         get_js_content("optimization/rotation/turnAbilityConfig.ts"),
         "optimization/rotation/turnAbilityConfig.ts",
+    )
+    try_save_content(
+        get_js_content("simulations/tests/testMetadataConstants.ts"),
+        "simulations/tests/testMetadataConstants.ts",
     )
 
 
