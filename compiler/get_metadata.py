@@ -7,6 +7,8 @@ HEAD_DATA = """import {
   Parts,
   PartsMainStats,
   Sets,
+  SetsOrnaments,
+  SetsRelics,
   Stats,
 } from 'lib/constants/constants'
 import {
@@ -34,18 +36,29 @@ import {
 import { SortOption } from 'lib/optimization/sortOptions'
 import {
   A_GROUNDED_ASCENT,
+  ACHERON,
+  ALONG_THE_PASSING_SHORE,
+  AVENTURINE,
+  BLACK_SWAN,
   CIPHER,
   DANCE_DANCE_DANCE,
   EARTHLY_ESCAPADE,
   FLOWING_NIGHTGLOW,
   HUOHUO,
+  INHERENTLY_UNJUST_DESTINY,
+  KAFKA,
+  KAFKA_B1,
   LIES_DANCE_ON_THE_BREEZE,
   LUOCHA,
   MULTIPLICATION,
   NIGHT_OF_FRIGHT,
+  PATIENCE_IS_ALL_YOU_NEED,
+  PHAINON,
+  REFORGED_REMEMBRANCE,
   ROBIN,
   SPARKLE,
   SUNDAY,
+  THUS_BURNS_THE_DAWN,
   TINGYUN,
 } from 'lib/simulations/tests/testMetadataConstants'
 
@@ -121,9 +134,24 @@ const RELICS_2P_BREAK_EFFECT_SPEED = [
   Sets.ThiefOfShootingMeteor,
   Sets.WatchmakerMasterOfDreamMachinations,
   Sets.IronCavalryAgainstTheScourge,
+  Sets.WarriorGoddessOfSunAndThunder,
+]
+
+const RELICS_2P_SPEED = [
+  Sets.MessengerTraversingHackerspace,
+  Sets.SacerdosRelivedOrdeal,
+  Sets.WarriorGoddessOfSunAndThunder,
+]
+
+const RELICS_2P_ATK = [
+  Sets.MusketeerOfWildWheat,
+  Sets.PrisonerInDeepConfinement,
+  Sets.TheWindSoaringValorous,
+  Sets.HeroOfTriumphantSong,
 ]
 
 const SPREAD_RELICS_4P_GENERAL_CONDITIONALS = [
+  [Sets.WavestriderCaptain, Sets.WavestriderCaptain],
   [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
   [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
   [Sets.EagleOfTwilightLine, Sets.EagleOfTwilightLine],
@@ -137,6 +165,7 @@ const SPREAD_ORNAMENTS_2P_FUA = [
 
 const SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS = [
   Sets.SigoniaTheUnclaimedDesolation,
+  Sets.ArcadiaOfWovenDreams,
 ]
 
 const SPREAD_ORNAMENTS_2P_ENERGY_REGEN = [
@@ -151,6 +180,8 @@ const SPREAD_ORNAMENTS_2P_SUPPORT = [
   Sets.PenaconyLandOfTheDreams,
   Sets.FleetOfTheAgeless,
   Sets.LushakaTheSunkenSeas,
+  Sets.ForgeOfTheKalpagniLantern,
+  Sets.GiantTreeOfRaptBrooding,
 ]
 
 export function getScoringMetadata() {"""
