@@ -40,26 +40,56 @@ import {
   ALONG_THE_PASSING_SHORE,
   AVENTURINE,
   BLACK_SWAN,
+  BRONYA,
+  BUT_THE_BATTLE_ISNT_OVER,
+  CASTORICE,
   CIPHER,
   DANCE_DANCE_DANCE,
   EARTHLY_ESCAPADE,
+  FEIXIAO,
+  FIREFLY,
   FLOWING_NIGHTGLOW,
+  FUGUE,
   HUOHUO,
+  HYACINE,
+  I_VENTURE_FORTH_TO_HUNT,
+  IF_TIME_WERE_A_FLOWER,
   INHERENTLY_UNJUST_DESTINY,
+  INTO_THE_UNREACHABLE_VEIL,
+  JADE,
+  JIAOQIU,
   KAFKA,
   KAFKA_B1,
   LIES_DANCE_ON_THE_BREEZE,
+  LINGSHA,
+  LONG_MAY_RAINBOWS_ADORN_THE_SKY,
+  LONG_ROAD_LEADS_HOME,
   LUOCHA,
+  MAKE_FAREWELLS_MORE_BEAUTIFUL,
+  MEMORIES_OF_THE_PAST,
+  MEMORYS_CURTAIN_NEVER_FALLS,
   MULTIPLICATION,
   NIGHT_OF_FRIGHT,
+  PAST_SELF_IN_MIRROR,
   PATIENCE_IS_ALL_YOU_NEED,
   PHAINON,
+  QUID_PRO_QUO,
   REFORGED_REMEMBRANCE,
   ROBIN,
+  RUAN_MEI,
+  SCENT_ALONE_STAYS_TRUE,
   SPARKLE,
+  STELLE_REMEMBRANCE,
   SUNDAY,
+  THE_HERTA,
+  THOSE_MANY_SPRINGS,
   THUS_BURNS_THE_DAWN,
   TINGYUN,
+  TOPAZ_NUMBY,
+  TRIBBIE,
+  WHEREABOUTS_SHOULD_DREAMS_REST,
+  WORRISOME_BLISSFUL,
+  YET_HOPE_IS_PRICELESS,
 } from 'lib/simulations/tests/testMetadataConstants'
 
 export type PresetDefinition = {
@@ -128,6 +158,16 @@ export const PresetEffects = {
   } as PresetDefinition,
 }
 
+const MATCH_2P_WEIGHT = 0.75
+const T2_WEIGHT = 0.9
+
+function weights<K extends string>(sets: K[], weight: number = 1) {
+  return sets.reduce((acc, set) => {
+    acc[set] = weight
+    return acc
+  }, {} as Record<K, number>)
+}
+
 const RELICS_2P_BREAK_EFFECT_SPEED = [
   Sets.MessengerTraversingHackerspace,
   Sets.SacerdosRelivedOrdeal,
@@ -150,6 +190,30 @@ const RELICS_2P_ATK = [
   Sets.HeroOfTriumphantSong,
 ]
 
+const SPREAD_RELICS_2P_SPEED_WEIGHTS = {
+  [Sets.WarriorGoddessOfSunAndThunder]: MATCH_2P_WEIGHT,
+  [Sets.MessengerTraversingHackerspace]: MATCH_2P_WEIGHT,
+  [Sets.SacerdosRelivedOrdeal]: MATCH_2P_WEIGHT,
+}
+
+const SPREAD_RELICS_2P_BREAK_WEIGHTS = {
+  [Sets.ThiefOfShootingMeteor]: MATCH_2P_WEIGHT,
+  [Sets.WatchmakerMasterOfDreamMachinations]: MATCH_2P_WEIGHT,
+  [Sets.IronCavalryAgainstTheScourge]: MATCH_2P_WEIGHT,
+}
+
+const SPREAD_RELICS_2P_ATK_WEIGHTS = {
+  [Sets.MusketeerOfWildWheat]: MATCH_2P_WEIGHT,
+  [Sets.PrisonerInDeepConfinement]: MATCH_2P_WEIGHT,
+  [Sets.TheWindSoaringValorous]: MATCH_2P_WEIGHT,
+  [Sets.HeroOfTriumphantSong]: MATCH_2P_WEIGHT,
+}
+
+const SPREAD_RELICS_2P_ATK_CRIT_WEIGHTS = {
+  ...SPREAD_RELICS_2P_ATK_WEIGHTS,
+  [Sets.ScholarLostInErudition]: MATCH_2P_WEIGHT,
+}
+
 const SPREAD_RELICS_4P_GENERAL_CONDITIONALS = [
   [Sets.WavestriderCaptain, Sets.WavestriderCaptain],
   [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
@@ -163,6 +227,8 @@ const SPREAD_ORNAMENTS_2P_FUA = [
   Sets.InertSalsotto,
 ]
 
+const SPREAD_ORNAMENTS_2P_FUA_WEIGHTS = weights(SPREAD_ORNAMENTS_2P_FUA)
+
 const SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS = [
   Sets.SigoniaTheUnclaimedDesolation,
   Sets.ArcadiaOfWovenDreams,
@@ -174,6 +240,8 @@ const SPREAD_ORNAMENTS_2P_ENERGY_REGEN = [
   Sets.LushakaTheSunkenSeas,
 ]
 
+const SPREAD_ORNAMENTS_2P_ENERGY_REGEN_WEIGHTS = weights(SPREAD_ORNAMENTS_2P_ENERGY_REGEN)
+
 const SPREAD_ORNAMENTS_2P_SUPPORT = [
   Sets.SprightlyVonwacq,
   Sets.BrokenKeel,
@@ -183,6 +251,8 @@ const SPREAD_ORNAMENTS_2P_SUPPORT = [
   Sets.ForgeOfTheKalpagniLantern,
   Sets.GiantTreeOfRaptBrooding,
 ]
+
+const SPREAD_ORNAMENTS_2P_SUPPORT_WEIGHTS = weights(SPREAD_ORNAMENTS_2P_SUPPORT)
 
 export function getScoringMetadata() {"""
 

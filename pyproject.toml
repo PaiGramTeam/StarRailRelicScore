@@ -3,7 +3,7 @@ name = "StarRailRelicScore"
 version = "0.3.0"
 description = "StarRail Relic Score Cal"
 authors = [
-    {name = "xtaodada", email = "xtao@xtaolink.cn"},
+    {name = "xtaodada", email = "xtao@xtao.de"},
 ]
 dependencies = [
     "pydantic<3.0.0,>=2.0.0",
