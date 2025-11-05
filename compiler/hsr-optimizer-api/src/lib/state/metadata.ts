@@ -44,6 +44,7 @@ import {
   DANCE_DANCE_DANCE,
   EARTHLY_ESCAPADE,
   EPOCH_ETCHED_IN_GOLDEN_BLOOD,
+  EVERNIGHT,
   FEIXIAO,
   FIREFLY,
   FLOWING_NIGHTGLOW,
@@ -78,9 +79,11 @@ import {
   SPARKLE,
   STELLE_REMEMBRANCE,
   SUNDAY,
+  TAKE_FLIGHT_TOWARD_A_PINK_TOMORROW,
   THE_HERTA,
   THOSE_MANY_SPRINGS,
   TINGYUN,
+  TO_EVERNIGHTS_STARS,
   TOPAZ_NUMBY,
   TRIBBIE,
   WHEREABOUTS_SHOULD_DREAMS_REST,
@@ -1169,7 +1172,9 @@ export function getScoringMetadata() {
         [Sets.FirmamentFrontlineGlamoth]: 1,
         [Sets.InertSalsotto]: 1,
       },
-      presets: [],
+      presets: [
+        PresetEffects.TENGOKU_SET,
+      ],
       sortOption: SortOption.SKILL,
       hiddenColumns: [SortOption.FUA, SortOption.DOT],
       simulation: {
@@ -1205,12 +1210,13 @@ export function getScoringMetadata() {
         ],
         comboDot: 0,
         relicSets: [
-          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
+          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
           Sets.RutilantArena,
+          Sets.TengokuLivestream,
           Sets.FirmamentFrontlineGlamoth,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
         ],
@@ -2174,6 +2180,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.VALOROUS_SET,
+        PresetEffects.TENGOKU_SET,
         PresetEffects.fnSacerdosSet(2),
       ],
       sortOption: SortOption.BASIC,
@@ -2214,6 +2221,7 @@ export function getScoringMetadata() {
         ],
         comboDot: 0,
         relicSets: [
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
           [Sets.SacerdosRelivedOrdeal, Sets.SacerdosRelivedOrdeal],
@@ -2221,6 +2229,7 @@ export function getScoringMetadata() {
         ],
         ornamentSets: [
           Sets.RutilantArena,
+          Sets.TengokuLivestream,
           ...SPREAD_ORNAMENTS_2P_FUA,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
         ],
@@ -3163,6 +3172,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.WASTELANDER_SET,
+        PresetEffects.TENGOKU_SET,
       ],
       sortOption: SortOption.BASIC,
       hiddenColumns: [SortOption.SKILL, SortOption.FUA, SortOption.DOT],
@@ -3205,6 +3215,7 @@ export function getScoringMetadata() {
         ],
         ornamentSets: [
           Sets.RutilantArena,
+          Sets.TengokuLivestream,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
         ],
         teammates: [
@@ -4417,6 +4428,7 @@ export function getScoringMetadata() {
         deprioritizeBuffs: true,
         relicSets: [
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
+          [Sets.SelfEnshroudedRecluse, Sets.SelfEnshroudedRecluse],
           [Sets.KnightOfPurityPalace, Sets.KnightOfPurityPalace],
           [Sets.TheAshblazingGrandDuke, Sets.KnightOfPurityPalace, Sets.PioneerDiverOfDeadWaters],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -5220,8 +5232,8 @@ export function getScoringMetadata() {
         ],
         comboDot: 0,
         relicSets: [
-          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.TheAshblazingGrandDuke, Sets.TheAshblazingGrandDuke],
+          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.PoetOfMourningCollapse, Sets.PoetOfMourningCollapse],
           [Sets.SacerdosRelivedOrdeal, Sets.SacerdosRelivedOrdeal],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -6502,9 +6514,9 @@ export function getScoringMetadata() {
         errRopeEidolon: 0,
         deprioritizeBuffs: false,
         relicSets: [
+          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
-          [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
@@ -6797,8 +6809,8 @@ export function getScoringMetadata() {
         comboDot: 0,
         errRopeEidolon: 0,
         relicSets: [
-          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
+          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
         ],
         ornamentSets: [
@@ -7106,6 +7118,7 @@ export function getScoringMetadata() {
       },
       presets: [
         PresetEffects.fnPioneerSet(4),
+        PresetEffects.TENGOKU_SET,
       ],
       sortOption: SortOption.SKILL,
       hiddenColumns: [SortOption.DOT],
@@ -7155,6 +7168,7 @@ export function getScoringMetadata() {
         ],
         ornamentSets: [
           Sets.RutilantArena,
+          Sets.TengokuLivestream,
           ...SPREAD_ORNAMENTS_2P_GENERAL_CONDITIONALS,
         ],
         teammates: [
@@ -7401,8 +7415,8 @@ export function getScoringMetadata() {
         comboDot: 0,
         errRopeEidolon: 0,
         relicSets: [
-          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.PioneerDiverOfDeadWaters, Sets.PioneerDiverOfDeadWaters],
+          [Sets.GeniusOfBrilliantStars, Sets.GeniusOfBrilliantStars],
           [Sets.ScholarLostInErudition, Sets.ScholarLostInErudition],
           RELICS_2P_SPEED,
           ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
@@ -7807,7 +7821,6 @@ export function getScoringMetadata() {
       },
       parts: {
         [Parts.Body]: [
-          Stats.CD,
           Stats.ATK_P,
         ],
         [Parts.Feet]: [
@@ -8006,6 +8019,232 @@ export function getScoringMetadata() {
       sortOption: SortOption.ATK,
       addedColumns: [SortOption.SHIELD],
       hiddenColumns: [SortOption.DOT, SortOption.SKILL],
+    },
+    1415: { // Cyrene
+      stats: {
+        [Stats.ATK]: 0,
+        [Stats.ATK_P]: 0,
+        [Stats.DEF]: 0,
+        [Stats.DEF_P]: 0,
+        [Stats.HP]: 1,
+        [Stats.HP_P]: 1,
+        [Stats.SPD]: 1,
+        [Stats.CR]: 1,
+        [Stats.CD]: 1,
+        [Stats.EHR]: 0,
+        [Stats.RES]: 0,
+        [Stats.BE]: 0,
+      },
+      parts: {
+        [Parts.Body]: [
+          Stats.HP_P,
+          Stats.CR,
+          Stats.CD,
+        ],
+        [Parts.Feet]: [
+          Stats.SPD,
+        ],
+        [Parts.PlanarSphere]: [
+          Stats.HP_P,
+          Stats.Ice_DMG,
+        ],
+        [Parts.LinkRope]: [
+          Stats.HP_P,
+        ],
+      },
+      sets: {},
+      presets: [
+        PresetEffects.BANANA_SET,
+      ],
+      sortOption: SortOption.MEMO_SKILL,
+      hiddenColumns: [SortOption.SKILL, SortOption.FUA, SortOption.ULT, SortOption.DOT],
+      addedColumns: [SortOption.MEMO_SKILL],
+      simulation: {
+        parts: {
+          [Parts.Body]: [
+            Stats.CR,
+            Stats.CD,
+            Stats.HP_P,
+          ],
+          [Parts.Feet]: [
+            Stats.HP_P,
+            Stats.SPD,
+          ],
+          [Parts.PlanarSphere]: [
+            Stats.HP_P,
+            Stats.Ice_DMG,
+          ],
+          [Parts.LinkRope]: [
+            Stats.HP_P,
+          ],
+        },
+        substats: [
+          Stats.CD,
+          Stats.CR,
+          Stats.HP_P,
+          Stats.HP,
+        ],
+        breakpoints: {
+          [Stats.SPD]: 180,
+        },
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          DEFAULT_ULT,
+          DEFAULT_MEMO_SKILL,
+          WHOLE_BASIC,
+          DEFAULT_MEMO_SKILL,
+          WHOLE_BASIC,
+          DEFAULT_MEMO_SKILL,
+        ],
+        comboDot: 0,
+        deprioritizeBuffs: true,
+        relicSets: [
+          [Sets.WorldRemakingDeliverer, Sets.WorldRemakingDeliverer],
+          RELICS_2P_SPEED,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
+        ],
+        ornamentSets: [
+          Sets.BoneCollectionsSereneDemesne,
+          Sets.AmphoreusTheEternalLand,
+          Sets.ArcadiaOfWovenDreams,
+          ...SPREAD_ORNAMENTS_2P_SUPPORT,
+        ],
+        teammates: [
+          {
+            characterId: CASTORICE,
+            lightCone: MAKE_FAREWELLS_MORE_BEAUTIFUL,
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: EVERNIGHT,
+            lightCone: TO_EVERNIGHTS_STARS,
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: HYACINE,
+            lightCone: LONG_MAY_RAINBOWS_ADORN_THE_SKY,
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+        ],
+      },
+    },
+    1321: { // The Dahlia
+      stats: {
+        [Stats.ATK]: 0,
+        [Stats.ATK_P]: 0,
+        [Stats.DEF]: 0,
+        [Stats.DEF_P]: 0,
+        [Stats.HP]: 0,
+        [Stats.HP_P]: 0,
+        [Stats.SPD]: 1,
+        [Stats.CR]: 0,
+        [Stats.CD]: 0,
+        [Stats.EHR]: 0,
+        [Stats.RES]: 0,
+        [Stats.BE]: 1,
+      },
+      parts: {
+        [Parts.Body]: [],
+        [Parts.Feet]: [
+          Stats.SPD,
+        ],
+        [Parts.PlanarSphere]: [],
+        [Parts.LinkRope]: [
+          Stats.ERR,
+          Stats.BE,
+        ],
+      },
+      sets: {
+        ...SPREAD_RELICS_2P_SPEED_WEIGHTS,
+        ...SPREAD_RELICS_2P_BREAK_WEIGHTS,
+        [Sets.IronCavalryAgainstTheScourge]: 1,
+        [Sets.ThiefOfShootingMeteor]: 1,
+
+        [Sets.ForgeOfTheKalpagniLantern]: 1,
+        [Sets.TaliaKingdomOfBanditry]: 1,
+        [Sets.SprightlyVonwacq]: 1,
+        [Sets.LushakaTheSunkenSeas]: 1,
+      },
+      presets: [
+        PresetEffects.fnAshblazingSet(5),
+      ],
+      sortOption: SortOption.FUA,
+      hiddenColumns: [SortOption.DOT],
+      simulation: {
+        parts: {
+          [Parts.Body]: [
+            Stats.CR,
+            Stats.CD,
+            Stats.ATK_P,
+          ],
+          [Parts.Feet]: [
+            Stats.SPD,
+            Stats.ATK_P,
+          ],
+          [Parts.PlanarSphere]: [
+            Stats.ATK_P,
+            Stats.Fire_DMG,
+          ],
+          [Parts.LinkRope]: [
+            Stats.BE,
+          ],
+        },
+        substats: [
+          Stats.BE,
+          Stats.ATK_P,
+          Stats.CR,
+          Stats.CD,
+        ],
+        errRopeEidolon: 0,
+        comboTurnAbilities: [
+          NULL_TURN_ABILITY_NAME,
+          START_ULT,
+          DEFAULT_SKILL,
+          END_BREAK,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+          DEFAULT_FUA,
+          WHOLE_BASIC,
+        ],
+        comboDot: 0,
+        deprioritizeBuffs: true,
+        relicSets: [
+          [Sets.IronCavalryAgainstTheScourge, Sets.IronCavalryAgainstTheScourge],
+          [Sets.ThiefOfShootingMeteor, Sets.ThiefOfShootingMeteor],
+          RELICS_2P_BREAK_EFFECT_SPEED,
+          ...SPREAD_RELICS_4P_GENERAL_CONDITIONALS,
+        ],
+        ornamentSets: [
+          Sets.ForgeOfTheKalpagniLantern,
+          ...SPREAD_ORNAMENTS_2P_ENERGY_REGEN,
+          ...SPREAD_ORNAMENTS_2P_SUPPORT,
+        ],
+        teammates: [
+          {
+            characterId: FIREFLY,
+            lightCone: WHEREABOUTS_SHOULD_DREAMS_REST,
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: FUGUE,
+            lightCone: LONG_ROAD_LEADS_HOME,
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+          {
+            characterId: LINGSHA,
+            lightCone: SCENT_ALONE_STAYS_TRUE,
+            characterEidolon: 0,
+            lightConeSuperimposition: 1,
+          },
+        ],
+      },
     },
   }
 }

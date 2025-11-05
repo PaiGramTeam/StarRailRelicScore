@@ -4,7 +4,7 @@
     "build": "tsx src/index.ts"
   },
   "dependencies": {
-    "@types/node": "^20.11.17",
-    "tsx": "^4.7.1"
+    "@types/node": "^20.19.24",
+    "tsx": "^4.20.6"
   }
 }

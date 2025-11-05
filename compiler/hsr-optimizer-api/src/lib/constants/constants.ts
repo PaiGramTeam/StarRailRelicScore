@@ -1,17 +1,18 @@
 // Represents the version of the latest info, which should be the beta leaks version at the time of the major update
 import gameData from 'data/game_data.json' with { type: 'json' }
-import { EVERNIGHT } from 'lib/simulations/tests/testMetadataConstants'
+import {
+  CYRENE,
+  EVERNIGHT,
+} from 'lib/simulations/tests/testMetadataConstants'
 
 // Semver defined optimizer version
-export const CURRENT_OPTIMIZER_VERSION = 'v3.6.1'
+export const CURRENT_OPTIMIZER_VERSION = 'v3.8.1'
 
 // Represents the beta data content version, used for display but not for update notifications
-export const CURRENT_DATA_VERSION = '3.6v5'
+export const CURRENT_DATA_VERSION = '3.8v1'
 
 const generateMessage = (message?: string) => `${CURRENT_DATA_VERSION} - ${message}`
-export const CharacterAnnouncementMessages: Record<string, string> = {
-  [EVERNIGHT]: generateMessage('Benchmarked against 4P World-Remaking Deliverer set by default'),
-}
+export const CharacterAnnouncementMessages: Record<string, string> = {}
 
 export const Stats = {
   ATK_P: 'ATK%',
@@ -431,6 +432,8 @@ export const SetsOrnaments = {
   GiantTreeOfRaptBrooding: 'Giant Tree of Rapt Brooding',
   ArcadiaOfWovenDreams: 'Arcadia of Woven Dreams',
   RevelryByTheSea: 'Revelry by the Sea',
+  AmphoreusTheEternalLand: 'Amphoreus, The Eternal Land',
+  TengokuLivestream: 'Tengoku@Livestream',
 } as const
 
 // Delete unreleased data
@@ -702,6 +705,8 @@ export const setToId = {
   [Sets.GiantTreeOfRaptBrooding]: '320',
   [Sets.ArcadiaOfWovenDreams]: '321',
   [Sets.RevelryByTheSea]: '322',
+  [Sets.AmphoreusTheEternalLand]: '323',
+  [Sets.TengokuLivestream]: '324',
 } as const
 
 export const ABILITY_LIMIT = 12
