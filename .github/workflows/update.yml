@@ -1,7 +1,13 @@
 name: Fetch Res
 
 on:
-  workflow_dispatch: ~
+  workflow_dispatch:
+    inputs:
+      skip-tests:
+        description: 'Skip running tests'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   Fetch-Wiki:
@@ -36,6 +42,7 @@ jobs:
           uv run ruff format .
 
       - name: Test New files
+        if: ${{ inputs.skip-tests == false }}
         run: |
           uv run pytest
 
