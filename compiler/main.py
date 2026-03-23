@@ -1,10 +1,23 @@
-from get_metadata import main as get_metadata
-from get_relic_config import main as get_relic_config
+from httpx import get
+
+url = "https://raw.githubusercontent.com/PaiGramTeam/HonkaiStarRailWikiDataParser/remote/data/mihomo_map/relic_config.json"
+
+
+def get_content() -> str:
+    req = get(url)
+    return req.text
+
+
+def save_content(content: str) -> None:
+    with open(
+        "src/starrailrelicscore/data/relic_config.json", "w", encoding="utf-8"
+    ) as file:
+        file.write(content)
 
 
 def main():
-    get_metadata()
-    get_relic_config()
+    content = get_content()
+    save_content(content)
 
 
 if __name__ == "__main__":

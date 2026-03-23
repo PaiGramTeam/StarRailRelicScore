@@ -1,0 +1,12 @@
+{
+  "name": "starrail_relic_score",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "hsr-optimizer",
+    "compiler"
+  ],
+  "scripts": {
+    "export": "npm run export --workspace=compiler"
+  }
+}

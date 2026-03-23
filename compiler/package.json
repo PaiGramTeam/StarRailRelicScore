@@ -1,0 +1,12 @@
+{
+  "name": "generate-metadata",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "导出 hsr-optimizer Metadata 数据为 JSON 文件的工具",
+  "scripts": {
+    "export": "vitest run --dir ."
+  },
+  "devDependencies": {
+    "vitest": "^3.1.3"
+  }
+}
