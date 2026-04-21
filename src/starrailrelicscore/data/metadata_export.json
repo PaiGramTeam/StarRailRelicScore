@@ -101,6 +101,17 @@
         "y": 1075,
         "z": 1.05
       },
+      "spineCenter": {
+        "x": 985,
+        "y": 1075,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -279,6 +290,17 @@
         "y": 1000,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1024,
+        "y": 1000,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -382,7 +404,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Scholar Lost in Erudition",
@@ -537,6 +558,17 @@
         "y": 1215,
         "z": 1.05
       },
+      "spineCenter": {
+        "x": 1015,
+        "y": 1215,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -632,7 +664,6 @@
             "END_BREAK",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "The Ashblazing Grand Duke",
@@ -789,6 +820,17 @@
         "y": 950,
         "z": 1
       },
+      "spineCenter": {
+        "x": 885,
+        "y": 950,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -898,7 +940,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "relicSets": [
             [
@@ -1057,8 +1098,19 @@
       "imageCenter": {
         "x": 1000,
         "y": 950,
-        "z": 1.1
+        "z": 1.25
       },
+      "spineCenter": {
+        "x": 1000,
+        "y": 950,
+        "z": 1.25
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -1160,7 +1212,6 @@
             "END_DOT",
             "DEFAULT_FUA"
           ],
-          "comboDot": 16,
           "relicSets": [
             [
               "Prisoner in Deep Confinement",
@@ -1313,6 +1364,17 @@
         "y": 950,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1050,
+        "y": 950,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -1493,6 +1555,17 @@
         "y": 1000,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1240,
+        "y": 1000,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -1590,7 +1663,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Scholar Lost in Erudition",
@@ -1743,6 +1815,17 @@
         "y": 975,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1024,
+        "y": 975,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -1922,6 +2005,17 @@
         "y": 910,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 970,
+        "y": 910,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -2023,7 +2117,6 @@
             "WHOLE_SKILL",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "relicSets": [
             [
@@ -2185,10 +2278,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 900,
-        "y": 950,
-        "z": 1.05
+        "x": 924,
+        "y": 944,
+        "z": 1.15
       },
+      "spineCenter": {
+        "x": 924,
+        "y": 944,
+        "z": 1.15
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -2279,7 +2383,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "relicSets": [
             [
@@ -2433,10 +2536,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1100,
-        "y": 1050,
-        "z": 1
+        "x": 1131,
+        "y": 1027,
+        "z": 1.15
       },
+      "spineCenter": {
+        "x": 1131,
+        "y": 1027,
+        "z": 1.15
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -2543,7 +2657,6 @@
             "END_SKILL",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "relicSets": [
             [
@@ -2702,6 +2815,17 @@
         "y": 1200,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 950,
+        "y": 1200,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -2881,10 +3005,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 820,
+        "x": 879,
         "y": 1075,
-        "z": 1.1
+        "z": 1.25
       },
+      "spineCenter": {
+        "x": 879,
+        "y": 1075,
+        "z": 1.25
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -2988,7 +3123,6 @@
             "DEFAULT_SKILL",
             "END_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Scholar Lost in Erudition",
@@ -3145,6 +3279,17 @@
         "y": 1030,
         "z": 1.3
       },
+      "spineCenter": {
+        "x": 1060,
+        "y": 1030,
+        "z": 1.3
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -3238,7 +3383,6 @@
             "END_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "deprioritizeBuffs": true,
           "relicSets": [
@@ -3416,6 +3560,17 @@
         "y": 1110,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1150,
+        "y": 1110,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -3593,6 +3748,17 @@
         "y": 1024,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1040,
+        "y": 1024,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -3796,6 +3962,17 @@
         "y": 1100,
         "z": 1
       },
+      "spineCenter": {
+        "x": 780,
+        "y": 1100,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -3972,6 +4149,17 @@
         "y": 900,
         "z": 1.15
       },
+      "spineCenter": {
+        "x": 880,
+        "y": 900,
+        "z": 1.15
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -4083,7 +4271,6 @@
             "DEFAULT_FUA",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Champion of Streetwise Boxing",
@@ -4240,6 +4427,17 @@
         "y": 950,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1000,
+        "y": 950,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -4337,7 +4535,6 @@
             "WHOLE_SKILL",
             "DEFAULT_DOT"
           ],
-          "comboDot": 60,
           "relicSets": [
             [
               "Prisoner in Deep Confinement",
@@ -4490,6 +4687,17 @@
         "y": 1025,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 975,
+        "y": 1025,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -4584,7 +4792,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Pioneer Diver of Dead Waters",
@@ -4742,6 +4949,17 @@
         "y": 1050,
         "z": 1.05
       },
+      "spineCenter": {
+        "x": 1180,
+        "y": 1050,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -4945,6 +5163,17 @@
         "y": 1000,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1016,
+        "y": 1027,
+        "z": 1.08
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -5045,7 +5274,6 @@
             "END_DOT",
             "DEFAULT_DOT"
           ],
-          "comboDot": 5,
           "relicSets": [
             [
               "Prisoner in Deep Confinement",
@@ -5068,12 +5296,13 @@
               "Eagle of Twilight Line"
             ],
             [
-              "Messenger Traversing Hackerspace",
-              "Sacerdos' Relived Ordeal",
               "Thief of Shooting Meteor",
               "Watchmaker, Master of Dream Machinations",
               "Iron Cavalry Against the Scourge",
-              "Warrior Goddess of Sun and Thunder"
+              "Messenger Traversing Hackerspace",
+              "Sacerdos' Relived Ordeal",
+              "Warrior Goddess of Sun and Thunder",
+              "Diviner of Distant Reach"
             ]
           ],
           "ornamentSets": [
@@ -5201,10 +5430,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1120,
-        "y": 875,
+        "x": 1041,
+        "y": 890,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1178,
+        "y": 886,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -5331,7 +5571,6 @@
             "WHOLE_BASIC",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "deprioritizeBuffs": true,
           "relicSets": [
             [
@@ -5494,6 +5733,17 @@
         "y": 1024,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1000,
+        "y": 1024,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -5610,7 +5860,6 @@
             "END_BASIC",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Scholar Lost in Erudition",
@@ -5775,10 +6024,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1024,
-        "y": 950,
+        "x": 1041,
+        "y": 890,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1041,
+        "y": 890,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -5955,10 +6215,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1024,
-        "y": 975,
-        "z": 1.05
+        "x": 1059,
+        "y": 921,
+        "z": 1.2
       },
+      "spineCenter": {
+        "x": 1069,
+        "y": 981,
+        "z": 1.35
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -6154,10 +6425,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1024,
-        "y": 1024,
-        "z": 1.1
+        "x": 1028,
+        "y": 1026,
+        "z": 1.17
       },
+      "spineCenter": {
+        "x": 1028,
+        "y": 1026,
+        "z": 1.17
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -6268,7 +6550,6 @@
             "WHOLE_SKILL",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "The Ashblazing Grand Duke",
@@ -6426,6 +6707,17 @@
         "y": 800,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1126,
+        "y": 804,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.25,
@@ -6538,7 +6830,6 @@
             "DEFAULT_FUA",
             "WHOLE_BASIC"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Longevous Disciple",
@@ -6692,6 +6983,17 @@
         "y": 1015,
         "z": 1.2
       },
+      "spineCenter": {
+        "x": 1075,
+        "y": 1015,
+        "z": 1.2
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -6782,7 +7084,8 @@
             "CRIT Rate",
             "CRIT DMG",
             "ATK%",
-            "Break Effect"
+            "Break Effect",
+            "ATK"
           ],
           "comboTurnAbilities": [
             "NULL",
@@ -6793,7 +7096,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Scholar Lost in Erudition",
@@ -6956,6 +7258,17 @@
         "y": 1055,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 922,
+        "y": 1057,
+        "z": 1.2
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -7146,6 +7459,17 @@
         "y": 950,
         "z": 1
       },
+      "spineCenter": {
+        "x": 920,
+        "y": 950,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -7343,6 +7667,17 @@
         "y": 1000,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1000,
+        "y": 1000,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -7443,7 +7778,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Scholar Lost in Erudition",
@@ -7602,6 +7936,17 @@
         "y": 1024,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1000,
+        "y": 1024,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.5,
@@ -7766,6 +8111,17 @@
         "y": 950,
         "z": 1.05
       },
+      "spineCenter": {
+        "x": 1050,
+        "y": 950,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -7968,6 +8324,17 @@
         "y": 930,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1024,
+        "y": 930,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -8068,7 +8435,6 @@
             "END_ULT",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Scholar Lost in Erudition",
@@ -8222,10 +8588,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1050,
-        "y": 1000,
+        "x": 1087,
+        "y": 979,
         "z": 1.05
       },
+      "spineCenter": {
+        "x": 1087,
+        "y": 979,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -8344,7 +8721,6 @@
             "WHOLE_BASIC",
             "WHOLE_BASIC"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Musketeer of Wild Wheat",
@@ -8503,6 +8879,17 @@
         "y": 900,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1000,
+        "y": 900,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -8608,7 +8995,6 @@
             "DEFAULT_FUA",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Genius of Brilliant Stars",
@@ -8771,6 +9157,17 @@
         "y": 1024,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 1000,
+        "y": 1024,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -8961,6 +9358,17 @@
         "y": 975,
         "z": 1.075
       },
+      "spineCenter": {
+        "x": 950,
+        "y": 975,
+        "z": 1.075
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -9164,6 +9572,17 @@
         "y": 900,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 950,
+        "y": 900,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.5,
@@ -9334,6 +9753,17 @@
         "y": 1050,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1134,
+        "y": 1033,
+        "z": 1.9
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -9436,7 +9866,6 @@
             "END_FUA",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "The Wind-Soaring Valorous",
@@ -9601,6 +10030,17 @@
         "y": 1075,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 1024,
+        "y": 1075,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -9716,7 +10156,6 @@
             "DEFAULT_FUA",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "The Wind-Soaring Valorous",
@@ -9870,8 +10309,19 @@
       "imageCenter": {
         "x": 1110,
         "y": 1000,
-        "z": 1.1
+        "z": 1.2
       },
+      "spineCenter": {
+        "x": 1110,
+        "y": 1000,
+        "z": 1.2
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -10060,10 +10510,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 960,
-        "y": 1024,
+        "x": 985,
+        "y": 1018,
         "z": 1.05
       },
+      "spineCenter": {
+        "x": 926,
+        "y": 1071,
+        "z": 1.2
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -10169,7 +10630,6 @@
             "DEFAULT_FUA",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "deprioritizeBuffs": true,
           "relicSets": [
@@ -10338,6 +10798,17 @@
         "y": 950,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 825,
+        "y": 950,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": -310,
+        "y": 112,
+        "z": -0.17
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -10464,7 +10935,6 @@
             "WHOLE_BASIC",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "deprioritizeBuffs": false,
           "relicSets": [
@@ -10638,6 +11108,17 @@
         "y": 1125,
         "z": 1.15
       },
+      "spineCenter": {
+        "x": 875,
+        "y": 1125,
+        "z": 1.15
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -10766,7 +11247,6 @@
             "START_BASIC",
             "END_BREAK"
           ],
-          "comboDot": 0,
           "deprioritizeBuffs": true,
           "relicSets": [
             [
@@ -10778,12 +11258,13 @@
               "Eagle of Twilight Line"
             ],
             [
-              "Messenger Traversing Hackerspace",
-              "Sacerdos' Relived Ordeal",
               "Thief of Shooting Meteor",
               "Watchmaker, Master of Dream Machinations",
               "Iron Cavalry Against the Scourge",
-              "Warrior Goddess of Sun and Thunder"
+              "Messenger Traversing Hackerspace",
+              "Sacerdos' Relived Ordeal",
+              "Warrior Goddess of Sun and Thunder",
+              "Diviner of Distant Reach"
             ],
             [
               "Wavestrider Captain",
@@ -10941,6 +11422,17 @@
         "y": 975,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1200,
+        "y": 975,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -11139,6 +11631,17 @@
         "y": 1000,
         "z": 1.15
       },
+      "spineCenter": {
+        "x": 1018,
+        "y": 983,
+        "z": 1.75
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -11240,7 +11743,6 @@
             "START_ULT",
             "END_SKILL"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "relicSets": [
             [
@@ -11399,6 +11901,17 @@
         "y": 1050,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1060,
+        "y": 1050,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -11602,6 +12115,17 @@
         "y": 1000,
         "z": 1.05
       },
+      "spineCenter": {
+        "x": 1150,
+        "y": 1000,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -11720,7 +12244,6 @@
             "WHOLE_BASIC",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "deprioritizeBuffs": true,
           "relicSets": [
             [
@@ -11894,9 +12417,20 @@
       "unreleased": false,
       "imageCenter": {
         "x": 965,
-        "y": 840,
-        "z": 1.15
+        "y": 838,
+        "z": 1.2
       },
+      "spineCenter": {
+        "x": 909,
+        "y": 815,
+        "z": 1.25
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -12010,7 +12544,6 @@
             "START_SKILL",
             "END_FUA"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Pioneer Diver of Dead Waters",
@@ -12167,6 +12700,17 @@
         "y": 1050,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1050,
+        "y": 1050,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -12358,10 +12902,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 950,
-        "y": 925,
-        "z": 1.25
+        "x": 964,
+        "y": 934,
+        "z": 1.3
       },
+      "spineCenter": {
+        "x": 964,
+        "y": 934,
+        "z": 1.3
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -12463,7 +13018,6 @@
             "WHOLE_BASIC",
             "DEFAULT_DOT"
           ],
-          "comboDot": 8,
           "relicSets": [
             [
               "Prisoner in Deep Confinement",
@@ -12617,6 +13171,17 @@
         "y": 900,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1000,
+        "y": 900,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -12721,7 +13286,6 @@
             "END_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Pioneer Diver of Dead Waters",
@@ -12870,10 +13434,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1024,
-        "y": 925,
-        "z": 1
+        "x": 1021,
+        "y": 855,
+        "z": 1.15
       },
+      "spineCenter": {
+        "x": 1009,
+        "y": 923,
+        "z": 1.15
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -13049,10 +13624,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 930,
-        "y": 1075,
-        "z": 1.25
+        "x": 938,
+        "y": 1088,
+        "z": 1.3
       },
+      "spineCenter": {
+        "x": 924,
+        "y": 1104,
+        "z": 1.3
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.5,
@@ -13159,7 +13745,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Iron Cavalry Against the Scourge",
@@ -13311,6 +13896,17 @@
         "y": 1075,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1050,
+        "y": 1075,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -13414,7 +14010,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Scholar Lost in Erudition",
@@ -13569,10 +14164,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1000,
-        "y": 950,
-        "z": 1.075
+        "x": 1006,
+        "y": 927,
+        "z": 1.12
       },
+      "spineCenter": {
+        "x": 1024,
+        "y": 810,
+        "z": 1.17
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -13764,10 +14370,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1024,
-        "y": 850,
+        "x": 1043,
+        "y": 840,
         "z": 1.15
       },
+      "spineCenter": {
+        "x": 1103,
+        "y": 835,
+        "z": 1.15
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -13880,7 +14497,6 @@
             "WHOLE_BASIC",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "The Ashblazing Grand Duke",
@@ -14048,6 +14664,17 @@
         "y": 1100,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1000,
+        "y": 1100,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.25,
@@ -14139,7 +14766,8 @@
           "parts": {
             "Body": [
               "CRIT Rate",
-              "CRIT DMG"
+              "CRIT DMG",
+              "ATK%"
             ],
             "Feet": [
               "SPD"
@@ -14149,7 +14777,8 @@
               "ATK%"
             ],
             "LinkRope": [
-              "Break Effect"
+              "Break Effect",
+              "ATK%"
             ]
           },
           "substats": [
@@ -14169,7 +14798,6 @@
             "START_BASIC",
             "END_BREAK"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Thief of Shooting Meteor",
@@ -14180,12 +14808,13 @@
               "Iron Cavalry Against the Scourge"
             ],
             [
-              "Messenger Traversing Hackerspace",
-              "Sacerdos' Relived Ordeal",
               "Thief of Shooting Meteor",
               "Watchmaker, Master of Dream Machinations",
               "Iron Cavalry Against the Scourge",
-              "Warrior Goddess of Sun and Thunder"
+              "Messenger Traversing Hackerspace",
+              "Sacerdos' Relived Ordeal",
+              "Warrior Goddess of Sun and Thunder",
+              "Diviner of Distant Reach"
             ],
             [
               "Wavestrider Captain",
@@ -14326,10 +14955,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1125,
-        "y": 1175,
-        "z": 1
+        "x": 1163,
+        "y": 1198,
+        "z": 1.15
       },
+      "spineCenter": {
+        "x": 857,
+        "y": 1228,
+        "z": 1.95
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.5,
@@ -14426,9 +15066,7 @@
         "simulation": {
           "parts": {
             "Body": [
-              "ATK%",
-              "CRIT Rate",
-              "CRIT DMG"
+              "ATK%"
             ],
             "Feet": [
               "SPD"
@@ -14438,8 +15076,7 @@
               "ATK%"
             ],
             "LinkRope": [
-              "Break Effect",
-              "ATK%"
+              "Break Effect"
             ]
           },
           "substats": [
@@ -14455,19 +15092,12 @@
           "comboTurnAbilities": [
             "NULL",
             "START_ULT",
-            "DEFAULT_BASIC",
-            "DEFAULT_BREAK",
-            "END_BREAK",
+            "END_BASIC",
+            "WHOLE_BASIC",
             "START_BASIC",
-            "DEFAULT_BREAK",
             "END_BREAK",
-            "START_BASIC",
-            "DEFAULT_BREAK",
-            "END_BREAK",
-            "START_SKILL",
-            "END_BREAK"
+            "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Iron Cavalry Against the Scourge",
@@ -14623,6 +15253,17 @@
         "y": 950,
         "z": 1.025
       },
+      "spineCenter": {
+        "x": 1027,
+        "y": 965,
+        "z": 1.07
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -14720,7 +15361,8 @@
             "Break Effect",
             "ATK%",
             "CRIT Rate",
-            "CRIT DMG"
+            "CRIT DMG",
+            "ATK"
           ],
           "errRopeEidolon": 0,
           "comboTurnAbilities": [
@@ -14735,7 +15377,6 @@
             "DEFAULT_FUA",
             "WHOLE_BASIC"
           ],
-          "comboDot": 0,
           "deprioritizeBuffs": true,
           "relicSets": [
             [
@@ -14747,12 +15388,13 @@
               "Thief of Shooting Meteor"
             ],
             [
-              "Messenger Traversing Hackerspace",
-              "Sacerdos' Relived Ordeal",
               "Thief of Shooting Meteor",
               "Watchmaker, Master of Dream Machinations",
               "Iron Cavalry Against the Scourge",
-              "Warrior Goddess of Sun and Thunder"
+              "Messenger Traversing Hackerspace",
+              "Sacerdos' Relived Ordeal",
+              "Warrior Goddess of Sun and Thunder",
+              "Diviner of Distant Reach"
             ],
             [
               "Wavestrider Captain",
@@ -14907,6 +15549,17 @@
         "y": 1085,
         "z": 1.275
       },
+      "spineCenter": {
+        "x": 1000,
+        "y": 1085,
+        "z": 1.275
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -15005,7 +15658,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "relicSets": [
             [
@@ -15155,10 +15807,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1200,
-        "y": 750,
+        "x": 1183,
+        "y": 723,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 1183,
+        "y": 723,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.5,
@@ -15315,7 +15978,6 @@
             "DEFAULT_MEMO_SKILL",
             "WHOLE_BASIC"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "relicSets": [
             [
@@ -15470,6 +16132,17 @@
         "y": 1000,
         "z": 1.075
       },
+      "spineCenter": {
+        "x": 875,
+        "y": 1000,
+        "z": 1.075
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -15549,8 +16222,7 @@
           ],
           "comboTurnAbilities": [
             "NULL",
-            "START_SKILL",
-            "END_ULT",
+            "DEFAULT_ULT",
             "DEFAULT_FUA",
             "DEFAULT_FUA",
             "WHOLE_BASIC",
@@ -15561,7 +16233,6 @@
             "DEFAULT_FUA",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "deprioritizeBuffs": true,
           "relicSets": [
@@ -15735,6 +16406,17 @@
         "y": 1050,
         "z": 1.05
       },
+      "spineCenter": {
+        "x": 925,
+        "y": 1050,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -15816,7 +16498,6 @@
             "END_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Scholar Lost in Erudition",
@@ -15964,10 +16645,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1235,
-        "y": 1025,
-        "z": 0.9
+        "x": 1245,
+        "y": 1059,
+        "z": 1
       },
+      "spineCenter": {
+        "x": 1245,
+        "y": 1059,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -16080,7 +16772,6 @@
             "START_SKILL",
             "END_SKILL"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "deprioritizeBuffs": false,
           "relicSets": [
@@ -16251,10 +16942,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1050,
-        "y": 900,
-        "z": 1
+        "x": 1099,
+        "y": 876,
+        "z": 1.05
       },
+      "spineCenter": {
+        "x": 1099,
+        "y": 876,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -16367,7 +17069,6 @@
             "DEFAULT_FUA"
           ],
           "deprioritizeBuffs": true,
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "relicSets": [
             [
@@ -16536,6 +17237,17 @@
         "y": 950,
         "z": 1
       },
+      "spineCenter": {
+        "x": 962,
+        "y": 1039,
+        "z": 1.3
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -16678,7 +17390,6 @@
             "DEFAULT_MEMO_SKILL",
             "DEFAULT_MEMO_TALENT"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Poet of Mourning Collapse",
@@ -16832,6 +17543,17 @@
         "y": 975,
         "z": 1.05
       },
+      "spineCenter": {
+        "x": 937,
+        "y": 993,
+        "z": 1.25
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -16926,7 +17648,6 @@
             "DEFAULT_BASIC",
             "END_ULT"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Wavestrider Captain",
@@ -17078,6 +17799,17 @@
         "y": 1025,
         "z": 1.05
       },
+      "spineCenter": {
+        "x": 1215,
+        "y": 1025,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -17088,25 +17820,28 @@
           "HP%": 1,
           "SPD": 1,
           "CRIT Rate": 0,
-          "CRIT DMG": 0.5,
+          "CRIT DMG": 1,
           "Effect Hit Rate": 0,
           "Effect RES": 0.5,
           "Break Effect": 0
         },
         "parts": {
           "Body": [
-            "Outgoing Healing Boost",
-            "HP%"
+            "CRIT DMG",
+            "HP%",
+            "Outgoing Healing Boost"
           ],
           "Feet": [
-            "SPD"
+            "SPD",
+            "HP%"
           ],
           "PlanarSphere": [
-            "HP%"
+            "HP%",
+            "Wind DMG Boost"
           ],
           "LinkRope": [
-            "Energy Regeneration Rate",
-            "HP%"
+            "HP%",
+            "Energy Regeneration Rate"
           ]
         },
         "presets": [
@@ -17122,21 +17857,16 @@
           }
         ],
         "sortOption": {
-          "key": "SKILL_HEAL",
-          "basicGridColumn": "SKILL_HEAL",
-          "combatGridColumn": "SKILL_HEAL",
-          "memoBasicGridColumn": "SKILL_HEAL",
-          "memoCombatGridColumn": "SKILL_HEAL",
-          "isComputedRating": true
+          "key": "MEMO_SKILL",
+          "basicGridColumn": "MEMO_SKILL",
+          "combatGridColumn": "MEMO_SKILL",
+          "memoBasicGridColumn": "MEMO_SKILL",
+          "memoCombatGridColumn": "MEMO_SKILL",
+          "isComputedRating": true,
+          "minFilterKey": "minMemoSkill",
+          "maxFilterKey": "maxMemoSkill"
         },
         "addedColumns": [
-          {
-            "key": "OHB",
-            "basicGridColumn": "OHB",
-            "combatGridColumn": "xOHB",
-            "memoBasicGridColumn": "mOHB",
-            "memoCombatGridColumn": "mxOHB"
-          },
           {
             "key": "MEMO_SKILL",
             "basicGridColumn": "MEMO_SKILL",
@@ -17146,6 +17876,21 @@
             "isComputedRating": true,
             "minFilterKey": "minMemoSkill",
             "maxFilterKey": "maxMemoSkill"
+          },
+          {
+            "key": "SKILL_HEAL",
+            "basicGridColumn": "SKILL_HEAL",
+            "combatGridColumn": "SKILL_HEAL",
+            "memoBasicGridColumn": "SKILL_HEAL",
+            "memoCombatGridColumn": "SKILL_HEAL",
+            "isComputedRating": true
+          },
+          {
+            "key": "OHB",
+            "basicGridColumn": "OHB",
+            "combatGridColumn": "xOHB",
+            "memoBasicGridColumn": "mOHB",
+            "memoCombatGridColumn": "mxOHB"
           }
         ],
         "hiddenColumns": [
@@ -17189,7 +17934,111 @@
             "minFilterKey": "minUlt",
             "maxFilterKey": "maxUlt"
           }
-        ]
+        ],
+        "simulation": {
+          "parts": {
+            "Body": [
+              "CRIT DMG",
+              "HP%",
+              "Outgoing Healing Boost"
+            ],
+            "Feet": [
+              "SPD",
+              "HP%"
+            ],
+            "PlanarSphere": [
+              "HP%",
+              "Wind DMG Boost"
+            ],
+            "LinkRope": [
+              "HP%"
+            ]
+          },
+          "substats": [
+            "CRIT DMG",
+            "CRIT Rate",
+            "HP%",
+            "HP",
+            "SPD"
+          ],
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL",
+            "START_ULT",
+            "END_MEMO_SKILL",
+            "START_SKILL",
+            "END_MEMO_SKILL",
+            "START_SKILL",
+            "END_MEMO_SKILL"
+          ],
+          "breakpoints": {
+            "SPD": 200
+          },
+          "relicSets": [
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "World-Remaking Deliverer",
+              "World-Remaking Deliverer"
+            ],
+            [
+              "Hero of Triumphant Song",
+              "Hero of Triumphant Song"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Wavestrider Captain",
+              "Ever-Glorious Magical Girl",
+              "Messenger Traversing Hackerspace",
+              "Sacerdos' Relived Ordeal",
+              "Warrior Goddess of Sun and Thunder",
+              "Diviner of Distant Reach",
+              "Longevous Disciple",
+              "Passerby of Wandering Cloud"
+            ]
+          ],
+          "ornamentSets": [
+            "Giant Tree of Rapt Brooding",
+            "Bone Collection's Serene Demesne",
+            "Arcadia of Woven Dreams",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "Forge of the Kalpagni Lantern",
+            "Giant Tree of Rapt Brooding"
+          ],
+          "teammates": [
+            {
+              "characterId": "1407",
+              "lightCone": "23040",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1413",
+              "lightCone": "23049",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1415",
+              "lightCone": "23052",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ]
+        }
       }
     },
     "1410": {
@@ -17291,10 +18140,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 765,
-        "y": 900,
+        "x": 794,
+        "y": 878,
         "z": 1.2
       },
+      "spineCenter": {
+        "x": 794,
+        "y": 878,
+        "z": 1.2
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -17401,7 +18261,6 @@
             "WHOLE_BASIC",
             "DEFAULT_DOT"
           ],
-          "comboDot": 5,
           "errRopeEidolon": 0,
           "relicSets": [
             [
@@ -17550,10 +18409,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1050,
-        "y": 950,
-        "z": 1.05
+        "x": 1039,
+        "y": 933,
+        "z": 1.1
       },
+      "spineCenter": {
+        "x": 1039,
+        "y": 933,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -17708,10 +18578,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 985,
-        "y": 985,
-        "z": 1.075
+        "x": 983,
+        "y": 1009,
+        "z": 1.15
       },
+      "spineCenter": {
+        "x": 983,
+        "y": 1009,
+        "z": 1.15
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -17858,7 +18739,6 @@
             "DEFAULT_MEMO_SKILL",
             "DEFAULT_MEMO_SKILL"
           ],
-          "comboDot": 0,
           "deprioritizeBuffs": true,
           "errRopeEidolon": 0,
           "relicSets": [
@@ -18013,10 +18893,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 975,
-        "y": 1024,
-        "z": 1.05
+        "x": 996,
+        "y": 1042,
+        "z": 1.1
       },
+      "spineCenter": {
+        "x": 996,
+        "y": 1042,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -18197,10 +19088,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 1030,
-        "y": 1225,
-        "z": 1.6
+        "x": 1044,
+        "y": 1230,
+        "z": 1.65
       },
+      "spineCenter": {
+        "x": 971,
+        "y": 1215,
+        "z": 1.7
+      },
+      "backgroundCenterOffset": {
+        "x": 144,
+        "y": 384,
+        "z": -0.5
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -18342,7 +19244,6 @@
             "WHOLE_BASIC",
             "DEFAULT_MEMO_SKILL"
           ],
-          "comboDot": 0,
           "deprioritizeBuffs": true,
           "relicSets": [
             [
@@ -18352,7 +19253,8 @@
             [
               "Messenger Traversing Hackerspace",
               "Sacerdos' Relived Ordeal",
-              "Warrior Goddess of Sun and Thunder"
+              "Warrior Goddess of Sun and Thunder",
+              "Diviner of Distant Reach"
             ],
             [
               "Wavestrider Captain",
@@ -18508,6 +19410,17 @@
         "y": 1050,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 1015,
+        "y": 1050,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -18618,14 +19531,11 @@
           "comboTurnAbilities": [
             "NULL",
             "START_ULT",
-            "DEFAULT_SKILL",
             "END_BASIC",
             "WHOLE_ELATION_SKILL",
-            "START_SKILL",
             "END_BASIC",
             "WHOLE_ELATION_SKILL"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "relicSets": [
             [
@@ -18666,9 +19576,9 @@
             },
             {
               "characterId": "1502",
-              "lightCone": "23054",
+              "lightCone": "21064",
               "characterEidolon": 0,
-              "lightConeSuperimposition": 1
+              "lightConeSuperimposition": 5
             },
             {
               "characterId": "1217",
@@ -18778,10 +19688,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 875,
-        "y": 1060,
-        "z": 1.15
+        "x": 877,
+        "y": 1086,
+        "z": 1.2
       },
+      "spineCenter": {
+        "x": 877,
+        "y": 1086,
+        "z": 1.2
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -18897,7 +19818,6 @@
             "WHOLE_BASIC",
             "WHOLE_ELATION_SKILL"
           ],
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "deprioritizeBuffs": true,
           "breakpoints": {
@@ -18915,7 +19835,8 @@
             [
               "Messenger Traversing Hackerspace",
               "Sacerdos' Relived Ordeal",
-              "Warrior Goddess of Sun and Thunder"
+              "Warrior Goddess of Sun and Thunder",
+              "Diviner of Distant Reach"
             ],
             [
               "Wavestrider Captain",
@@ -19074,6 +19995,17 @@
         "y": 1024,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1024,
+        "y": 1024,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -19182,7 +20114,6 @@
             "WHOLE_SKILL",
             "DEFAULT_FUA"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "The Ashblazing Grand Duke",
@@ -19255,50 +20186,50 @@
       },
       "traceTree": [
         {
-          "id": "1505201_4.1v4",
+          "id": "1505201_4.2v3",
           "stat": "CRIT Rate",
           "value": 0.027,
           "pre": null,
           "children": []
         },
         {
-          "id": "1505202_4.1v4",
+          "id": "1505202_4.2v3",
           "stat": "Elation",
           "value": 0.04,
           "pre": null,
           "children": []
         },
         {
-          "id": "1505203_4.1v4",
+          "id": "1505203_4.2v3",
           "stat": "CRIT Rate",
           "value": 0.027,
           "pre": null,
           "children": []
         },
         {
-          "id": "1505204_4.1v4",
+          "id": "1505204_4.2v3",
           "stat": "SPD",
           "value": 2,
           "pre": null,
           "children": []
         },
         {
-          "id": "1505205_4.1v4",
+          "id": "1505205_4.2v3",
           "stat": "CRIT Rate",
           "value": 0.04,
           "pre": null,
           "children": [
             {
-              "id": "1505206_4.1v4",
+              "id": "1505206_4.2v3",
               "stat": "Elation",
               "value": 0.06,
-              "pre": "1505205_4.1v4",
+              "pre": "1505205_4.2v3",
               "children": [
                 {
-                  "id": "1505207_4.1v4",
+                  "id": "1505207_4.2v3",
                   "stat": "CRIT Rate",
                   "value": 0.04,
-                  "pre": "1505206_4.1v4",
+                  "pre": "1505206_4.2v3",
                   "children": []
                 }
               ]
@@ -19306,22 +20237,22 @@
           ]
         },
         {
-          "id": "1505208_4.1v4",
+          "id": "1505208_4.2v3",
           "stat": "SPD",
           "value": 3,
           "pre": null,
           "children": [
             {
-              "id": "1505209_4.1v4",
+              "id": "1505209_4.2v3",
               "stat": "Elation",
               "value": 0.08,
-              "pre": "1505208_4.1v4",
+              "pre": "1505208_4.2v3",
               "children": [
                 {
-                  "id": "1505210_4.1v4",
+                  "id": "1505210_4.2v3",
                   "stat": "CRIT Rate",
                   "value": 0.053,
-                  "pre": "1505209_4.1v4",
+                  "pre": "1505209_4.2v3",
                   "children": []
                 }
               ]
@@ -19344,10 +20275,21 @@
         "y": 950,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 1050,
+        "y": 950,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
-          "ATK": 0.75,
-          "ATK%": 0.75,
+          "ATK": 0.25,
+          "ATK%": 0.25,
           "DEF": 0,
           "DEF%": 0,
           "HP": 0,
@@ -19365,12 +20307,22 @@
             "CRIT DMG"
           ],
           "Feet": [
-            "SPD",
-            "ATK%"
+            "HP%",
+            "ATK%",
+            "DEF%",
+            "SPD"
           ],
           "PlanarSphere": [
+            "HP%",
+            "ATK%",
+            "DEF%",
             "Physical DMG Boost",
-            "ATK%"
+            "Fire DMG Boost",
+            "Ice DMG Boost",
+            "Lightning DMG Boost",
+            "Wind DMG Boost",
+            "Quantum DMG Boost",
+            "Imaginary DMG Boost"
           ],
           "LinkRope": [
             "ATK%",
@@ -19378,11 +20330,6 @@
           ]
         },
         "presets": [
-          {
-            "name": "BANANA_SET",
-            "value": true,
-            "set": "The Wondrous BananAmusement Park"
-          },
           {
             "name": "fnPioneerSet",
             "value": 4,
@@ -19491,9 +20438,9 @@
           "teammates": [
             {
               "characterId": "1502",
-              "lightCone": "23054",
+              "lightCone": "21064",
               "characterEidolon": 0,
-              "lightConeSuperimposition": 1
+              "lightConeSuperimposition": 5
             },
             {
               "characterId": "8010",
@@ -19518,56 +20465,56 @@
       "path": "Elation",
       "element": "Imaginary",
       "traces": {
-        "CRIT DMG": 0.133,
-        "Elation": 0.18,
+        "Elation": 0.1,
+        "SPD": 9,
         "CRIT Rate": 0.187
       },
       "traceTree": [
         {
-          "id": "1506201_4.1v4",
+          "id": "1506201_4.2v3",
           "stat": "CRIT Rate",
           "value": 0.027,
           "pre": null,
           "children": []
         },
         {
-          "id": "1506202_4.1v4",
+          "id": "1506202_4.2v3",
+          "stat": "SPD",
+          "value": 2,
+          "pre": null,
+          "children": []
+        },
+        {
+          "id": "1506203_4.2v3",
+          "stat": "CRIT Rate",
+          "value": 0.027,
+          "pre": null,
+          "children": []
+        },
+        {
+          "id": "1506204_4.2v3",
           "stat": "Elation",
           "value": 0.04,
           "pre": null,
           "children": []
         },
         {
-          "id": "1506203_4.1v4",
-          "stat": "CRIT Rate",
-          "value": 0.027,
-          "pre": null,
-          "children": []
-        },
-        {
-          "id": "1506204_4.1v4",
-          "stat": "CRIT DMG",
-          "value": 0.053,
-          "pre": null,
-          "children": []
-        },
-        {
-          "id": "1506205_4.1v4",
+          "id": "1506205_4.2v3",
           "stat": "CRIT Rate",
           "value": 0.04,
           "pre": null,
           "children": [
             {
-              "id": "1506206_4.1v4",
-              "stat": "Elation",
-              "value": 0.06,
-              "pre": "1506205_4.1v4",
+              "id": "1506206_4.2v3",
+              "stat": "SPD",
+              "value": 3,
+              "pre": "1506205_4.2v3",
               "children": [
                 {
-                  "id": "1506207_4.1v4",
+                  "id": "1506207_4.2v3",
                   "stat": "CRIT Rate",
                   "value": 0.04,
-                  "pre": "1506206_4.1v4",
+                  "pre": "1506206_4.2v3",
                   "children": []
                 }
               ]
@@ -19575,22 +20522,22 @@
           ]
         },
         {
-          "id": "1506208_4.1v4",
-          "stat": "CRIT DMG",
-          "value": 0.08,
+          "id": "1506208_4.2v3",
+          "stat": "Elation",
+          "value": 0.06,
           "pre": null,
           "children": [
             {
-              "id": "1506209_4.1v4",
-              "stat": "Elation",
-              "value": 0.08,
-              "pre": "1506208_4.1v4",
+              "id": "1506209_4.2v3",
+              "stat": "SPD",
+              "value": 4,
+              "pre": "1506208_4.2v3",
               "children": [
                 {
-                  "id": "1506210_4.1v4",
+                  "id": "1506210_4.2v3",
                   "stat": "CRIT Rate",
                   "value": 0.053,
-                  "pre": "1506209_4.1v4",
+                  "pre": "1506209_4.2v3",
                   "children": []
                 }
               ]
@@ -19598,12 +20545,12 @@
           ]
         }
       ],
-      "max_sp": 80,
+      "max_sp": 60,
       "stats": {
-        "HP": 1125.432,
-        "ATK": 543.312,
-        "DEF": 679.14,
-        "SPD": 99,
+        "HP": 1047.816,
+        "ATK": 388.08,
+        "DEF": 654.885,
+        "SPD": 110,
         "CRIT Rate": 0.05,
         "CRIT DMG": 0.5
       },
@@ -19613,10 +20560,21 @@
         "y": 900,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 1179,
+        "y": 936,
+        "z": 1.28
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
-          "ATK": 0.75,
-          "ATK%": 0.75,
+          "ATK": 0,
+          "ATK%": 0,
           "DEF": 0,
           "DEF%": 0,
           "HP": 0,
@@ -19634,15 +20592,25 @@
             "CRIT DMG"
           ],
           "Feet": [
-            "SPD",
-            "ATK%"
+            "SPD"
           ],
           "PlanarSphere": [
-            "Imaginary DMG Boost",
-            "ATK%"
+            "HP%",
+            "ATK%",
+            "DEF%",
+            "Physical DMG Boost",
+            "Fire DMG Boost",
+            "Ice DMG Boost",
+            "Lightning DMG Boost",
+            "Wind DMG Boost",
+            "Quantum DMG Boost",
+            "Imaginary DMG Boost"
           ],
           "LinkRope": [
+            "HP%",
             "ATK%",
+            "DEF%",
+            "Break Effect",
             "Energy Regeneration Rate"
           ]
         },
@@ -19696,23 +20664,25 @@
               "CRIT DMG"
             ],
             "Feet": [
-              "SPD",
-              "ATK%"
+              "SPD"
             ],
             "PlanarSphere": [
-              "Imaginary DMG Boost",
-              "ATK%"
+              "HP%"
             ],
             "LinkRope": [
-              "ATK%"
+              "HP%"
             ]
           },
           "substats": [
             "CRIT DMG",
             "CRIT Rate",
-            "ATK%",
-            "ATK"
+            "SPD",
+            "DEF%",
+            "HP%"
           ],
+          "breakpoints": {
+            "SPD": 160
+          },
           "comboTurnAbilities": [
             "NULL",
             "START_ULT",
@@ -19729,32 +20699,20 @@
             "WHOLE_ELATION_SKILL"
           ],
           "comboDot": 0,
-          "errRopeEidolon": 0,
           "relicSets": [
             [
               "Ever-Glorious Magical Girl",
               "Ever-Glorious Magical Girl"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Eagle of Twilight Line",
-              "Eagle of Twilight Line"
+              "Genius of Brilliant Stars",
+              "Genius of Brilliant Stars"
             ]
           ],
           "ornamentSets": [
             "Punklorde Stage Zero",
             "Tengoku@Livestream",
+            "Izumo Gensei and Takama Divine Realm",
             "Rutilant Arena",
             "Sigonia, the Unclaimed Desolation",
             "Arcadia of Woven Dreams"
@@ -19767,9 +20725,9 @@
               "lightConeSuperimposition": 1
             },
             {
-              "characterId": "8010",
-              "lightCone": "22007",
-              "characterEidolon": 6,
+              "characterId": "1502",
+              "lightCone": "21064",
+              "characterEidolon": 0,
               "lightConeSuperimposition": 5
             },
             {
@@ -19885,6 +20843,17 @@
         "y": 1100,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1024,
+        "y": 1100,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -19984,7 +20953,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Scholar Lost in Erudition",
@@ -20139,6 +21107,17 @@
         "y": 1024,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1024,
+        "y": 1024,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -20238,7 +21217,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Scholar Lost in Erudition",
@@ -20391,6 +21369,17 @@
         "y": 1024,
         "z": 1.05
       },
+      "spineCenter": {
+        "x": 980,
+        "y": 1024,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -20567,6 +21556,17 @@
         "y": 1024,
         "z": 1.05
       },
+      "spineCenter": {
+        "x": 1050,
+        "y": 1024,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -20744,6 +21744,17 @@
         "y": 1000,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 1040,
+        "y": 1000,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -20935,6 +21946,17 @@
         "y": 1000,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 1040,
+        "y": 1000,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -21125,6 +22147,17 @@
         "y": 975,
         "z": 0.95
       },
+      "spineCenter": {
+        "x": 955,
+        "y": 975,
+        "z": 0.95
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -21334,6 +22367,17 @@
         "y": 975,
         "z": 0.95
       },
+      "spineCenter": {
+        "x": 955,
+        "y": 975,
+        "z": 0.95
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -21455,50 +22499,50 @@
       },
       "traceTree": [
         {
-          "id": "8009201_4.1v4",
+          "id": "8009201_4.2v3",
           "stat": "ATK%",
           "value": 0.04,
           "pre": null,
           "children": []
         },
         {
-          "id": "8009202_4.1v4",
+          "id": "8009202_4.2v3",
           "stat": "CRIT Rate",
           "value": 0.027,
           "pre": null,
           "children": []
         },
         {
-          "id": "8009203_4.1v4",
+          "id": "8009203_4.2v3",
           "stat": "ATK%",
           "value": 0.04,
           "pre": null,
           "children": []
         },
         {
-          "id": "8009204_4.1v4",
+          "id": "8009204_4.2v3",
           "stat": "CRIT DMG",
           "value": 0.053,
           "pre": null,
           "children": []
         },
         {
-          "id": "8009205_4.1v4",
+          "id": "8009205_4.2v3",
           "stat": "ATK%",
           "value": 0.06,
           "pre": null,
           "children": [
             {
-              "id": "8009206_4.1v4",
+              "id": "8009206_4.2v3",
               "stat": "CRIT Rate",
               "value": 0.04,
-              "pre": "8009205_4.1v4",
+              "pre": "8009205_4.2v3",
               "children": [
                 {
-                  "id": "8009207_4.1v4",
+                  "id": "8009207_4.2v3",
                   "stat": "ATK%",
                   "value": 0.06,
-                  "pre": "8009206_4.1v4",
+                  "pre": "8009206_4.2v3",
                   "children": []
                 }
               ]
@@ -21506,22 +22550,22 @@
           ]
         },
         {
-          "id": "8009208_4.1v4",
+          "id": "8009208_4.2v3",
           "stat": "CRIT DMG",
           "value": 0.08,
           "pre": null,
           "children": [
             {
-              "id": "8009209_4.1v4",
+              "id": "8009209_4.2v3",
               "stat": "CRIT Rate",
               "value": 0.053,
-              "pre": "8009208_4.1v4",
+              "pre": "8009208_4.2v3",
               "children": [
                 {
-                  "id": "8009210_4.1v4",
+                  "id": "8009210_4.2v3",
                   "stat": "ATK%",
                   "value": 0.08,
-                  "pre": "8009209_4.1v4",
+                  "pre": "8009209_4.2v3",
                   "children": []
                 }
               ]
@@ -21540,10 +22584,21 @@
       },
       "unreleased": true,
       "imageCenter": {
-        "x": 1050,
-        "y": 1100,
+        "x": 1035,
+        "y": 1014,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1035,
+        "y": 1014,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -21676,6 +22731,14 @@
             [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
             ]
           ],
           "ornamentSets": [
@@ -21729,50 +22792,50 @@
       },
       "traceTree": [
         {
-          "id": "8010201_4.1v4",
+          "id": "8010201_4.2v3",
           "stat": "ATK%",
           "value": 0.04,
           "pre": null,
           "children": []
         },
         {
-          "id": "8010202_4.1v4",
+          "id": "8010202_4.2v3",
           "stat": "CRIT Rate",
           "value": 0.027,
           "pre": null,
           "children": []
         },
         {
-          "id": "8010203_4.1v4",
+          "id": "8010203_4.2v3",
           "stat": "ATK%",
           "value": 0.04,
           "pre": null,
           "children": []
         },
         {
-          "id": "8010204_4.1v4",
+          "id": "8010204_4.2v3",
           "stat": "CRIT DMG",
           "value": 0.053,
           "pre": null,
           "children": []
         },
         {
-          "id": "8010205_4.1v4",
+          "id": "8010205_4.2v3",
           "stat": "ATK%",
           "value": 0.06,
           "pre": null,
           "children": [
             {
-              "id": "8010206_4.1v4",
+              "id": "8010206_4.2v3",
               "stat": "CRIT Rate",
               "value": 0.04,
-              "pre": "8010205_4.1v4",
+              "pre": "8010205_4.2v3",
               "children": [
                 {
-                  "id": "8010207_4.1v4",
+                  "id": "8010207_4.2v3",
                   "stat": "ATK%",
                   "value": 0.06,
-                  "pre": "8010206_4.1v4",
+                  "pre": "8010206_4.2v3",
                   "children": []
                 }
               ]
@@ -21780,22 +22843,22 @@
           ]
         },
         {
-          "id": "8010208_4.1v4",
+          "id": "8010208_4.2v3",
           "stat": "CRIT DMG",
           "value": 0.08,
           "pre": null,
           "children": [
             {
-              "id": "8010209_4.1v4",
+              "id": "8010209_4.2v3",
               "stat": "CRIT Rate",
               "value": 0.053,
-              "pre": "8010208_4.1v4",
+              "pre": "8010208_4.2v3",
               "children": [
                 {
-                  "id": "8010210_4.1v4",
+                  "id": "8010210_4.2v3",
                   "stat": "ATK%",
                   "value": 0.08,
-                  "pre": "8010209_4.1v4",
+                  "pre": "8010209_4.2v3",
                   "children": []
                 }
               ]
@@ -21814,10 +22877,21 @@
       },
       "unreleased": true,
       "imageCenter": {
-        "x": 1050,
-        "y": 1100,
+        "x": 1035,
+        "y": 1014,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1035,
+        "y": 1014,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -21946,6 +23020,14 @@
             [
               "Pioneer Diver of Dead Waters",
               "Pioneer Diver of Dead Waters"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
             ],
             [
               "Eagle of Twilight Line",
@@ -22093,6 +23175,17 @@
         "y": 950,
         "z": 1
       },
+      "spineCenter": {
+        "x": 885,
+        "y": 950,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -22209,10 +23302,6 @@
             [
               "Pioneer Diver of Dead Waters",
               "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Scholar Lost in Erudition",
-              "Scholar Lost in Erudition"
             ],
             [
               "Wavestrider Captain",
@@ -22362,8 +23451,19 @@
       "imageCenter": {
         "x": 1000,
         "y": 950,
-        "z": 1.1
+        "z": 1.25
       },
+      "spineCenter": {
+        "x": 1000,
+        "y": 950,
+        "z": 1.25
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -22467,7 +23567,6 @@
             "END_DOT",
             "DEFAULT_FUA"
           ],
-          "comboDot": 16,
           "errRopeEidolon": 0,
           "deprioritizeBuffs": true,
           "relicSets": [
@@ -22478,7 +23577,8 @@
             [
               "Messenger Traversing Hackerspace",
               "Sacerdos' Relived Ordeal",
-              "Warrior Goddess of Sun and Thunder"
+              "Warrior Goddess of Sun and Thunder",
+              "Diviner of Distant Reach"
             ],
             [
               "Wavestrider Captain",
@@ -22637,6 +23737,17 @@
         "y": 950,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1050,
+        "y": 950,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -22749,7 +23860,6 @@
             "WHOLE_BASIC"
           ],
           "deprioritizeBuffs": true,
-          "comboDot": 0,
           "errRopeEidolon": 0,
           "relicSets": [
             [
@@ -22767,7 +23877,8 @@
             [
               "Messenger Traversing Hackerspace",
               "Sacerdos' Relived Ordeal",
-              "Warrior Goddess of Sun and Thunder"
+              "Warrior Goddess of Sun and Thunder",
+              "Diviner of Distant Reach"
             ],
             [
               "Wavestrider Captain",
@@ -22928,6 +24039,17 @@
         "y": 1075,
         "z": 1.1
       },
+      "spineCenter": {
+        "x": 820,
+        "y": 1075,
+        "z": 1.1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -23192,6 +24314,17 @@
         "y": 800,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1126,
+        "y": 804,
+        "z": 1.05
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -23305,7 +24438,6 @@
             "DEFAULT_FUA",
             "WHOLE_BASIC"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Longevous Disciple",
@@ -23460,6 +24592,17 @@
         "y": 930,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1024,
+        "y": 930,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -23562,7 +24705,6 @@
             "WHOLE_SKILL",
             "WHOLE_SKILL"
           ],
-          "comboDot": 0,
           "relicSets": [
             [
               "Scholar Lost in Erudition",
@@ -23720,6 +24862,17 @@
         "y": 975,
         "z": 1.075
       },
+      "spineCenter": {
+        "x": 950,
+        "y": 975,
+        "z": 1.075
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -23922,6 +25075,17 @@
         "y": 1050,
         "z": 1
       },
+      "spineCenter": {
+        "x": 1050,
+        "y": 1050,
+        "z": 1
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -24113,10 +25277,21 @@
       },
       "unreleased": false,
       "imageCenter": {
-        "x": 950,
-        "y": 925,
-        "z": 1.25
+        "x": 964,
+        "y": 934,
+        "z": 1.3
       },
+      "spineCenter": {
+        "x": 964,
+        "y": 934,
+        "z": 1.3
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -24218,7 +25393,6 @@
             "WHOLE_BASIC",
             "DEFAULT_DOT"
           ],
-          "comboDot": 8,
           "relicSets": [
             [
               "Prisoner in Deep Confinement",
@@ -24372,6 +25546,17 @@
         "y": 1075,
         "z": 1.25
       },
+      "spineCenter": {
+        "x": 930,
+        "y": 1075,
+        "z": 1.25
+      },
+      "backgroundCenterOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "disableSpine": false,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.5,
@@ -27115,7 +28300,7 @@
     },
     "22007": {
       "id": "22007",
-      "name": "We'll face the Hereafter together",
+      "name": "Tomorrow, Together",
       "rarity": 4,
       "path": "Elation",
       "stats": {
@@ -29028,13 +30213,13 @@
     },
     "23057": {
       "id": "23057",
-      "name": "Welcome to Cosmic City",
+      "name": "Welcome to the Cosmic City",
       "rarity": 5,
       "path": "Elation",
       "stats": {
-        "HP": 952.56,
-        "ATK": 635.04,
-        "DEF": 463.05
+        "HP": 1164.24,
+        "ATK": 476.28,
+        "DEF": 529.2
       },
       "imageOffset": {
         "x": 10,
@@ -29043,26 +30228,26 @@
       },
       "superimpositions": {
         "1": {
-          "ATK%": 0.64
+          "SPD%": 0.18
         },
         "2": {
-          "ATK%": 0.8
+          "SPD%": 0.21
         },
         "3": {
-          "ATK%": 0.96
+          "SPD%": 0.24
         },
         "4": {
-          "ATK%": 1.12
+          "SPD%": 0.27
         },
         "5": {
-          "ATK%": 1.28
+          "SPD%": 0.3
         }
       },
       "unreleased": true
     },
     "23058": {
       "id": "23058",
-      "name": "A Rendezvous in the Next Flower Season",
+      "name": "Until the Flowers Bloom Again",
       "rarity": 5,
       "path": "Elation",
       "stats": {
@@ -29080,16 +30265,16 @@
           "CRIT DMG": 0.6
         },
         "2": {
-          "CRIT DMG": 0.825
+          "CRIT DMG": 0.75
         },
         "3": {
-          "CRIT DMG": 1.05
+          "CRIT DMG": 0.9
         },
         "4": {
-          "CRIT DMG": 1.275
+          "CRIT DMG": 1.05
         },
         "5": {
-          "CRIT DMG": 1.5
+          "CRIT DMG": 1.2
         }
       },
       "unreleased": true
