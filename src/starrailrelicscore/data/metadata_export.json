@@ -449,7 +449,7 @@
               "lightConeSuperimposition": 1
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -1110,7 +1110,7 @@
         "y": 0,
         "z": 0
       },
-      "disableSpine": false,
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -1374,7 +1374,7 @@
         "y": 0,
         "z": 0
       },
-      "disableSpine": false,
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -2288,9 +2288,9 @@
         "z": 1.15
       },
       "backgroundCenterOffset": {
-        "x": 0,
-        "y": 0,
-        "z": 0
+        "x": 277,
+        "y": 213,
+        "z": 0.5
       },
       "disableSpine": false,
       "scoringMetadata": {
@@ -2430,7 +2430,7 @@
               "lightConeSuperimposition": 5
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -3019,7 +3019,7 @@
         "y": 0,
         "z": 0
       },
-      "disableSpine": false,
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.75,
@@ -6717,7 +6717,7 @@
         "y": 0,
         "z": 0
       },
-      "disableSpine": false,
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.25,
@@ -8480,7 +8480,7 @@
               "lightConeSuperimposition": 1
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -8725,6 +8725,10 @@
             [
               "Musketeer of Wild Wheat",
               "Musketeer of Wild Wheat"
+            ],
+            [
+              "Genius of Brilliant Stars",
+              "Genius of Brilliant Stars"
             ],
             [
               "Wastelander of Banditry Desert",
@@ -9368,7 +9372,7 @@
         "y": 0,
         "z": 0
       },
-      "disableSpine": false,
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -10200,7 +10204,7 @@
               "lightConeSuperimposition": 5
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -11299,7 +11303,7 @@
           ],
           "teammates": [
             {
-              "characterId": "1310",
+              "characterId": "1310b1",
               "lightCone": "23025",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -12710,7 +12714,7 @@
         "y": 0,
         "z": 0
       },
-      "disableSpine": false,
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0,
@@ -12916,7 +12920,7 @@
         "y": 0,
         "z": 0
       },
-      "disableSpine": false,
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 1,
@@ -13638,7 +13642,7 @@
         "y": 0,
         "z": 0
       },
-      "disableSpine": false,
+      "disableSpine": true,
       "scoringMetadata": {
         "stats": {
           "ATK": 0.5,
@@ -14057,7 +14061,7 @@
               "lightConeSuperimposition": 1
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -15428,7 +15432,7 @@
           ],
           "teammates": [
             {
-              "characterId": "1310",
+              "characterId": "1310b1",
               "lightCone": "23025",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -15555,9 +15559,9 @@
         "z": 1.275
       },
       "backgroundCenterOffset": {
-        "x": 0,
-        "y": 0,
-        "z": 0
+        "x": 208,
+        "y": -16,
+        "z": 0.5
       },
       "disableSpine": false,
       "scoringMetadata": {
@@ -16952,9 +16956,9 @@
         "z": 1.05
       },
       "backgroundCenterOffset": {
-        "x": 0,
-        "y": 0,
-        "z": 0
+        "x": 95,
+        "y": 364,
+        "z": 0.17
       },
       "disableSpine": false,
       "scoringMetadata": {
@@ -17243,9 +17247,9 @@
         "z": 1.3
       },
       "backgroundCenterOffset": {
-        "x": 0,
-        "y": 0,
-        "z": 0
+        "x": -156,
+        "y": 171,
+        "z": 0.17
       },
       "disableSpine": false,
       "scoringMetadata": {
@@ -17805,8 +17809,8 @@
         "z": 1.05
       },
       "backgroundCenterOffset": {
-        "x": 0,
-        "y": 0,
+        "x": 30,
+        "y": 172,
         "z": 0
       },
       "disableSpine": false,
@@ -19581,7 +19585,7 @@
               "lightConeSuperimposition": 5
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -19885,7 +19889,7 @@
               "lightConeSuperimposition": 1
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -20186,50 +20190,50 @@
       },
       "traceTree": [
         {
-          "id": "1505201_4.2v3",
+          "id": "1505201",
           "stat": "CRIT Rate",
           "value": 0.027,
           "pre": null,
           "children": []
         },
         {
-          "id": "1505202_4.2v3",
+          "id": "1505202",
           "stat": "Elation",
           "value": 0.04,
           "pre": null,
           "children": []
         },
         {
-          "id": "1505203_4.2v3",
+          "id": "1505203",
           "stat": "CRIT Rate",
           "value": 0.027,
           "pre": null,
           "children": []
         },
         {
-          "id": "1505204_4.2v3",
+          "id": "1505204",
           "stat": "SPD",
           "value": 2,
           "pre": null,
           "children": []
         },
         {
-          "id": "1505205_4.2v3",
+          "id": "1505205",
           "stat": "CRIT Rate",
           "value": 0.04,
           "pre": null,
           "children": [
             {
-              "id": "1505206_4.2v3",
+              "id": "1505206",
               "stat": "Elation",
               "value": 0.06,
-              "pre": "1505205_4.2v3",
+              "pre": "1505205",
               "children": [
                 {
-                  "id": "1505207_4.2v3",
+                  "id": "1505207",
                   "stat": "CRIT Rate",
                   "value": 0.04,
-                  "pre": "1505206_4.2v3",
+                  "pre": "1505206",
                   "children": []
                 }
               ]
@@ -20237,22 +20241,22 @@
           ]
         },
         {
-          "id": "1505208_4.2v3",
+          "id": "1505208",
           "stat": "SPD",
           "value": 3,
           "pre": null,
           "children": [
             {
-              "id": "1505209_4.2v3",
+              "id": "1505209",
               "stat": "Elation",
               "value": 0.08,
-              "pre": "1505208_4.2v3",
+              "pre": "1505208",
               "children": [
                 {
-                  "id": "1505210_4.2v3",
+                  "id": "1505210",
                   "stat": "CRIT Rate",
                   "value": 0.053,
-                  "pre": "1505209_4.2v3",
+                  "pre": "1505209",
                   "children": []
                 }
               ]
@@ -20269,7 +20273,7 @@
         "CRIT Rate": 0.05,
         "CRIT DMG": 0.5
       },
-      "unreleased": true,
+      "unreleased": false,
       "imageCenter": {
         "x": 1050,
         "y": 950,
@@ -20449,7 +20453,7 @@
               "lightConeSuperimposition": 5
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -20471,50 +20475,50 @@
       },
       "traceTree": [
         {
-          "id": "1506201_4.2v3",
+          "id": "1506201",
           "stat": "CRIT Rate",
           "value": 0.027,
           "pre": null,
           "children": []
         },
         {
-          "id": "1506202_4.2v3",
+          "id": "1506202",
           "stat": "SPD",
           "value": 2,
           "pre": null,
           "children": []
         },
         {
-          "id": "1506203_4.2v3",
+          "id": "1506203",
           "stat": "CRIT Rate",
           "value": 0.027,
           "pre": null,
           "children": []
         },
         {
-          "id": "1506204_4.2v3",
+          "id": "1506204",
           "stat": "Elation",
           "value": 0.04,
           "pre": null,
           "children": []
         },
         {
-          "id": "1506205_4.2v3",
+          "id": "1506205",
           "stat": "CRIT Rate",
           "value": 0.04,
           "pre": null,
           "children": [
             {
-              "id": "1506206_4.2v3",
+              "id": "1506206",
               "stat": "SPD",
               "value": 3,
-              "pre": "1506205_4.2v3",
+              "pre": "1506205",
               "children": [
                 {
-                  "id": "1506207_4.2v3",
+                  "id": "1506207",
                   "stat": "CRIT Rate",
                   "value": 0.04,
-                  "pre": "1506206_4.2v3",
+                  "pre": "1506206",
                   "children": []
                 }
               ]
@@ -20522,22 +20526,22 @@
           ]
         },
         {
-          "id": "1506208_4.2v3",
+          "id": "1506208",
           "stat": "Elation",
           "value": 0.06,
           "pre": null,
           "children": [
             {
-              "id": "1506209_4.2v3",
+              "id": "1506209",
               "stat": "SPD",
               "value": 4,
-              "pre": "1506208_4.2v3",
+              "pre": "1506208",
               "children": [
                 {
-                  "id": "1506210_4.2v3",
+                  "id": "1506210",
                   "stat": "CRIT Rate",
                   "value": 0.053,
-                  "pre": "1506209_4.2v3",
+                  "pre": "1506209",
                   "children": []
                 }
               ]
@@ -20554,7 +20558,7 @@
         "CRIT Rate": 0.05,
         "CRIT DMG": 0.5
       },
-      "unreleased": true,
+      "unreleased": false,
       "imageCenter": {
         "x": 1015,
         "y": 900,
@@ -20731,7 +20735,7 @@
               "lightConeSuperimposition": 5
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -20995,7 +20999,7 @@
               "lightConeSuperimposition": 1
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -21259,7 +21263,7 @@
               "lightConeSuperimposition": 1
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -22499,50 +22503,50 @@
       },
       "traceTree": [
         {
-          "id": "8009201_4.2v3",
+          "id": "8009201",
           "stat": "ATK%",
           "value": 0.04,
           "pre": null,
           "children": []
         },
         {
-          "id": "8009202_4.2v3",
+          "id": "8009202",
           "stat": "CRIT Rate",
           "value": 0.027,
           "pre": null,
           "children": []
         },
         {
-          "id": "8009203_4.2v3",
+          "id": "8009203",
           "stat": "ATK%",
           "value": 0.04,
           "pre": null,
           "children": []
         },
         {
-          "id": "8009204_4.2v3",
+          "id": "8009204",
           "stat": "CRIT DMG",
           "value": 0.053,
           "pre": null,
           "children": []
         },
         {
-          "id": "8009205_4.2v3",
+          "id": "8009205",
           "stat": "ATK%",
           "value": 0.06,
           "pre": null,
           "children": [
             {
-              "id": "8009206_4.2v3",
+              "id": "8009206",
               "stat": "CRIT Rate",
               "value": 0.04,
-              "pre": "8009205_4.2v3",
+              "pre": "8009205",
               "children": [
                 {
-                  "id": "8009207_4.2v3",
+                  "id": "8009207",
                   "stat": "ATK%",
                   "value": 0.06,
-                  "pre": "8009206_4.2v3",
+                  "pre": "8009206",
                   "children": []
                 }
               ]
@@ -22550,22 +22554,22 @@
           ]
         },
         {
-          "id": "8009208_4.2v3",
+          "id": "8009208",
           "stat": "CRIT DMG",
           "value": 0.08,
           "pre": null,
           "children": [
             {
-              "id": "8009209_4.2v3",
+              "id": "8009209",
               "stat": "CRIT Rate",
               "value": 0.053,
-              "pre": "8009208_4.2v3",
+              "pre": "8009208",
               "children": [
                 {
-                  "id": "8009210_4.2v3",
+                  "id": "8009210",
                   "stat": "ATK%",
                   "value": 0.08,
-                  "pre": "8009209_4.2v3",
+                  "pre": "8009209",
                   "children": []
                 }
               ]
@@ -22582,7 +22586,7 @@
         "CRIT Rate": 0.05,
         "CRIT DMG": 0.5
       },
-      "unreleased": true,
+      "unreleased": false,
       "imageCenter": {
         "x": 1035,
         "y": 1014,
@@ -22770,7 +22774,7 @@
               "lightConeSuperimposition": 1
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -22792,50 +22796,50 @@
       },
       "traceTree": [
         {
-          "id": "8010201_4.2v3",
+          "id": "8010201",
           "stat": "ATK%",
           "value": 0.04,
           "pre": null,
           "children": []
         },
         {
-          "id": "8010202_4.2v3",
+          "id": "8010202",
           "stat": "CRIT Rate",
           "value": 0.027,
           "pre": null,
           "children": []
         },
         {
-          "id": "8010203_4.2v3",
+          "id": "8010203",
           "stat": "ATK%",
           "value": 0.04,
           "pre": null,
           "children": []
         },
         {
-          "id": "8010204_4.2v3",
+          "id": "8010204",
           "stat": "CRIT DMG",
           "value": 0.053,
           "pre": null,
           "children": []
         },
         {
-          "id": "8010205_4.2v3",
+          "id": "8010205",
           "stat": "ATK%",
           "value": 0.06,
           "pre": null,
           "children": [
             {
-              "id": "8010206_4.2v3",
+              "id": "8010206",
               "stat": "CRIT Rate",
               "value": 0.04,
-              "pre": "8010205_4.2v3",
+              "pre": "8010205",
               "children": [
                 {
-                  "id": "8010207_4.2v3",
+                  "id": "8010207",
                   "stat": "ATK%",
                   "value": 0.06,
-                  "pre": "8010206_4.2v3",
+                  "pre": "8010206",
                   "children": []
                 }
               ]
@@ -22843,22 +22847,22 @@
           ]
         },
         {
-          "id": "8010208_4.2v3",
+          "id": "8010208",
           "stat": "CRIT DMG",
           "value": 0.08,
           "pre": null,
           "children": [
             {
-              "id": "8010209_4.2v3",
+              "id": "8010209",
               "stat": "CRIT Rate",
               "value": 0.053,
-              "pre": "8010208_4.2v3",
+              "pre": "8010208",
               "children": [
                 {
-                  "id": "8010210_4.2v3",
+                  "id": "8010210",
                   "stat": "ATK%",
                   "value": 0.08,
-                  "pre": "8010209_4.2v3",
+                  "pre": "8010209",
                   "children": []
                 }
               ]
@@ -22875,7 +22879,7 @@
         "CRIT Rate": 0.05,
         "CRIT DMG": 0.5
       },
-      "unreleased": true,
+      "unreleased": false,
       "imageCenter": {
         "x": 1035,
         "y": 1014,
@@ -23063,7 +23067,7 @@
               "lightConeSuperimposition": 1
             },
             {
-              "characterId": "1217",
+              "characterId": "1217b1",
               "lightCone": "23017",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
@@ -28330,7 +28334,7 @@
           "CRIT DMG": 0.24
         }
       },
-      "unreleased": true
+      "unreleased": false
     },
     "23000": {
       "id": "23000",
@@ -30243,7 +30247,7 @@
           "SPD%": 0.3
         }
       },
-      "unreleased": true
+      "unreleased": false
     },
     "23058": {
       "id": "23058",
@@ -30277,7 +30281,7 @@
           "CRIT DMG": 1.2
         }
       },
-      "unreleased": true
+      "unreleased": false
     },
     "24000": {
       "id": "24000",
