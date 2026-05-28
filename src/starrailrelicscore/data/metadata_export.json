@@ -154,6 +154,15 @@
             "name": "WARRIOR_SET",
             "value": true,
             "set": "Warrior Goddess of Sun and Thunder"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 8,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -186,7 +195,94 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "shieldSimulation": {
+          "parts": {
+            "Body": [
+              "DEF%"
+            ],
+            "Feet": [
+              "DEF%",
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "DEF%"
+            ],
+            "LinkRope": [
+              "DEF%",
+              "Energy Regeneration Rate"
+            ]
+          },
+          "substats": [
+            "DEF%",
+            "DEF",
+            "SPD",
+            "Effect RES",
+            "HP%"
+          ],
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL",
+            "DEFAULT_SKILL_SHIELD",
+            "DEFAULT_SKILL_SHIELD"
+          ],
+          "relicSets": [
+            [
+              "Self-Enshrouded Recluse",
+              "Self-Enshrouded Recluse"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Self-Enshrouded Recluse",
+              "Self-Enshrouded Recluse"
+            ],
+            [
+              "Knight of Purity Palace",
+              "Knight of Purity Palace"
+            ]
+          ],
+          "ornamentSets": [
+            "Lushaka, the Sunken Seas",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1308",
+              "lightCone": "23024",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1218",
+              "lightCone": "23029",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1406",
+              "lightCone": "23043",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1002": {
@@ -339,6 +435,15 @@
             "name": "fnPioneerSet",
             "value": 4,
             "set": "Pioneer Diver of Dead Waters"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 1,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -408,18 +513,6 @@
             [
               "Scholar Lost in Erudition",
               "Scholar Lost in Erudition"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
             ],
             [
               "Pioneer Diver of Dead Waters",
@@ -670,18 +763,6 @@
               "The Ashblazing Grand Duke"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -875,6 +956,15 @@
             "name": "fnPioneerSet",
             "value": 4,
             "set": "Pioneer Diver of Dead Waters"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 8,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -908,93 +998,7 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ],
-        "simulation": {
-          "parts": {
-            "Body": [
-              "CRIT Rate",
-              "CRIT DMG"
-            ],
-            "Feet": [
-              "ATK%",
-              "SPD"
-            ],
-            "PlanarSphere": [
-              "ATK%",
-              "Imaginary DMG Boost"
-            ],
-            "LinkRope": [
-              "ATK%"
-            ]
-          },
-          "substats": [
-            "CRIT DMG",
-            "CRIT Rate",
-            "ATK%",
-            "ATK"
-          ],
-          "comboTurnAbilities": [
-            "NULL",
-            "START_ULT",
-            "END_SKILL",
-            "WHOLE_SKILL",
-            "WHOLE_SKILL"
-          ],
-          "errRopeEidolon": 0,
-          "relicSets": [
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Scholar Lost in Erudition",
-              "Scholar Lost in Erudition"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Eagle of Twilight Line",
-              "Eagle of Twilight Line"
-            ]
-          ],
-          "ornamentSets": [
-            "Rutilant Arena",
-            "Firmament Frontline: Glamoth",
-            "Izumo Gensei and Takama Divine Realm",
-            "Sigonia, the Unclaimed Desolation",
-            "Arcadia of Woven Dreams"
-          ],
-          "teammates": [
-            {
-              "characterId": "1308",
-              "lightCone": "23024",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1218",
-              "lightCone": "23029",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1414",
-              "lightCone": "23051",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            }
-          ]
-        }
+        ]
       }
     },
     "1005": {
@@ -1170,95 +1174,7 @@
           "minFilterKey": "minDot",
           "maxFilterKey": "maxDot"
         },
-        "hiddenColumns": [],
-        "simulation": {
-          "parts": {
-            "Body": [
-              "ATK%"
-            ],
-            "Feet": [
-              "ATK%",
-              "SPD"
-            ],
-            "PlanarSphere": [
-              "ATK%",
-              "Lightning DMG Boost"
-            ],
-            "LinkRope": [
-              "ATK%"
-            ]
-          },
-          "substats": [
-            "ATK%",
-            "ATK",
-            "Effect Hit Rate",
-            "CRIT Rate",
-            "CRIT DMG"
-          ],
-          "breakpoints": {
-            "Effect Hit Rate": 0.282
-          },
-          "comboTurnAbilities": [
-            "NULL",
-            "START_ULT",
-            "DEFAULT_DOT",
-            "DEFAULT_SKILL",
-            "END_DOT",
-            "DEFAULT_FUA",
-            "START_SKILL",
-            "END_DOT",
-            "DEFAULT_FUA",
-            "START_SKILL",
-            "END_DOT",
-            "DEFAULT_FUA"
-          ],
-          "relicSets": [
-            [
-              "Prisoner in Deep Confinement",
-              "Prisoner in Deep Confinement"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Eagle of Twilight Line",
-              "Eagle of Twilight Line"
-            ]
-          ],
-          "ornamentSets": [
-            "Firmament Frontline: Glamoth",
-            "Revelry by the Sea"
-          ],
-          "teammates": [
-            {
-              "characterId": "1307b1",
-              "lightCone": "23022",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1410",
-              "lightCone": "23047",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1414",
-              "lightCone": "23051",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            }
-          ]
-        }
+        "hiddenColumns": []
       }
     },
     "1006": {
@@ -1599,7 +1515,17 @@
             "ATK%"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 8,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "SKILL",
           "basicGridColumn": "SKILL",
@@ -1667,18 +1593,6 @@
             [
               "Scholar Lost in Erudition",
               "Scholar Lost in Erudition"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -2132,18 +2046,6 @@
               "Hunter of Glacial Forest"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -2328,7 +2230,17 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 8,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "ULT",
           "basicGridColumn": "ULT",
@@ -2392,18 +2304,6 @@
             [
               "Scholar Lost in Erudition",
               "Scholar Lost in Erudition"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -2596,6 +2496,15 @@
             "name": "TENGOKU_SET",
             "value": true,
             "set": "Tengoku@Livestream"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 8,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -2666,18 +2575,6 @@
             [
               "Genius of Brilliant Stars",
               "Genius of Brilliant Stars"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -2864,7 +2761,13 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnSacerdosSet",
+            "value": 3,
+            "set": "Sacerdos' Relived Ordeal"
+          }
+        ],
         "sortOption": {
           "key": "CD",
           "basicGridColumn": "CD",
@@ -2905,7 +2808,84 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "supportSimulation": {
+          "parts": {
+            "Body": [
+              "CRIT DMG"
+            ],
+            "Feet": [
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "HP%",
+              "DEF%"
+            ],
+            "LinkRope": [
+              "Energy Regeneration Rate"
+            ]
+          },
+          "substats": [
+            "CRIT DMG",
+            "SPD",
+            "Effect RES",
+            "HP%",
+            "DEF%"
+          ],
+          "buffStat": 9,
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL"
+          ],
+          "relicSets": [
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ]
+          ],
+          "ornamentSets": [
+            "Broken Keel",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1408",
+              "lightCone": "23044",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1412",
+              "lightCone": "23048",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1414",
+              "lightCone": "23051",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1102": {
@@ -3058,6 +3038,15 @@
             "name": "TENGOKU_SET",
             "value": true,
             "set": "Tengoku@Livestream"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 1,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -3091,92 +3080,7 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ],
-        "simulation": {
-          "parts": {
-            "Body": [
-              "CRIT Rate",
-              "CRIT DMG"
-            ],
-            "Feet": [
-              "ATK%",
-              "SPD"
-            ],
-            "PlanarSphere": [
-              "ATK%",
-              "Quantum DMG Boost"
-            ],
-            "LinkRope": [
-              "ATK%"
-            ]
-          },
-          "substats": [
-            "CRIT DMG",
-            "CRIT Rate",
-            "ATK%",
-            "ATK"
-          ],
-          "comboTurnAbilities": [
-            "NULL",
-            "START_ULT",
-            "DEFAULT_SKILL",
-            "DEFAULT_SKILL",
-            "END_SKILL"
-          ],
-          "relicSets": [
-            [
-              "Scholar Lost in Erudition",
-              "Scholar Lost in Erudition"
-            ],
-            [
-              "Genius of Brilliant Stars",
-              "Genius of Brilliant Stars"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Eagle of Twilight Line",
-              "Eagle of Twilight Line"
-            ]
-          ],
-          "ornamentSets": [
-            "Rutilant Arena",
-            "Tengoku@Livestream",
-            "Firmament Frontline: Glamoth",
-            "Sigonia, the Unclaimed Desolation",
-            "Arcadia of Woven Dreams"
-          ],
-          "teammates": [
-            {
-              "characterId": "1006b1",
-              "lightCone": "23043",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1306b1",
-              "lightCone": "23003",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1414",
-              "lightCone": "23051",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            }
-          ]
-        }
+        ]
       }
     },
     "1103": {
@@ -3329,6 +3233,15 @@
             "name": "fnPioneerSet",
             "value": 4,
             "set": "Pioneer Diver of Dead Waters"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -3403,18 +3316,6 @@
               "Eagle of Twilight Line"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -3433,8 +3334,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
+            "City of Converging Stars"
           ],
           "teammates": [
             {
@@ -3643,7 +3543,93 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "shieldSimulation": {
+          "parts": {
+            "Body": [
+              "DEF%"
+            ],
+            "Feet": [
+              "DEF%",
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "DEF%"
+            ],
+            "LinkRope": [
+              "DEF%",
+              "Energy Regeneration Rate"
+            ]
+          },
+          "substats": [
+            "DEF%",
+            "DEF",
+            "SPD",
+            "Effect RES",
+            "HP%"
+          ],
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL",
+            "DEFAULT_ULT_SHIELD"
+          ],
+          "relicSets": [
+            [
+              "Self-Enshrouded Recluse",
+              "Self-Enshrouded Recluse"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Self-Enshrouded Recluse",
+              "Self-Enshrouded Recluse"
+            ],
+            [
+              "Knight of Purity Palace",
+              "Knight of Purity Palace"
+            ]
+          ],
+          "ornamentSets": [
+            "Lushaka, the Sunken Seas",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1408",
+              "lightCone": "23044",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1412",
+              "lightCone": "23048",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1313",
+              "lightCone": "23034",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1105": {
@@ -3856,7 +3842,94 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "healSimulation": {
+          "parts": {
+            "Body": [
+              "Outgoing Healing Boost"
+            ],
+            "Feet": [
+              "SPD",
+              "HP%"
+            ],
+            "PlanarSphere": [
+              "HP%"
+            ],
+            "LinkRope": [
+              "HP%"
+            ]
+          },
+          "substats": [
+            "HP%",
+            "HP",
+            "SPD",
+            "Effect RES",
+            "DEF%"
+          ],
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL",
+            "DEFAULT_SKILL_HEAL",
+            "DEFAULT_ULT_HEAL"
+          ],
+          "relicSets": [
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Passerby of Wandering Cloud",
+              "Passerby of Wandering Cloud"
+            ]
+          ],
+          "ornamentSets": [
+            "Lushaka, the Sunken Seas",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars",
+            "Giant Tree of Rapt Brooding"
+          ],
+          "teammates": [
+            {
+              "characterId": "1407",
+              "lightCone": "23040",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1403",
+              "lightCone": "23038",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1406",
+              "lightCone": "23043",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1106": {
@@ -4011,6 +4084,15 @@
             "name": "fnPioneerSet",
             "value": 4,
             "set": "Pioneer Diver of Dead Waters"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -4277,18 +4359,6 @@
               "Champion of Streetwise Boxing"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -4477,6 +4547,15 @@
             "name": "PRISONER_SET",
             "value": 3,
             "set": "Prisoner in Deep Confinement"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 8,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -4539,18 +4618,6 @@
             [
               "Prisoner in Deep Confinement",
               "Prisoner in Deep Confinement"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -4736,6 +4803,15 @@
             "name": "fnPioneerSet",
             "value": 4,
             "set": "Pioneer Diver of Dead Waters"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 2,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -4800,18 +4876,6 @@
             [
               "Scholar Lost in Erudition",
               "Scholar Lost in Erudition"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -5057,7 +5121,95 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "healSimulation": {
+          "parts": {
+            "Body": [
+              "Outgoing Healing Boost"
+            ],
+            "Feet": [
+              "SPD",
+              "HP%"
+            ],
+            "PlanarSphere": [
+              "HP%"
+            ],
+            "LinkRope": [
+              "HP%"
+            ]
+          },
+          "substats": [
+            "HP%",
+            "HP",
+            "SPD",
+            "Effect RES",
+            "DEF%"
+          ],
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL",
+            "DEFAULT_SKILL_HEAL",
+            "DEFAULT_TALENT_HEAL",
+            "DEFAULT_ULT_HEAL"
+          ],
+          "relicSets": [
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Passerby of Wandering Cloud",
+              "Passerby of Wandering Cloud"
+            ]
+          ],
+          "ornamentSets": [
+            "Lushaka, the Sunken Seas",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars",
+            "Giant Tree of Rapt Brooding"
+          ],
+          "teammates": [
+            {
+              "characterId": "1407",
+              "lightCone": "23040",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1403",
+              "lightCone": "23038",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1406",
+              "lightCone": "23043",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1111": {
@@ -5212,6 +5364,15 @@
             "name": "PRISONER_SET",
             "value": 3,
             "set": "Prisoner in Deep Confinement"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 1,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -5278,18 +5439,6 @@
             [
               "Prisoner in Deep Confinement",
               "Prisoner in Deep Confinement"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -5578,18 +5727,6 @@
               "The Ashblazing Grand Duke"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -5607,8 +5744,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
+            "City of Converging Stars"
           ],
           "teammates": [
             {
@@ -5792,6 +5928,15 @@
             "name": "fnSacerdosSet",
             "value": 2,
             "set": "Sacerdos' Relived Ordeal"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -5876,18 +6021,6 @@
             [
               "Sacerdos' Relived Ordeal",
               "Sacerdos' Relived Ordeal"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -6275,6 +6408,15 @@
             "name": "WARRIOR_SET",
             "value": true,
             "set": "Warrior Goddess of Sun and Thunder"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -6326,7 +6468,94 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "healSimulation": {
+          "parts": {
+            "Body": [
+              "Outgoing Healing Boost"
+            ],
+            "Feet": [
+              "SPD",
+              "ATK%"
+            ],
+            "PlanarSphere": [
+              "ATK%"
+            ],
+            "LinkRope": [
+              "ATK%"
+            ]
+          },
+          "substats": [
+            "ATK%",
+            "ATK",
+            "SPD",
+            "Effect RES",
+            "DEF%"
+          ],
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL",
+            "DEFAULT_SKILL_HEAL",
+            "DEFAULT_TALENT_HEAL"
+          ],
+          "relicSets": [
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Passerby of Wandering Cloud",
+              "Passerby of Wandering Cloud"
+            ]
+          ],
+          "ornamentSets": [
+            "Lushaka, the Sunken Seas",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars",
+            "Giant Tree of Rapt Brooding"
+          ],
+          "teammates": [
+            {
+              "characterId": "1407",
+              "lightCone": "23040",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1403",
+              "lightCone": "23038",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1406",
+              "lightCone": "23043",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1204": {
@@ -6556,18 +6785,6 @@
               "The Ashblazing Grand Duke"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -6793,93 +7010,7 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ],
-        "simulation": {
-          "parts": {
-            "Body": [
-              "CRIT Rate",
-              "CRIT DMG"
-            ],
-            "Feet": [
-              "HP%",
-              "SPD"
-            ],
-            "PlanarSphere": [
-              "HP%",
-              "Wind DMG Boost"
-            ],
-            "LinkRope": [
-              "HP%"
-            ]
-          },
-          "substats": [
-            "CRIT DMG",
-            "CRIT Rate",
-            "HP%",
-            "HP",
-            "ATK%"
-          ],
-          "comboTurnAbilities": [
-            "NULL",
-            "START_SKILL",
-            "DEFAULT_ULT",
-            "END_BASIC",
-            "DEFAULT_FUA",
-            "WHOLE_BASIC",
-            "WHOLE_BASIC",
-            "DEFAULT_FUA",
-            "WHOLE_BASIC"
-          ],
-          "relicSets": [
-            [
-              "Longevous Disciple",
-              "Longevous Disciple"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Eagle of Twilight Line",
-              "Eagle of Twilight Line"
-            ]
-          ],
-          "ornamentSets": [
-            "Bone Collection's Serene Demesne",
-            "Rutilant Arena",
-            "Inert Salsotto",
-            "Sigonia, the Unclaimed Desolation",
-            "Arcadia of Woven Dreams"
-          ],
-          "teammates": [
-            {
-              "characterId": "1403",
-              "lightCone": "23038",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1407",
-              "lightCone": "23040",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1409",
-              "lightCone": "23042",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            }
-          ]
-        }
+        ]
       }
     },
     "1206": {
@@ -7028,7 +7159,17 @@
             "Break Effect"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 1,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "SKILL",
           "basicGridColumn": "SKILL",
@@ -7108,18 +7249,6 @@
             [
               "Iron Cavalry Against the Scourge",
               "Iron Cavalry Against the Scourge"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -7312,6 +7441,15 @@
             "name": "fnSacerdosSet",
             "value": 1,
             "set": "Sacerdos' Relived Ordeal"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 1,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -7788,18 +7926,6 @@
               "Hunter of Glacial Forest"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -7984,6 +8110,15 @@
             "name": "PRISONER_SET",
             "value": 3,
             "set": "Prisoner in Deep Confinement"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -8218,7 +8353,95 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "healSimulation": {
+          "parts": {
+            "Body": [
+              "Outgoing Healing Boost"
+            ],
+            "Feet": [
+              "SPD",
+              "HP%"
+            ],
+            "PlanarSphere": [
+              "HP%"
+            ],
+            "LinkRope": [
+              "HP%"
+            ]
+          },
+          "substats": [
+            "HP%",
+            "HP",
+            "SPD",
+            "Effect RES",
+            "DEF%"
+          ],
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL",
+            "DEFAULT_SKILL_HEAL",
+            "DEFAULT_TALENT_HEAL",
+            "DEFAULT_ULT_HEAL"
+          ],
+          "relicSets": [
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Passerby of Wandering Cloud",
+              "Passerby of Wandering Cloud"
+            ]
+          ],
+          "ornamentSets": [
+            "Lushaka, the Sunken Seas",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars",
+            "Giant Tree of Rapt Brooding"
+          ],
+          "teammates": [
+            {
+              "characterId": "1407",
+              "lightCone": "23040",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1403",
+              "lightCone": "23038",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1406",
+              "lightCone": "23043",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1212": {
@@ -8369,7 +8592,17 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 3,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "SKILL",
           "basicGridColumn": "SKILL",
@@ -8401,92 +8634,7 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ],
-        "simulation": {
-          "parts": {
-            "Body": [
-              "CRIT DMG"
-            ],
-            "Feet": [
-              "ATK%",
-              "SPD"
-            ],
-            "PlanarSphere": [
-              "ATK%",
-              "Ice DMG Boost"
-            ],
-            "LinkRope": [
-              "ATK%"
-            ]
-          },
-          "substats": [
-            "CRIT DMG",
-            "CRIT Rate",
-            "ATK%",
-            "ATK"
-          ],
-          "errRopeEidolon": 0,
-          "comboTurnAbilities": [
-            "NULL",
-            "DEFAULT_ULT",
-            "WHOLE_SKILL",
-            "WHOLE_SKILL",
-            "START_SKILL",
-            "END_ULT",
-            "WHOLE_SKILL"
-          ],
-          "relicSets": [
-            [
-              "Scholar Lost in Erudition",
-              "Scholar Lost in Erudition"
-            ],
-            [
-              "Hunter of Glacial Forest",
-              "Hunter of Glacial Forest"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Eagle of Twilight Line",
-              "Eagle of Twilight Line"
-            ]
-          ],
-          "ornamentSets": [
-            "Rutilant Arena",
-            "Sigonia, the Unclaimed Desolation",
-            "Arcadia of Woven Dreams"
-          ],
-          "teammates": [
-            {
-              "characterId": "1101",
-              "lightCone": "23003",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1303",
-              "lightCone": "23019",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1217b1",
-              "lightCone": "23017",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            }
-          ]
-        }
+        ]
       }
     },
     "1213": {
@@ -8646,6 +8794,15 @@
             "name": "TENGOKU_SET",
             "value": true,
             "set": "Tengoku@Livestream"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 8,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -8733,18 +8890,6 @@
             [
               "Wastelander of Banditry Desert",
               "Wastelander of Banditry Desert"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -9007,18 +9152,6 @@
             [
               "Poet of Mourning Collapse",
               "Poet of Mourning Collapse"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -9631,6 +9764,15 @@
             "name": "PRISONER_SET",
             "value": 3,
             "set": "Prisoner in Deep Confinement"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -9882,18 +10024,6 @@
             [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -10164,18 +10294,6 @@
             [
               "The Wind-Soaring Valorous",
               "The Wind-Soaring Valorous"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -10646,18 +10764,6 @@
               "The Ashblazing Grand Duke"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -10675,8 +10781,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
+            "City of Converging Stars"
           ],
           "teammates": [
             {
@@ -10955,18 +11060,6 @@
               "Wastelander of Banditry Desert"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -10983,8 +11076,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
+            "City of Converging Stars"
           ],
           "teammates": [
             {
@@ -11168,7 +11260,17 @@
             "Break Effect"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 8,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "BASIC",
           "basicGridColumn": "BASIC",
@@ -11271,18 +11373,6 @@
               "Diviner of Distant Reach"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -11298,8 +11388,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
+            "City of Converging Stars"
           ],
           "teammates": [
             {
@@ -11481,6 +11570,15 @@
             "name": "WARRIOR_SET",
             "value": true,
             "set": "Warrior Goddess of Sun and Thunder"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -11680,7 +11778,17 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 8,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "ULT",
           "basicGridColumn": "ULT",
@@ -11756,18 +11864,6 @@
             [
               "Champion of Streetwise Boxing",
               "Champion of Streetwise Boxing"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -12268,18 +12364,6 @@
               "Pioneer Diver of Dead Waters"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -12297,8 +12381,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
+            "City of Converging Stars"
           ],
           "teammates": [
             {
@@ -12320,6 +12403,93 @@
               "lightConeSuperimposition": 1
             }
           ]
+        },
+        "shieldSimulation": {
+          "parts": {
+            "Body": [
+              "DEF%"
+            ],
+            "Feet": [
+              "DEF%",
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "DEF%"
+            ],
+            "LinkRope": [
+              "DEF%",
+              "Energy Regeneration Rate"
+            ]
+          },
+          "substats": [
+            "DEF%",
+            "DEF",
+            "SPD",
+            "Effect RES",
+            "HP%"
+          ],
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL",
+            "DEFAULT_SKILL_SHIELD",
+            "DEFAULT_SKILL_SHIELD"
+          ],
+          "relicSets": [
+            [
+              "Self-Enshrouded Recluse",
+              "Self-Enshrouded Recluse"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Self-Enshrouded Recluse",
+              "Self-Enshrouded Recluse"
+            ],
+            [
+              "Knight of Purity Palace",
+              "Knight of Purity Palace"
+            ]
+          ],
+          "ornamentSets": [
+            "Lushaka, the Sunken Seas",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1220",
+              "lightCone": "23031",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1112",
+              "lightCone": "23016",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1403",
+              "lightCone": "23038",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
         }
       }
     },
@@ -12548,19 +12718,8 @@
             "START_SKILL",
             "END_FUA"
           ],
+          "errRopeEidolon": 6,
           "relicSets": [
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
             [
               "Pioneer Diver of Dead Waters",
               "Pioneer Diver of Dead Waters"
@@ -12753,7 +12912,13 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnSacerdosSet",
+            "value": 3,
+            "set": "Sacerdos' Relived Ordeal"
+          }
+        ],
         "sortOption": {
           "key": "CD",
           "basicGridColumn": "CD",
@@ -12958,6 +13123,15 @@
             "name": "PRISONER_SET",
             "value": 3,
             "set": "Prisoner in Deep Confinement"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -12981,95 +13155,7 @@
             "minFilterKey": "minFua",
             "maxFilterKey": "maxFua"
           }
-        ],
-        "simulation": {
-          "parts": {
-            "Body": [
-              "Effect Hit Rate",
-              "ATK%"
-            ],
-            "Feet": [
-              "ATK%",
-              "SPD"
-            ],
-            "PlanarSphere": [
-              "ATK%",
-              "Wind DMG Boost"
-            ],
-            "LinkRope": [
-              "ATK%"
-            ]
-          },
-          "substats": [
-            "ATK%",
-            "Effect Hit Rate",
-            "ATK",
-            "CRIT Rate",
-            "CRIT DMG"
-          ],
-          "breakpoints": {
-            "Effect Hit Rate": 1.2
-          },
-          "comboTurnAbilities": [
-            "NULL",
-            "START_ULT",
-            "END_SKILL",
-            "DEFAULT_DOT",
-            "WHOLE_BASIC",
-            "DEFAULT_DOT",
-            "WHOLE_SKILL",
-            "DEFAULT_DOT",
-            "WHOLE_BASIC",
-            "DEFAULT_DOT"
-          ],
-          "relicSets": [
-            [
-              "Prisoner in Deep Confinement",
-              "Prisoner in Deep Confinement"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Eagle of Twilight Line",
-              "Eagle of Twilight Line"
-            ]
-          ],
-          "ornamentSets": [
-            "Revelry by the Sea",
-            "Firmament Frontline: Glamoth",
-            "Pan-Cosmic Commercial Enterprise"
-          ],
-          "teammates": [
-            {
-              "characterId": "1005b1",
-              "lightCone": "23006",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1410",
-              "lightCone": "23047",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1414",
-              "lightCone": "23051",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            }
-          ]
-        }
+        ]
       }
     },
     "1308": {
@@ -13225,6 +13311,15 @@
             "name": "fnPioneerSet",
             "value": 4,
             "set": "Pioneer Diver of Dead Waters"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 8,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -13291,18 +13386,6 @@
             "WHOLE_SKILL"
           ],
           "relicSets": [
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
             [
               "Pioneer Diver of Dead Waters",
               "Pioneer Diver of Dead Waters"
@@ -13526,7 +13609,84 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "supportSimulation": {
+          "parts": {
+            "Body": [
+              "ATK%"
+            ],
+            "Feet": [
+              "ATK%",
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "ATK%"
+            ],
+            "LinkRope": [
+              "Energy Regeneration Rate"
+            ]
+          },
+          "substats": [
+            "ATK%",
+            "ATK",
+            "SPD",
+            "Effect RES",
+            "HP%"
+          ],
+          "buffStat": 5,
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL"
+          ],
+          "relicSets": [
+            [
+              "Prisoner in Deep Confinement",
+              "The Wind-Soaring Valorous"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ]
+          ],
+          "ornamentSets": [
+            "Sprightly Vonwacq",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1220",
+              "lightCone": "23031",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1403",
+              "lightCone": "23038",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1304",
+              "lightCone": "23023",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1310": {
@@ -13716,85 +13876,7 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ],
-        "simulation": {
-          "parts": {
-            "Body": [
-              "ATK%"
-            ],
-            "Feet": [
-              "ATK%",
-              "SPD"
-            ],
-            "PlanarSphere": [
-              "ATK%"
-            ],
-            "LinkRope": [
-              "Break Effect"
-            ]
-          },
-          "substats": [
-            "Break Effect",
-            "ATK%",
-            "ATK",
-            "CRIT Rate",
-            "CRIT DMG"
-          ],
-          "comboTurnAbilities": [
-            "NULL",
-            "START_ULT",
-            "DEFAULT_SKILL",
-            "END_BREAK",
-            "WHOLE_SKILL",
-            "WHOLE_SKILL",
-            "WHOLE_SKILL"
-          ],
-          "relicSets": [
-            [
-              "Iron Cavalry Against the Scourge",
-              "Iron Cavalry Against the Scourge"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Eagle of Twilight Line",
-              "Eagle of Twilight Line"
-            ]
-          ],
-          "ornamentSets": [
-            "Forge of the Kalpagni Lantern"
-          ],
-          "teammates": [
-            {
-              "characterId": "1225",
-              "lightCone": "23035",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1321",
-              "lightCone": "23050",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1222",
-              "lightCone": "23032",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            }
-          ]
-        }
+        ]
       }
     },
     "1312": {
@@ -13949,6 +14031,15 @@
             "name": "fnPioneerSet",
             "value": 4,
             "set": "Pioneer Diver of Dead Waters"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 8,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -14018,18 +14109,6 @@
             [
               "Scholar Lost in Erudition",
               "Scholar Lost in Erudition"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
             ],
             [
               "Pioneer Diver of Dead Waters",
@@ -14224,7 +14303,13 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnSacerdosSet",
+            "value": 4,
+            "set": "Sacerdos' Relived Ordeal"
+          }
+        ],
         "sortOption": {
           "key": "CD",
           "basicGridColumn": "CD",
@@ -14275,7 +14360,84 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "supportSimulation": {
+          "parts": {
+            "Body": [
+              "CRIT DMG"
+            ],
+            "Feet": [
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "HP%",
+              "DEF%"
+            ],
+            "LinkRope": [
+              "Energy Regeneration Rate"
+            ]
+          },
+          "substats": [
+            "CRIT DMG",
+            "SPD",
+            "Effect RES",
+            "HP%",
+            "DEF%"
+          ],
+          "buffStat": 9,
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL"
+          ],
+          "relicSets": [
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ]
+          ],
+          "ornamentSets": [
+            "Broken Keel",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1408",
+              "lightCone": "23044",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1412",
+              "lightCone": "23048",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1414",
+              "lightCone": "23051",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1314": {
@@ -14519,18 +14681,6 @@
               "Sacerdos' Relived Ordeal"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -14723,7 +14873,17 @@
             "Break Effect"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 2,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "BASIC",
           "basicGridColumn": "BASIC",
@@ -14819,18 +14979,6 @@
               "Sacerdos' Relived Ordeal",
               "Warrior Goddess of Sun and Thunder",
               "Diviner of Distant Reach"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -15112,18 +15260,6 @@
               "Eagle of Twilight Line"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -15401,18 +15537,6 @@
               "Diviner of Distant Reach"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -15427,8 +15551,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
+            "City of Converging Stars"
           ],
           "teammates": [
             {
@@ -15598,7 +15721,17 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "SKILL",
           "basicGridColumn": "SKILL",
@@ -15667,18 +15800,6 @@
             [
               "Scholar Lost in Erudition",
               "Scholar Lost in Erudition"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -15989,18 +16110,6 @@
               "Hero of Triumphant Song"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -16253,18 +16362,6 @@
               "Poet of Mourning Collapse"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -16281,8 +16378,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
+            "City of Converging Stars"
           ],
           "teammates": [
             {
@@ -16508,18 +16604,6 @@
               "Scholar Lost in Erudition"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -16709,6 +16793,15 @@
             "name": "GENIUS_SET",
             "value": true,
             "set": "Genius of Brilliant Stars"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -16792,18 +16885,6 @@
               "Pioneer Diver of Dead Waters"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -16821,8 +16902,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
+            "City of Converging Stars"
           ],
           "teammates": [
             {
@@ -17084,18 +17164,6 @@
               "Genius of Brilliant Stars"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -17114,8 +17182,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
+            "City of Converging Stars"
           ],
           "teammates": [
             {
@@ -17400,18 +17467,6 @@
               "Poet of Mourning Collapse"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -17656,18 +17711,6 @@
             [
               "Wavestrider Captain",
               "Wavestrider Captain"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -18007,6 +18050,7 @@
               "Warrior Goddess of Sun and Thunder",
               "Diviner of Distant Reach",
               "Longevous Disciple",
+              "Divine-Querying Master Smith",
               "Passerby of Wandering Cloud"
             ]
           ],
@@ -18019,7 +18063,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
+            "City of Converging Stars",
             "Giant Tree of Rapt Brooding"
           ],
           "teammates": [
@@ -18042,6 +18086,94 @@
               "lightConeSuperimposition": 1
             }
           ]
+        },
+        "healSimulation": {
+          "parts": {
+            "Body": [
+              "Outgoing Healing Boost"
+            ],
+            "Feet": [
+              "SPD",
+              "HP%"
+            ],
+            "PlanarSphere": [
+              "HP%"
+            ],
+            "LinkRope": [
+              "HP%"
+            ]
+          },
+          "substats": [
+            "HP%",
+            "HP",
+            "SPD",
+            "Effect RES",
+            "CRIT DMG"
+          ],
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL",
+            "DEFAULT_SKILL_HEAL",
+            "DEFAULT_ULT_HEAL",
+            "DEFAULT_SKILL_HEAL"
+          ],
+          "relicSets": [
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Passerby of Wandering Cloud",
+              "Passerby of Wandering Cloud"
+            ]
+          ],
+          "ornamentSets": [
+            "Giant Tree of Rapt Brooding",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars",
+            "Giant Tree of Rapt Brooding"
+          ],
+          "teammates": [
+            {
+              "characterId": "1407",
+              "lightCone": "23040",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1403",
+              "lightCone": "23038",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1406",
+              "lightCone": "23043",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
         }
       }
     },
@@ -18202,6 +18334,15 @@
             "name": "fnPioneerSet",
             "value": 4,
             "set": "Pioneer Diver of Dead Waters"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -18270,18 +18411,6 @@
             [
               "Prisoner in Deep Confinement",
               "Prisoner in Deep Confinement"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -18460,7 +18589,17 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "ULT",
           "basicGridColumn": "ULT",
@@ -18482,7 +18621,94 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "supportSimulation": {
+          "parts": {
+            "Body": [
+              "ATK%"
+            ],
+            "Feet": [
+              "ATK%",
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "ATK%"
+            ],
+            "LinkRope": [
+              "ATK%",
+              "Energy Regeneration Rate"
+            ]
+          },
+          "substats": [
+            "ATK%",
+            "ATK",
+            "SPD",
+            "Effect RES",
+            "HP%"
+          ],
+          "buffStat": 5,
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL"
+          ],
+          "relicSets": [
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Passerby of Wandering Cloud",
+              "Passerby of Wandering Cloud"
+            ]
+          ],
+          "ornamentSets": [
+            "Lushaka, the Sunken Seas",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars",
+            "Giant Tree of Rapt Brooding"
+          ],
+          "teammates": [
+            {
+              "characterId": "1408",
+              "lightCone": "23044",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1313",
+              "lightCone": "23034",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1414",
+              "lightCone": "23051",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1413": {
@@ -18755,18 +18981,6 @@
               "Poet of Mourning Collapse"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -18992,7 +19206,93 @@
             "minFilterKey": "minSkill",
             "maxFilterKey": "maxSkill"
           }
-        ]
+        ],
+        "supportSimulation": {
+          "parts": {
+            "Body": [
+              "ATK%"
+            ],
+            "Feet": [
+              "SPD",
+              "ATK%"
+            ],
+            "PlanarSphere": [
+              "ATK%"
+            ],
+            "LinkRope": [
+              "Energy Regeneration Rate",
+              "ATK%"
+            ]
+          },
+          "substats": [
+            "ATK%",
+            "ATK",
+            "SPD",
+            "HP%",
+            "DEF%"
+          ],
+          "buffStat": 5,
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL"
+          ],
+          "relicSets": [
+            [
+              "Self-Enshrouded Recluse",
+              "Self-Enshrouded Recluse"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Self-Enshrouded Recluse",
+              "Self-Enshrouded Recluse"
+            ],
+            [
+              "Knight of Purity Palace",
+              "Knight of Purity Palace"
+            ]
+          ],
+          "ornamentSets": [
+            "Lushaka, the Sunken Seas",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1408",
+              "lightCone": "23044",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1313",
+              "lightCone": "23034",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1403",
+              "lightCone": "23038",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1415": {
@@ -19261,18 +19561,6 @@
               "Diviner of Distant Reach"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -19286,8 +19574,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
+            "City of Converging Stars"
           ],
           "teammates": [
             {
@@ -19463,6 +19750,15 @@
             "name": "TENGOKU_SET",
             "value": true,
             "set": "Tengoku@Livestream"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -19545,18 +19841,6 @@
             [
               "Ever-Glorious Magical Girl",
               "Ever-Glorious Magical Girl"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -19843,18 +20127,6 @@
               "Diviner of Distant Reach"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -19872,8 +20144,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
+            "City of Converging Stars"
           ],
           "teammates": [
             {
@@ -20128,18 +20399,6 @@
               "Pioneer Diver of Dead Waters"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -20298,7 +20557,7 @@
           "DEF%": 0,
           "HP": 0,
           "HP%": 0,
-          "SPD": 1,
+          "SPD": 0,
           "CRIT Rate": 1,
           "CRIT DMG": 1,
           "Effect Hit Rate": 0,
@@ -20338,6 +20597,15 @@
             "name": "fnPioneerSet",
             "value": 4,
             "set": "Pioneer Diver of Dead Waters"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 8,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -20410,22 +20678,16 @@
           ],
           "comboDot": 0,
           "errRopeEidolon": 0,
+          "combatStatsConfig": [
+            {
+              "add": "Energy Regeneration Rate",
+              "remove": "ELEMENTAL_DMG"
+            }
+          ],
           "relicSets": [
             [
               "Ever-Glorious Magical Girl",
               "Ever-Glorious Magical Girl"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -20435,7 +20697,6 @@
           "ornamentSets": [
             "Punklorde Stage Zero",
             "Tengoku@Livestream",
-            "Rutilant Arena",
             "Sigonia, the Unclaimed Desolation",
             "Arcadia of Woven Dreams"
           ],
@@ -20703,21 +20964,19 @@
             "WHOLE_ELATION_SKILL"
           ],
           "comboDot": 0,
+          "combatStatsConfig": [
+            {
+              "remove": "ELEMENTAL_DMG"
+            }
+          ],
           "relicSets": [
             [
               "Ever-Glorious Magical Girl",
               "Ever-Glorious Magical Girl"
-            ],
-            [
-              "Genius of Brilliant Stars",
-              "Genius of Brilliant Stars"
             ]
           ],
           "ornamentSets": [
             "Punklorde Stage Zero",
-            "Tengoku@Livestream",
-            "Izumo Gensei and Takama Divine Realm",
-            "Rutilant Arena",
             "Sigonia, the Unclaimed Desolation",
             "Arcadia of Woven Dreams"
           ],
@@ -20737,6 +20996,263 @@
             {
               "characterId": "1217b1",
               "lightCone": "23017",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ]
+        }
+      }
+    },
+    "1507": {
+      "id": "1507",
+      "name": "Mortenax Blade",
+      "rarity": 5,
+      "path": "Nihility",
+      "element": "Fire",
+      "traces": {
+        "CRIT Rate": 0.12,
+        "HP%": 0.1,
+        "Fire DMG Boost": 0.224
+      },
+      "traceTree": [
+        {
+          "id": "1507201_4.3v5",
+          "stat": "Fire DMG Boost",
+          "value": 0.032,
+          "pre": null,
+          "children": [
+            {
+              "id": "1507210_4.3v5",
+              "stat": "Fire DMG Boost",
+              "value": 0.064,
+              "pre": "1507201_4.3v5",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1507202_4.3v5",
+          "stat": "CRIT Rate",
+          "value": 0.027,
+          "pre": null,
+          "children": [
+            {
+              "id": "1507203_4.3v5",
+              "stat": "Fire DMG Boost",
+              "value": 0.032,
+              "pre": "1507202_4.3v5",
+              "children": [
+                {
+                  "id": "1507204_4.3v5",
+                  "stat": "HP%",
+                  "value": 0.04,
+                  "pre": "1507203_4.3v5",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1507205_4.3v5",
+          "stat": "Fire DMG Boost",
+          "value": 0.048,
+          "pre": null,
+          "children": [
+            {
+              "id": "1507206_4.3v5",
+              "stat": "CRIT Rate",
+              "value": 0.04,
+              "pre": "1507205_4.3v5",
+              "children": [
+                {
+                  "id": "1507207_4.3v5",
+                  "stat": "Fire DMG Boost",
+                  "value": 0.048,
+                  "pre": "1507206_4.3v5",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1507208_4.3v5",
+          "stat": "HP%",
+          "value": 0.06,
+          "pre": null,
+          "children": []
+        },
+        {
+          "id": "1507209_4.3v5",
+          "stat": "CRIT Rate",
+          "value": 0.053,
+          "pre": null,
+          "children": []
+        }
+      ],
+      "max_sp": 160,
+      "stats": {
+        "HP": 1358.28,
+        "ATK": 543.312,
+        "DEF": 485.1,
+        "SPD": 107,
+        "CRIT Rate": 0.05,
+        "CRIT DMG": 0.5
+      },
+      "unreleased": true,
+      "imageCenter": {
+        "x": 1040,
+        "y": 1002,
+        "z": 1.15
+      },
+      "spineCenter": {
+        "x": 1017,
+        "y": 1125,
+        "z": 1.15
+      },
+      "backgroundCenterOffset": {
+        "x": -66,
+        "y": 52,
+        "z": 0.17
+      },
+      "disableSpine": false,
+      "scoringMetadata": {
+        "stats": {
+          "ATK": 0,
+          "ATK%": 0,
+          "DEF": 0,
+          "DEF%": 0,
+          "HP": 1,
+          "HP%": 1,
+          "SPD": 1,
+          "CRIT Rate": 1,
+          "CRIT DMG": 1,
+          "Effect Hit Rate": 0,
+          "Effect RES": 0,
+          "Break Effect": 0
+        },
+        "parts": {
+          "Body": [
+            "CRIT DMG",
+            "CRIT Rate"
+          ],
+          "Feet": [
+            "SPD",
+            "HP%"
+          ],
+          "PlanarSphere": [
+            "Fire DMG Boost",
+            "HP%"
+          ],
+          "LinkRope": [
+            "HP%",
+            "Energy Regeneration Rate"
+          ]
+        },
+        "presets": [
+          {
+            "name": "fnPioneerSet",
+            "value": 4,
+            "set": "Pioneer Diver of Dead Waters"
+          },
+          {
+            "name": "VALOROUS_SET",
+            "value": true,
+            "set": "The Wind-Soaring Valorous"
+          }
+        ],
+        "sortOption": {
+          "key": "FUA",
+          "basicGridColumn": "FUA",
+          "combatGridColumn": "FUA",
+          "memoBasicGridColumn": "FUA",
+          "memoCombatGridColumn": "FUA",
+          "isComputedRating": true,
+          "minFilterKey": "minFua",
+          "maxFilterKey": "maxFua"
+        },
+        "hiddenColumns": [
+          {
+            "key": "DOT",
+            "basicGridColumn": "DOT",
+            "combatGridColumn": "DOT",
+            "memoBasicGridColumn": "DOT",
+            "memoCombatGridColumn": "DOT",
+            "isComputedRating": true,
+            "minFilterKey": "minDot",
+            "maxFilterKey": "maxDot"
+          }
+        ],
+        "simulation": {
+          "parts": {
+            "Body": [
+              "CRIT DMG",
+              "CRIT Rate"
+            ],
+            "Feet": [
+              "HP%",
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "HP%",
+              "Fire DMG Boost"
+            ],
+            "LinkRope": [
+              "HP%"
+            ]
+          },
+          "substats": [
+            "CRIT DMG",
+            "CRIT Rate",
+            "HP%",
+            "HP",
+            "SPD"
+          ],
+          "comboTurnAbilities": [
+            "NULL",
+            "START_ULT",
+            "END_SKILL",
+            "DEFAULT_FUA",
+            "DEFAULT_FUA",
+            "WHOLE_SKILL"
+          ],
+          "deprioritizeBuffs": true,
+          "relicSets": [
+            [
+              "Divine-Querying Master Smith",
+              "Divine-Querying Master Smith"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ]
+          ],
+          "ornamentSets": [
+            "Bone Collection's Serene Demesne",
+            "Duran, Dynasty of Running Wolves",
+            "Sigonia, the Unclaimed Desolation",
+            "Inert Salsotto",
+            "Sigonia, the Unclaimed Desolation",
+            "Arcadia of Woven Dreams"
+          ],
+          "errRopeEidolon": 0,
+          "teammates": [
+            {
+              "characterId": "1504",
+              "lightCone": "23056",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1403",
+              "lightCone": "23038",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1409",
+              "lightCone": "23042",
               "characterEidolon": 0,
               "lightConeSuperimposition": 1
             }
@@ -20892,7 +21408,17 @@
             "Break Effect"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 3,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "SKILL",
           "basicGridColumn": "SKILL",
@@ -20961,18 +21487,6 @@
             [
               "Scholar Lost in Erudition",
               "Scholar Lost in Erudition"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -21156,7 +21670,17 @@
             "Break Effect"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 3,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "SKILL",
           "basicGridColumn": "SKILL",
@@ -21225,18 +21749,6 @@
             [
               "Scholar Lost in Erudition",
               "Scholar Lost in Erudition"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -21415,7 +21927,17 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "TALENT_SHIELD",
           "basicGridColumn": "TALENT_SHIELD",
@@ -21456,7 +21978,94 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "shieldSimulation": {
+          "parts": {
+            "Body": [
+              "DEF%"
+            ],
+            "Feet": [
+              "DEF%",
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "DEF%"
+            ],
+            "LinkRope": [
+              "DEF%",
+              "Energy Regeneration Rate"
+            ]
+          },
+          "substats": [
+            "DEF%",
+            "DEF",
+            "SPD",
+            "Effect RES",
+            "HP%"
+          ],
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL",
+            "DEFAULT_TALENT_SHIELD",
+            "DEFAULT_TALENT_SHIELD"
+          ],
+          "relicSets": [
+            [
+              "Self-Enshrouded Recluse",
+              "Self-Enshrouded Recluse"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Self-Enshrouded Recluse",
+              "Self-Enshrouded Recluse"
+            ],
+            [
+              "Knight of Purity Palace",
+              "Knight of Purity Palace"
+            ]
+          ],
+          "ornamentSets": [
+            "Lushaka, the Sunken Seas",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1308",
+              "lightCone": "23024",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1218",
+              "lightCone": "23029",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1406",
+              "lightCone": "23043",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "8004": {
@@ -21602,7 +22211,17 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 5,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
+          }
+        ],
         "sortOption": {
           "key": "TALENT_SHIELD",
           "basicGridColumn": "TALENT_SHIELD",
@@ -21643,7 +22262,94 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "shieldSimulation": {
+          "parts": {
+            "Body": [
+              "DEF%"
+            ],
+            "Feet": [
+              "DEF%",
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "DEF%"
+            ],
+            "LinkRope": [
+              "DEF%",
+              "Energy Regeneration Rate"
+            ]
+          },
+          "substats": [
+            "DEF%",
+            "DEF",
+            "SPD",
+            "Effect RES",
+            "HP%"
+          ],
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL",
+            "DEFAULT_TALENT_SHIELD",
+            "DEFAULT_TALENT_SHIELD"
+          ],
+          "relicSets": [
+            [
+              "Self-Enshrouded Recluse",
+              "Self-Enshrouded Recluse"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Self-Enshrouded Recluse",
+              "Self-Enshrouded Recluse"
+            ],
+            [
+              "Knight of Purity Palace",
+              "Knight of Purity Palace"
+            ]
+          ],
+          "ornamentSets": [
+            "Lushaka, the Sunken Seas",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1308",
+              "lightCone": "23024",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1218",
+              "lightCone": "23029",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1406",
+              "lightCone": "23043",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "8005": {
@@ -21804,7 +22510,13 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "WATCHMAKER_SET",
+            "value": true,
+            "set": "Watchmaker, Master of Dream Machinations"
+          }
+        ],
         "sortOption": {
           "key": "BE",
           "basicGridColumn": "BE",
@@ -21845,7 +22557,86 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "supportSimulation": {
+          "parts": {
+            "Body": [
+              "HP%",
+              "DEF%"
+            ],
+            "Feet": [
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "HP%",
+              "DEF%"
+            ],
+            "LinkRope": [
+              "Energy Regeneration Rate",
+              "Break Effect"
+            ]
+          },
+          "substats": [
+            "Break Effect",
+            "SPD",
+            "Effect RES",
+            "HP%",
+            "DEF%"
+          ],
+          "buffStat": 12,
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL"
+          ],
+          "relicSets": [
+            [
+              "Watchmaker, Master of Dream Machinations",
+              "Watchmaker, Master of Dream Machinations"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ]
+          ],
+          "ornamentSets": [
+            "Forge of the Kalpagni Lantern",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1310b1",
+              "lightCone": "23025",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1225",
+              "lightCone": "23035",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1222",
+              "lightCone": "23032",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "8006": {
@@ -22006,7 +22797,13 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "WATCHMAKER_SET",
+            "value": true,
+            "set": "Watchmaker, Master of Dream Machinations"
+          }
+        ],
         "sortOption": {
           "key": "BE",
           "basicGridColumn": "BE",
@@ -22047,7 +22844,86 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "supportSimulation": {
+          "parts": {
+            "Body": [
+              "HP%",
+              "DEF%"
+            ],
+            "Feet": [
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "HP%",
+              "DEF%"
+            ],
+            "LinkRope": [
+              "Energy Regeneration Rate",
+              "Break Effect"
+            ]
+          },
+          "substats": [
+            "Break Effect",
+            "SPD",
+            "Effect RES",
+            "HP%",
+            "DEF%"
+          ],
+          "buffStat": 12,
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL"
+          ],
+          "relicSets": [
+            [
+              "Watchmaker, Master of Dream Machinations",
+              "Watchmaker, Master of Dream Machinations"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ]
+          ],
+          "ornamentSets": [
+            "Forge of the Kalpagni Lantern",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1310b1",
+              "lightCone": "23025",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1225",
+              "lightCone": "23035",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1222",
+              "lightCone": "23032",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "8007": {
@@ -22267,7 +23143,84 @@
             "minFilterKey": "minMemoSkill",
             "maxFilterKey": "maxMemoSkill"
           }
-        ]
+        ],
+        "supportSimulation": {
+          "parts": {
+            "Body": [
+              "CRIT DMG"
+            ],
+            "Feet": [
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "HP%",
+              "DEF%"
+            ],
+            "LinkRope": [
+              "Energy Regeneration Rate"
+            ]
+          },
+          "substats": [
+            "CRIT DMG",
+            "SPD",
+            "Effect RES",
+            "HP%",
+            "DEF%"
+          ],
+          "buffStat": 9,
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL"
+          ],
+          "relicSets": [
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ]
+          ],
+          "ornamentSets": [
+            "Broken Keel",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1413",
+              "lightCone": "23049",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1415",
+              "lightCone": "23052",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1409",
+              "lightCone": "23042",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "8008": {
@@ -22487,7 +23440,84 @@
             "minFilterKey": "minMemoSkill",
             "maxFilterKey": "maxMemoSkill"
           }
-        ]
+        ],
+        "supportSimulation": {
+          "parts": {
+            "Body": [
+              "CRIT DMG"
+            ],
+            "Feet": [
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "HP%",
+              "DEF%"
+            ],
+            "LinkRope": [
+              "Energy Regeneration Rate"
+            ]
+          },
+          "substats": [
+            "CRIT DMG",
+            "SPD",
+            "Effect RES",
+            "HP%",
+            "DEF%"
+          ],
+          "buffStat": 9,
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL"
+          ],
+          "relicSets": [
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ]
+          ],
+          "ornamentSets": [
+            "Broken Keel",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1413",
+              "lightCone": "23049",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1415",
+              "lightCone": "23052",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1409",
+              "lightCone": "23042",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "8009": {
@@ -22676,111 +23706,7 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ],
-        "simulation": {
-          "parts": {
-            "Body": [
-              "CRIT Rate",
-              "CRIT DMG"
-            ],
-            "Feet": [
-              "SPD",
-              "ATK%"
-            ],
-            "PlanarSphere": [
-              "Lightning DMG Boost",
-              "ATK%"
-            ],
-            "LinkRope": [
-              "ATK%"
-            ]
-          },
-          "substats": [
-            "CRIT DMG",
-            "CRIT Rate",
-            "ATK%",
-            "ATK"
-          ],
-          "comboTurnAbilities": [
-            "NULL",
-            "START_ULT",
-            "WHOLE_SKILL",
-            "WHOLE_SKILL",
-            "WHOLE_ELATION_SKILL",
-            "WHOLE_ELATION_SKILL"
-          ],
-          "comboDot": 0,
-          "errRopeEidolon": 0,
-          "relicSets": [
-            [
-              "Ever-Glorious Magical Girl",
-              "Ever-Glorious Magical Girl"
-            ],
-            [
-              "Diviner of Distant Reach",
-              "Diviner of Distant Reach"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Eagle of Twilight Line",
-              "Eagle of Twilight Line"
-            ],
-            [
-              "Sacerdos' Relived Ordeal",
-              "Sacerdos' Relived Ordeal"
-            ],
-            [
-              "Eagle of Twilight Line",
-              "Eagle of Twilight Line"
-            ]
-          ],
-          "ornamentSets": [
-            "Punklorde Stage Zero",
-            "Sigonia, the Unclaimed Desolation",
-            "Arcadia of Woven Dreams",
-            "Sprightly Vonwacq",
-            "Penacony, Land of the Dreams",
-            "Lushaka, the Sunken Seas",
-            "Sprightly Vonwacq",
-            "Broken Keel",
-            "Penacony, Land of the Dreams",
-            "Fleet of the Ageless",
-            "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
-          ],
-          "teammates": [
-            {
-              "characterId": "1506",
-              "lightCone": "23057",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1501",
-              "lightCone": "23053",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1217b1",
-              "lightCone": "23017",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            }
-          ]
-        }
+        ]
       }
     },
     "8010": {
@@ -22969,111 +23895,7 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ],
-        "simulation": {
-          "parts": {
-            "Body": [
-              "CRIT Rate",
-              "CRIT DMG"
-            ],
-            "Feet": [
-              "SPD",
-              "ATK%"
-            ],
-            "PlanarSphere": [
-              "Lightning DMG Boost",
-              "ATK%"
-            ],
-            "LinkRope": [
-              "ATK%"
-            ]
-          },
-          "substats": [
-            "CRIT DMG",
-            "CRIT Rate",
-            "ATK%",
-            "ATK"
-          ],
-          "comboTurnAbilities": [
-            "NULL",
-            "START_ULT",
-            "WHOLE_SKILL",
-            "WHOLE_SKILL",
-            "WHOLE_ELATION_SKILL",
-            "WHOLE_ELATION_SKILL"
-          ],
-          "comboDot": 0,
-          "errRopeEidolon": 0,
-          "relicSets": [
-            [
-              "Ever-Glorious Magical Girl",
-              "Ever-Glorious Magical Girl"
-            ],
-            [
-              "Diviner of Distant Reach",
-              "Diviner of Distant Reach"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Eagle of Twilight Line",
-              "Eagle of Twilight Line"
-            ],
-            [
-              "Sacerdos' Relived Ordeal",
-              "Sacerdos' Relived Ordeal"
-            ],
-            [
-              "Eagle of Twilight Line",
-              "Eagle of Twilight Line"
-            ]
-          ],
-          "ornamentSets": [
-            "Punklorde Stage Zero",
-            "Sigonia, the Unclaimed Desolation",
-            "Arcadia of Woven Dreams",
-            "Sprightly Vonwacq",
-            "Penacony, Land of the Dreams",
-            "Lushaka, the Sunken Seas",
-            "Sprightly Vonwacq",
-            "Broken Keel",
-            "Penacony, Land of the Dreams",
-            "Fleet of the Ageless",
-            "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding"
-          ],
-          "teammates": [
-            {
-              "characterId": "1506",
-              "lightCone": "23057",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1501",
-              "lightCone": "23053",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            },
-            {
-              "characterId": "1217b1",
-              "lightCone": "23017",
-              "characterEidolon": 0,
-              "lightConeSuperimposition": 1
-            }
-          ]
-        }
+        ]
       }
     },
     "1004b1": {
@@ -23303,18 +24125,6 @@
           "comboDot": 0,
           "errRopeEidolon": 0,
           "relicSets": [
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
             [
               "Pioneer Diver of Dead Waters",
               "Pioneer Diver of Dead Waters"
@@ -23585,18 +24395,6 @@
               "Diviner of Distant Reach"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -23609,8 +24407,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding",
+            "City of Converging Stars",
             "Sprightly Vonwacq",
             "Penacony, Land of the Dreams",
             "Lushaka, the Sunken Seas"
@@ -23793,6 +24590,15 @@
             "name": "fnPioneerSet",
             "value": 4,
             "set": "Pioneer Diver of Dead Waters"
+          },
+          {
+            "name": "fnMortenaxAshblazingSet",
+            "value": 1,
+            "set": "The Ashblazing Grand Duke",
+            "teammateCondition": {
+              "characterId": "1507",
+              "minEidolon": 2
+            }
           }
         ],
         "sortOption": {
@@ -23885,18 +24691,6 @@
               "Diviner of Distant Reach"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -23913,8 +24707,7 @@
             "Penacony, Land of the Dreams",
             "Fleet of the Ageless",
             "Lushaka, the Sunken Seas",
-            "Forge of the Kalpagni Lantern",
-            "Giant Tree of Rapt Brooding",
+            "City of Converging Stars",
             "Sprightly Vonwacq",
             "Penacony, Land of the Dreams",
             "Lushaka, the Sunken Seas"
@@ -24167,18 +24960,6 @@
             [
               "Genius of Brilliant Stars",
               "Genius of Brilliant Stars"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -24448,18 +25229,6 @@
               "Longevous Disciple"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -24719,18 +25488,6 @@
               "Genius of Brilliant Stars"
             ],
             [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
-            ],
-            [
               "Eagle of Twilight Line",
               "Eagle of Twilight Line"
             ]
@@ -24974,7 +25731,95 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "healSimulation": {
+          "parts": {
+            "Body": [
+              "Outgoing Healing Boost"
+            ],
+            "Feet": [
+              "SPD",
+              "HP%"
+            ],
+            "PlanarSphere": [
+              "HP%"
+            ],
+            "LinkRope": [
+              "HP%"
+            ]
+          },
+          "substats": [
+            "HP%",
+            "HP",
+            "SPD",
+            "Effect RES",
+            "DEF%"
+          ],
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL",
+            "DEFAULT_SKILL_HEAL",
+            "DEFAULT_TALENT_HEAL",
+            "DEFAULT_TALENT_HEAL"
+          ],
+          "relicSets": [
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ],
+            [
+              "Warrior Goddess of Sun and Thunder",
+              "Warrior Goddess of Sun and Thunder"
+            ],
+            [
+              "Passerby of Wandering Cloud",
+              "Passerby of Wandering Cloud"
+            ]
+          ],
+          "ornamentSets": [
+            "Lushaka, the Sunken Seas",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars",
+            "Giant Tree of Rapt Brooding"
+          ],
+          "teammates": [
+            {
+              "characterId": "1408",
+              "lightCone": "23044",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1412",
+              "lightCone": "23048",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1313",
+              "lightCone": "23034",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1306b1": {
@@ -25128,7 +25973,13 @@
             "Energy Regeneration Rate"
           ]
         },
-        "presets": [],
+        "presets": [
+          {
+            "name": "fnSacerdosSet",
+            "value": 3,
+            "set": "Sacerdos' Relived Ordeal"
+          }
+        ],
         "sortOption": {
           "key": "CD",
           "basicGridColumn": "CD",
@@ -25179,7 +26030,84 @@
             "minFilterKey": "minDot",
             "maxFilterKey": "maxDot"
           }
-        ]
+        ],
+        "supportSimulation": {
+          "parts": {
+            "Body": [
+              "CRIT DMG"
+            ],
+            "Feet": [
+              "SPD"
+            ],
+            "PlanarSphere": [
+              "HP%",
+              "DEF%"
+            ],
+            "LinkRope": [
+              "Energy Regeneration Rate"
+            ]
+          },
+          "substats": [
+            "CRIT DMG",
+            "SPD",
+            "Effect RES",
+            "HP%",
+            "DEF%"
+          ],
+          "buffStat": 9,
+          "errRopeEidolon": 0,
+          "comboTurnAbilities": [
+            "NULL"
+          ],
+          "relicSets": [
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Sacerdos' Relived Ordeal",
+              "Sacerdos' Relived Ordeal"
+            ],
+            [
+              "Eagle of Twilight Line",
+              "Eagle of Twilight Line"
+            ],
+            [
+              "Messenger Traversing Hackerspace",
+              "Messenger Traversing Hackerspace"
+            ]
+          ],
+          "ornamentSets": [
+            "Broken Keel",
+            "Sprightly Vonwacq",
+            "Broken Keel",
+            "Penacony, Land of the Dreams",
+            "Fleet of the Ageless",
+            "Lushaka, the Sunken Seas",
+            "City of Converging Stars"
+          ],
+          "teammates": [
+            {
+              "characterId": "1015",
+              "lightCone": "23046",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1313",
+              "lightCone": "23034",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            },
+            {
+              "characterId": "1409",
+              "lightCone": "23042",
+              "characterEidolon": 0,
+              "lightConeSuperimposition": 1
+            }
+          ],
+          "deprioritizeBuffs": true
+        }
       }
     },
     "1307b1": {
@@ -25401,18 +26329,6 @@
             [
               "Prisoner in Deep Confinement",
               "Prisoner in Deep Confinement"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -25672,18 +26588,6 @@
             [
               "Iron Cavalry Against the Scourge",
               "Iron Cavalry Against the Scourge"
-            ],
-            [
-              "Wavestrider Captain",
-              "Wavestrider Captain"
-            ],
-            [
-              "Poet of Mourning Collapse",
-              "Poet of Mourning Collapse"
-            ],
-            [
-              "Pioneer Diver of Dead Waters",
-              "Pioneer Diver of Dead Waters"
             ],
             [
               "Eagle of Twilight Line",
@@ -30283,6 +31187,40 @@
       },
       "unreleased": false
     },
+    "23059": {
+      "id": "23059",
+      "name": "Reforged in Hellfire",
+      "rarity": 5,
+      "path": "Nihility",
+      "stats": {
+        "HP": 1375.92,
+        "ATK": 423.36,
+        "DEF": 463.05
+      },
+      "imageOffset": {
+        "x": 4,
+        "y": -123,
+        "s": 1.12
+      },
+      "superimpositions": {
+        "1": {
+          "HP%": 0.3
+        },
+        "2": {
+          "HP%": 0.375
+        },
+        "3": {
+          "HP%": 0.45
+        },
+        "4": {
+          "HP%": 0.525
+        },
+        "5": {
+          "HP%": 0.6
+        }
+      },
+      "unreleased": true
+    },
     "24000": {
       "id": "24000",
       "name": "On the Fall of an Aeon",
@@ -31864,6 +32802,16 @@
         "id": "130",
         "name": "Diviner of Distant Reach",
         "skills": "Increases SPD by 6%. Before entering combat, if the wearer's SPD is greater than or equal to 120/160, increases the wearer's CRIT Rate by 10%/18%. When the wearer uses Elation Skill for the first time in each battle, increases all allies' Elation by 10%. This effect cannot stack."
+      },
+      "131": {
+        "id": "131",
+        "name": "As Navigator Isee Sees It",
+        "skills": "Increases ATK by 12%. When the wearer enters combat or uses Skill, their Skill and Ultimate DMG dealt increases by 18%, stacking up to 3 times. At the start of the wearer's turn or after using their Ultimate, removes 1 stack of this effect."
+      },
+      "132": {
+        "id": "132",
+        "name": "Divine-Querying Master Smith",
+        "skills": "Increases Max HP by 12%. Increases the wearer's CRIT DMG dealt to enemy targets in the DEF reduction state by 28%. After the wearer inflicts the DEF reduction state on an enemy target, all allies gain \"Comburent\" for 2 turns. This effect cannot be stacked. DMG dealt by ally targets with \"Comburent\" increases by 15%. This effect can be triggered again after the wearer uses an attack."
       },
       "301": {
         "id": "301",
